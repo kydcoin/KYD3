@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KYD
+Comment=KYD P2P Cryptocurrency
+Comment[fr]=KYD, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=KYD, eşten eşe kriptografik sanal para birimi
+Exec=kyd-qt %u
+Terminal=false
+Type=Application
+Icon=kyd128
+MimeType=x-scheme-handler/kyd;
+Categories=Office;Finance;

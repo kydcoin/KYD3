@@ -1,0 +1,1 @@
+qt/qt_libbitcoinqt_a-qrc_kyd.o: qt/qrc_kyd.cpp

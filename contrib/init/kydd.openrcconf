@@ -1,0 +1,26 @@
+# /etc/conf.d/kydd: config file for /etc/init.d/kydd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/kyd/kyd.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/kydd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/kydd.pid"
+
+# Where to write kydd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/kydd"
+
+# User and group to own kydd process
+#BITCOIND_USER="kyd"
+#BITCOIND_GROUP="kyd"
+
+# Path to kydd executable
+#BITCOIND_BIN="/usr/bin/kydd"
+
+# Nice value to run kydd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

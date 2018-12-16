@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  kydd The KYD core server.
+#
+#
+# chkconfig: 345 80 20
+# description: kydd
+# processname: kydd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/kydd, see below
+if [ -f /etc/sysconfig/kydd ]; then
+        . /etc/sysconfig/kydd
+fi
+
+RETVAL=0
+
+prog=kydd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/kydd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/kydd}
+
+# kydd defaults to /usr/bin/kydd, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/kydd}
+
+# kydd opts default to -disablewallet, override with BITCOIND_OPTS
+bitcoind_opts=${BITCOIND_OPTS}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
