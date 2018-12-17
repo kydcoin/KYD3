@@ -127,28 +127,28 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // KYD: 1 day
-        nTargetSpacing = 1 * 60;  // KYD: 1 minute
-        nMaturity = 15;
+        nTargetSpacing = 1 * 30;  // KYD: 1 minute
+        nMaturity = 20;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
 
         /** Major code base update **/
-        nWalletForkBlock = 550;
-        nWalletForkDblBlock = 5000000;       // +10000
-        nWalletForkResumeBlock = 5000000;    // +20000
+        nWalletForkBlock = 275;
+        nWalletForkDblBlock = 50000000;       // +10000
+        nWalletForkResumeBlock = 50000000;    // +20000
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 500;
+        nLastPOWBlock = 250;
         nModifierUpdateBlock = 1;
-        nZerocoinStartHeight = 501;
+        nZerocoinStartHeight = 251;
         nZerocoinStartTime = 1544339974;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = 5000000; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = 5000000; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = 5000000; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = 5000000; //Start enforcing the invalid UTXO's and staking rewards
+        nBlockRecalculateAccumulators = 50000000; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = 50000000; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = 50000000; //Last valid accumulator checkpoint
+        nBlockEnforceInvalidUTXO = 50000000; //Start enforcing the invalid UTXO's and staking rewards
         nInvalidAmountFiltered = 0*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
-        nBlockZerocoinV2 = 550; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
+        nBlockZerocoinV2 = 50000000; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
         nEnforceNewSporkKey = 1632109087; //!> Sporks signed after (GMT): Tuesday, May 1, 2018 7:00:00 AM GMT must use the new spork key
         nRejectOldSporkKey = 1632109087; //!> Fully reject old spork key after (GMT): Friday, June 1, 2018 12:00:00 AM
 
