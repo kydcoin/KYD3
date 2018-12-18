@@ -2911,7 +2911,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
     CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
-    if (chainActive.Height() < Params().WalletForkResumeBlock() && chainActive.Height() >= Params().WalletForkDblBlock()) {
+    if (chainActive.Height() < Params().WalletForkResumeBlock() && chainActive.Height() >= 5000) {
         nExpectedMint = 100 * COIN;
     }
     if (block.IsProofOfWork())
