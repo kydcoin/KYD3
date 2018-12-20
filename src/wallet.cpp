@@ -774,11 +774,11 @@ isminetype CWallet::IsMine(const CTxIn& txin) const
 
 bool CWallet::IsMyZerocoinSpend(const CBigNum& bnSerial) const
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // return zkydTracker->HasSerial(bnSerial);
-	// **** Zero Disable End ****
-	
-	return false;
+    // **** Zero Disable End ****
+    
+    return false;
 }
 
 CAmount CWallet::GetDebit(const CTxIn& txin, const isminefilter& filter) const
@@ -1643,7 +1643,7 @@ std::map<libzerocoin::CoinDenomination, int> mapMintMaturity;
 int nLastMaturityCheck = 0;
 CAmount CWallet::GetZerocoinBalance(bool fMatureOnly) const
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // if (fMatureOnly) {
     //     if (chainActive.Height() > nLastMaturityCheck)
     //         mapMintMaturity = GetMintMaturityHeight();
@@ -1660,27 +1660,27 @@ CAmount CWallet::GetZerocoinBalance(bool fMatureOnly) const
     // }
     // 
     // return zkydTracker->GetBalance(false, false);
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 
-	return 0;
+    return 0;
 }
 
 CAmount CWallet::GetImmatureZerocoinBalance() const
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // return GetZerocoinBalance(false) - GetZerocoinBalance(true) - GetUnconfirmedZerocoinBalance();
-	// **** Zero Disable End ****
-	
-	return 0;
+    // **** Zero Disable End ****
+    
+    return 0;
 }
 
 CAmount CWallet::GetUnconfirmedZerocoinBalance() const
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // return zkydTracker->GetUnconfirmedBalance();
-	// **** Zero Disable End ****
-	
-	return 0;
+    // **** Zero Disable End ****
+    
+    return 0;
 }
 
 CAmount CWallet::GetUnlockedCoins() const
@@ -3993,7 +3993,7 @@ bool CWallet::GetDestData(const CTxDestination& dest, const std::string& key, st
 // CWallet::AutoZeromint() gets called with each new incoming block
 void CWallet::AutoZeromint()
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // // Don't bother Autominting if Zerocoin Protocol isn't active
     // if (GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) return;
     // 
@@ -4094,7 +4094,7 @@ void CWallet::AutoZeromint()
     // else {
     //     LogPrintf("CWallet::AutoZeromint(): Nothing minted because either not enough funds available or the requested denomination size (%d) is not yet reached.\n", nPreferredDenom);
     // }
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 }
 
 void CWallet::AutoCombineDust()
@@ -4476,7 +4476,7 @@ bool CWallet::GetZerocoinKey(const CBigNum& bnSerial, CKey& key)
 
 bool CWallet::CreateZKYDOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint)
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // // mint a new coin (create Pedersen Commitment) and extract PublicCoin that is shareable from it
     // libzerocoin::PrivateCoin coin(Params().Zerocoin_Params(false), denomination, false);
     // zwalletMain->GenerateDeterministicZKYD(denomination, coin, dMint);
@@ -4493,14 +4493,14 @@ bool CWallet::CreateZKYDOutPut(libzerocoin::CoinDenomination denomination, CTxOu
     // outMint = CTxOut(libzerocoin::ZerocoinDenominationToAmount(denomination), scriptSerializedCoin);
     // 
     // return true;
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 
-	return false;
+    return false;
 }
 
 bool CWallet::CreateZerocoinMintTransaction(const CAmount nValue, CMutableTransaction& txNew, vector<CDeterministicMint>& vDMints, CReserveKey* reservekey, int64_t& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl, const bool isZCSpendChange)
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // if (IsLocked()) {
     //     strFailReason = _("Error: Wallet locked, unable to create transaction!");
     //     LogPrintf("SpendZerocoin() : %s", strFailReason.c_str());
@@ -4589,16 +4589,16 @@ bool CWallet::CreateZerocoinMintTransaction(const CAmount nValue, CMutableTransa
     // }
     // 
     // return true;
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 
     strFailReason = _("Zerocoin is disabled");
-	return false;
+    return false;
 }
 
 bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, const uint256& hashTxOut, CTxIn& newTxIn,
                          CZerocoinSpendReceipt& receipt, libzerocoin::SpendType spendType, CBlockIndex* pindexCheckpoint)
 {
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // // Default error status if not changed below
     // receipt.SetStatus(_("Transaction Mint Started"), ZKYD_TXMINT_GENERAL);
     // libzerocoin::ZerocoinParams* paramsAccumulator = Params().Zerocoin_Params(false);
@@ -4724,9 +4724,9 @@ bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, con
     // receipt.SetStatus(_("Spend Valid"), ZKYD_SPEND_OKAY); // Everything okay
     // 
     // return true;
-	// **** Zero Disable End ****
-	
-	return error("%s: Zerocoin is disabled", __func__);
+    // **** Zero Disable End ****
+    
+    return error("%s: Zerocoin is disabled", __func__);
 }
 
 bool CWallet::CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel, CWalletTx& wtxNew, CReserveKey& reserveKey, CZerocoinSpendReceipt& receipt, vector<CZerocoinMint>& vSelectedMints, vector<CDeterministicMint>& vNewMints, bool fMintChange,  bool fMinimizeChange, CBitcoinAddress* address)

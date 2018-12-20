@@ -2890,12 +2890,12 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         RecalculateKYDSupply(Params().Zerocoin_StartHeight());
     }
 
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // //Track zKYD money supply in the block index
     // if (!UpdateZKYDSupply(block, pindex))
     //     return state.DoS(100, error("%s: Failed to calculate new zKYD supply for block=%s height=%d", __func__,
     //                                 block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 
     // track money supply and mint amount info
     CAmount nMoneySupplyPrev = pindex->pprev ? pindex->pprev->nMoneySupply : 0;
@@ -2991,14 +2991,14 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         }
     }
 
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // // Flush spend/mint info to disk
     // if (!zerocoinDB->WriteCoinSpendBatch(vSpends)) return state.Abort(("Failed to record coin serials to database"));
     // if (!zerocoinDB->WriteCoinMintBatch(vMints)) return state.Abort(("Failed to record new mints to database"));
     // 
     // //Record accumulator checksums
     // DatabaseChecksums(mapAccumulators);
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 
     if (fTxIndex)
         if (!pblocktree->WriteTxIndex(vPos))
@@ -3837,7 +3837,7 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
         return state.DoS(50, error("CheckBlockHeader() : proof of work failed"),
             REJECT_INVALID, "high-hash");
 
-	// **** Zero Disable Start ****
+    // **** Zero Disable Start ****
     // // Version 4 header must be used after Params().Zerocoin_StartHeight(). And never before.
     // if (block.GetBlockTime() > Params().Zerocoin_StartTime()) {
     //     if(block.nVersion < Params().Zerocoin_HeaderVersion())
@@ -3848,7 +3848,7 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
     //         return state.DoS(50, error("CheckBlockHeader() : block version must be below 4 before ZerocoinStartHeight"),
     //         REJECT_INVALID, "block-version");
     // }
-	// **** Zero Disable End ****
+    // **** Zero Disable End ****
 
     return true;
 }
