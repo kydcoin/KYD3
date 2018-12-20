@@ -774,7 +774,11 @@ isminetype CWallet::IsMine(const CTxIn& txin) const
 
 bool CWallet::IsMyZerocoinSpend(const CBigNum& bnSerial) const
 {
-    return zkydTracker->HasSerial(bnSerial);
+	// **** Zero Disable Start ****
+    // return zkydTracker->HasSerial(bnSerial);
+	// **** Zero Disable End ****
+	
+	return false;
 }
 
 CAmount CWallet::GetDebit(const CTxIn& txin, const isminefilter& filter) const
