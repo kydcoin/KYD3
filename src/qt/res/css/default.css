@@ -65,11 +65,11 @@ QMenu::item:selected {
 }
 
 QToolBar {
-  background-color: qlineargradient(y1:0, y2: 1, stop: 0 #23da79, stop: 0.75 #23da79, stop: 0.99 #ffffff, stop: 1 #ffffff);
+  background-color: qlineargradient(y1:0, y2: 1, stop: 0 #23da79, stop: 0.80 #23da79, stop: 0.99 #ffffff, stop: 1 #ffffff);
 	border: 0px solid #fff;
-	padding: 1;
+	padding: 0;
 	margin: 0;
-  width: 70px;
+  width: 90px;
 }
 
 QToolBar > QToolButton {
@@ -82,10 +82,11 @@ QToolBar > QToolButton {
 	border-top: 0px;
 	min-height: 2.5em;
 	padding: 0em 0em;
+  font-weight: bold;
 	font-size: 11px;
 	color: #fff;
-	width: 80px;
-	height: 60px;
+	width: 90px;
+	height: 70px;
 }
 
 QToolBar > QToolButton:checked {
