@@ -658,7 +658,7 @@
     </message>
     <message>
         <source>&amp;Privacy</source>
-        <translation>&amp;pRIVACY</translation>
+        <translation>&amp;Privacy</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
