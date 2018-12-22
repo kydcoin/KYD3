@@ -34,6 +34,7 @@ contrib/devtools/split-debug.sh
 
 src/leveldb/build_config.mk
 src/univalue/gen
+src/univalue/build-aux
 
 src/qt/*.moc
 src/qt/moc_*.cpp
