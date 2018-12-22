@@ -113,7 +113,7 @@ QMessageBox {
 }
 
 QProgressBar {
-	color: #AAAAAA;
+	color: #000;
 	border: 1px solid transparent;
 	border-radius: 50px;
 	background-color: transparent;
