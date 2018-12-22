@@ -81,7 +81,7 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet) : QDialog(paren
         digits.setNum(index);
         ui->digits->addItem(digits, digits);
     }
-    
+
     /* Theme selector static themes */
     ui->theme->addItem(QString("Default"), QVariant("default"));
 
@@ -145,6 +145,19 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet) : QDialog(paren
 
     /* setup/change UI elements when proxy IP is invalid/valid */
     connect(this, SIGNAL(proxyIpChecks(QValidatedLineEdit*, QLineEdit*)), this, SLOT(doProxyIpChecks(QValidatedLineEdit*, QLineEdit*)));
+
+    /* Disable Zerocoin */
+    ui->checkBoxZeromintEnable->setEnabled(false);
+    ui->percentage_label->setEnabled(false);
+    ui->zeromintPercentage->setEnabled(false);
+    ui->labelPreferredDenom->setEnabled(false);
+    ui->preferredDenom->setEnabled(false);
+
+    ui->checkBoxZeromintEnable->setVisible(false);
+    ui->percentage_label->setVisible(false);
+    ui->zeromintPercentage->setVisible(false);
+    ui->labelPreferredDenom->setVisible(false);
+    ui->preferredDenom->setVisible(false);
 }
 
 OptionsDialog::~OptionsDialog()
