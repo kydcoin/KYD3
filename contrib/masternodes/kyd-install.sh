@@ -11,7 +11,7 @@ COIN_DAEMON='kydd'
 COIN_CLI='kyd-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.1.2.0/kydcoin-3.1.2.0-ubuntu16.tar.gz'
-COIN_BOOTSTRAP='https://raw.githubusercontent.com/enginama/KYD3/master/contrib/masternodes/kyd-bootstrap.tar.gz'
+COIN_BOOTSTRAP='https://raw.githubusercontent.com/kydcoin/KYD3/master/contrib/masternodes/kyd-bootstrap.tar.gz'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='KYD'
@@ -244,7 +244,7 @@ function important_information() {
  echo -e "VPS_IP:PORT ${RED}$NODEIP:$COIN_PORT${NC}"
  echo -e "MASTERNODE PRIVATEKEY is: ${RED}$COINKEY${NC}"
  echo -e "Please check ${RED}$COIN_NAME${NC} is running with the following command: ${RED}systemctl status $COIN_NAME.service${NC}"
- echo -e "Please check that your chain is fully synced before starting it from local wallet. To do this type kyd-cli mnsync status. {GREEN}RequestedMasternodeAssets{NC} must equal {GREEN}999{NC}"
+ echo -e "Please check that your chain is fully synced before starting it from local wallet. To do this type kyd-cli mnsync status. ${GREEN}RequestedMasternodeAssets${NC} must equal ${GREEN}999${NC}"
  echo -e "================================================================================================================================"
 }
 
