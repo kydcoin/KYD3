@@ -244,7 +244,7 @@ function important_information() {
  echo -e "VPS_IP:PORT ${RED}$NODEIP:$COIN_PORT${NC}"
  echo -e "MASTERNODE PRIVATEKEY is: ${RED}$COINKEY${NC}"
  echo -e "Please check ${RED}$COIN_NAME${NC} is running with the following command: ${RED}systemctl status $COIN_NAME.service${NC}"
- echo -e "Please check that your chain is fully synced before starting it from local wallet. To do this type kyd-cli mnsync status. {GREEN}RequestedMasternodeAssets{NC} must equal {GREEN}999{NC}"
+ echo -e "Please check that your chain is fully synced before starting it from local wallet. To do this type kyd-cli mnsync status. ${GREEN}RequestedMasternodeAssets${NC} must equal ${GREEN}999${NC}"
  echo -e "================================================================================================================================"
 }
 
