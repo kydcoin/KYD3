@@ -56,7 +56,6 @@ src/qt/test/moc*.cpp
 *.pyc
 *.o
 *.o-*
-*.patch
 .kyd
 *.a
 *.pb.cc
@@ -76,7 +75,6 @@ src/qt/test/moc*.cpp
 
 # Compilation and Qt preprocessor part
 *.qm
-Makefile
 kyd-qt
 KYD-Qt.app
 .!*
