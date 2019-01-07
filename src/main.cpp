@@ -1307,7 +1307,6 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
         }
     }
 
-
     {
         CCoinsView dummy;
         CCoinsViewCache view(&dummy);
@@ -2891,10 +2890,12 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         RecalculateKYDSupply(Params().Zerocoin_StartHeight());
     }
 
-    //Track zKYD money supply in the block index
-    if (!UpdateZKYDSupply(block, pindex))
-        return state.DoS(100, error("%s: Failed to calculate new zKYD supply for block=%s height=%d", __func__,
-                                    block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
+    // **** Zero Disable Start ****
+    // //Track zKYD money supply in the block index
+    // if (!UpdateZKYDSupply(block, pindex))
+    //     return state.DoS(100, error("%s: Failed to calculate new zKYD supply for block=%s height=%d", __func__,
+    //                                 block.GetHash().GetHex(), pindex->nHeight), REJECT_INVALID);
+    // **** Zero Disable End ****
 
     // track money supply and mint amount info
     CAmount nMoneySupplyPrev = pindex->pprev ? pindex->pprev->nMoneySupply : 0;
@@ -2990,12 +2991,14 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         }
     }
 
-    // Flush spend/mint info to disk
-    if (!zerocoinDB->WriteCoinSpendBatch(vSpends)) return state.Abort(("Failed to record coin serials to database"));
-    if (!zerocoinDB->WriteCoinMintBatch(vMints)) return state.Abort(("Failed to record new mints to database"));
-
-    //Record accumulator checksums
-    DatabaseChecksums(mapAccumulators);
+    // **** Zero Disable Start ****
+    // // Flush spend/mint info to disk
+    // if (!zerocoinDB->WriteCoinSpendBatch(vSpends)) return state.Abort(("Failed to record coin serials to database"));
+    // if (!zerocoinDB->WriteCoinMintBatch(vMints)) return state.Abort(("Failed to record new mints to database"));
+    // 
+    // //Record accumulator checksums
+    // DatabaseChecksums(mapAccumulators);
+    // **** Zero Disable End ****
 
     if (fTxIndex)
         if (!pblocktree->WriteTxIndex(vPos))
@@ -3834,16 +3837,18 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
         return state.DoS(50, error("CheckBlockHeader() : proof of work failed"),
             REJECT_INVALID, "high-hash");
 
-    // Version 4 header must be used after Params().Zerocoin_StartHeight(). And never before.
-    if (block.GetBlockTime() > Params().Zerocoin_StartTime()) {
-        if(block.nVersion < Params().Zerocoin_HeaderVersion())
-            return state.DoS(50, error("CheckBlockHeader() : block version must be above 4 after ZerocoinStartHeight"),
-            REJECT_INVALID, "block-version");
-    } else {
-        if (block.nVersion >= Params().Zerocoin_HeaderVersion())
-            return state.DoS(50, error("CheckBlockHeader() : block version must be below 4 before ZerocoinStartHeight"),
-            REJECT_INVALID, "block-version");
-    }
+    // **** Zero Disable Start ****
+    // // Version 4 header must be used after Params().Zerocoin_StartHeight(). And never before.
+    // if (block.GetBlockTime() > Params().Zerocoin_StartTime()) {
+    //     if(block.nVersion < Params().Zerocoin_HeaderVersion())
+    //         return state.DoS(50, error("CheckBlockHeader() : block version must be above 4 after ZerocoinStartHeight"),
+    //         REJECT_INVALID, "block-version");
+    // } else {
+    //     if (block.nVersion >= Params().Zerocoin_HeaderVersion())
+    //         return state.DoS(50, error("CheckBlockHeader() : block version must be below 4 before ZerocoinStartHeight"),
+    //         REJECT_INVALID, "block-version");
+    // }
+    // **** Zero Disable End ****
 
     return true;
 }

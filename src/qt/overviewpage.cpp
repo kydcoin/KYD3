@@ -149,6 +149,11 @@ OverviewPage::OverviewPage(QWidget* parent) : QWidget(parent),
     ui->labelWalletStatus->setText("(" + tr("out of sync") + ")");
     ui->labelTransactionsStatus->setText("(" + tr("out of sync") + ")");
 
+    // Disable Zerocoin Frame
+    ui->frame_ZerocoinBalances->hide();
+
+    SetLinks();
+
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
 }
@@ -421,4 +426,21 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+}
+
+void OverviewPage::SetLinks()
+{
+    ui->labelLinks1->setText("Website:");
+    ui->labelLinks2->setText("Review:");
+    ui->labelLinks3->setText("Block Explorer:");
+    ui->labelLinks4->setText("Discord:");
+    ui->labelLinks5->setText("Twitter:");
+    ui->labelLinks6->setText("Github:");
+
+    ui->labelLinksUrl1->setText("<a href=\"https://kydcoin.io\">https://kydcoin.io</a>");
+    ui->labelLinksUrl2->setText("<a href=\"https://review.kydcoin.io\">https://review.kydcoin.io</a>");
+    ui->labelLinksUrl3->setText("<a href=\"https://explorer.kydcoin.io\">https://explorer.kydcoin.io</a>");
+    ui->labelLinksUrl4->setText("<a href=\"https://discord.gg/xjXpxqP\">https://discord.gg/xjXpxqP</a>");
+    ui->labelLinksUrl5->setText("<a href=\"https://twitter.com/KYDcoin\">https://twitter.com/KYDcoin</a>");
+    ui->labelLinksUrl6->setText("<a href=\"https://github.com/kydcoin\">https://github.com/kydcoin</a>");
 }

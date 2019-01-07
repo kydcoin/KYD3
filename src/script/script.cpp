@@ -250,17 +250,24 @@ bool CScript::IsPayToScriptHash() const
 
 bool CScript::IsZerocoinMint() const
 {
-    //fast test for Zerocoin Mint CScripts
-    return (this->size() > 0 &&
-        this->at(0) == OP_ZEROCOINMINT);
+	// **** Zero Disable Start ****
+    // //fast test for Zerocoin Mint CScripts
+    // return (this->size() > 0 && this->at(0) == OP_ZEROCOINMINT);
+	// **** Zero Disable End ****
+	
+	return false;
 }
 
 bool CScript::IsZerocoinSpend() const
 {
-    if (this->empty())
-        return false;
-
-    return (this->at(0) == OP_ZEROCOINSPEND);
+	// **** Zero Disable Start ****
+    // if (this->empty())
+    //     return false;
+    // 
+    // return (this->at(0) == OP_ZEROCOINSPEND);
+	// **** Zero Disable End ****
+	
+	return false;
 }
 
 bool CScript::IsPushOnly(const_iterator pc) const
