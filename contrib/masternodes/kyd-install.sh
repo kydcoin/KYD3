@@ -4,7 +4,6 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 TMP_FOLDER=$(mktemp -d)
-IMG_FILE='DuAiBSwV4AACVAA.ansi.txt'
 CONFIG_FILE='kyd.conf'
 CONFIGFOLDER='/root/.kydcore'
 COIN_DAEMON='kydd'
