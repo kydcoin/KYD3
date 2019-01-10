@@ -369,10 +369,10 @@ exit 1
 
 function UpdateNode() {
 echo -e "Stopping KYD Service"
-cp KYD.service kyd.service > /dev/null 2>&1
+cp /etc/systemd/system/KYD.service /etc/systemd/system/kyd.service > /dev/null 2>&1
 systemctl stop $COIN_NAME.service > /dev/null 2>&1
 systemctl stop KYD.service > /dev/null 2>&1
-rm KYD.service > /dev/null 2>&1
+rm /etc/systemd/system/KYD.service > /dev/null 2>&1
 download_node
   systemctl start $COIN_NAME.service
   echo -e "${GREEN}$COIN_NAME Masternode has been updated!${NC}"
