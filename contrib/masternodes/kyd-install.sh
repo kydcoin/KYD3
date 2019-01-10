@@ -14,7 +14,7 @@ COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.1.2.1/kydcoin-3.1
 COIN_BOOTSTRAP='https://raw.githubusercontent.com/kydcoin/KYD3/master/contrib/masternodes/kyd-bootstrap.tar.gz'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='KYD'
+COIN_NAME='kyd'
 COIN_PORT=12244
 RPC_PORT=12243
 
