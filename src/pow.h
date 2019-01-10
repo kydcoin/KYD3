@@ -24,6 +24,8 @@ enum DiffMode {
 };
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader* pblock);
+unsigned int GetDGWNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader* pblock, int64_t targetSpacing, uint256 workLimit);
+unsigned int Get2BlocksNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader* pblock);
 
 /** Check whether a block hash satisfies the proof-of-work requirement specified by nBits */
 bool CheckProofOfWork(uint256 hash, unsigned int nBits);

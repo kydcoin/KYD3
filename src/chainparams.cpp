@@ -122,7 +122,8 @@ public:
         pchMessageStart[3] = 0xe6;
         vAlertPubKey = ParseHex("045842c614ccb80d184542d6b45a6851f58de36fc898d6a38f32b4b7af28a67e16f2b809c1425c6d95eb8b39aa3e79729bfe59f6854450229ea6572045455962b7");
         nDefaultPort = 12244;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // KYD starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // KYD starting difficulty is 1 / 2^20
+        bnPOSWorkLimit = ~uint256(0) >> 24; // KYD max POS difficulty is 1 / 2^24
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
@@ -131,6 +132,8 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // KYD: 1 day
         nTargetSpacing = 1 * 30;  // KYD: 1 minute
+        nPOSTargetSpacing = 60;
+        nPOSDGWForkBlock = 55000;
         nMaturity = 20;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
