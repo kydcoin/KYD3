@@ -146,3 +146,8 @@ make
 /nbproject/
 KYD-Qt.app/Contents/MacOS/KYD-Qt
 dist/KYD-Qt.app/Contents/MacOS/KYD-Qt
+
+Makefile
+src/Makefile
+src/leveldb/build_config.mk
+src/univalue/Makefile
