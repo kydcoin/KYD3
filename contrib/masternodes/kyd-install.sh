@@ -4,17 +4,16 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 TMP_FOLDER=$(mktemp -d)
-IMG_FILE='DuAiBSwV4AACVAA.ansi.txt'
 CONFIG_FILE='kyd.conf'
 CONFIGFOLDER='/root/.kydcore'
 COIN_DAEMON='kydd'
 COIN_CLI='kyd-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.1.2.0/kydcoin-3.1.2.0-ubuntu16.tar.gz'
+COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.1.3.1/kydcoin-3.1.3.1-ubuntu16-full.tar.gz'
 COIN_BOOTSTRAP='https://raw.githubusercontent.com/kydcoin/KYD3/master/contrib/masternodes/kyd-bootstrap.tar.gz'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='KYD'
+COIN_NAME='kyd'
 COIN_PORT=12244
 RPC_PORT=12243
 
@@ -370,7 +369,10 @@ exit 1
 
 function UpdateNode() {
 echo -e "Stopping KYD Service"
-systemctl stop $COIN_NAME.service
+cp KYD.service kyd.service > /dev/null 2>&1
+systemctl stop $COIN_NAME.service > /dev/null 2>&1
+systemctl stop KYD.service > /dev/null 2>&1
+rm KYD.service > /dev/null 2>&1
 download_node
   systemctl start $COIN_NAME.service
   echo -e "${GREEN}$COIN_NAME Masternode has been updated!${NC}"
