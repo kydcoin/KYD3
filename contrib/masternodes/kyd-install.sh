@@ -310,7 +310,7 @@ done
 
 function resync_no_bootstrap() {
 echo -e "${RED}Stopping $COIN_DAEMON...${NC}"
-systemctl stop ${COIN_NAME^^}.service
+systemctl stop $COIN_NAME.service
 echo -e "${RED}Sleeping for 20 seconds...${NC}";
 sleep 20
 cd $CONFIGFOLDER
@@ -323,14 +323,14 @@ mv ${COIN_NAME,,}{.keep,.conf}
 ls -al
 sleep 5
 echo -e "${YELLOW}Starting $COIN_DAEMON...${NC}"
-systemctl start ${COIN_NAME^^}.service
-echo -e "${GREEN}${COIN_NAME^^} Masternode refreshed!${NC}"
+systemctl start $COIN_NAME.service
+echo -e "${GREEN}$COIN_NAME Masternode refreshed!${NC}"
 exit 1
 }
 
 function resync_bootstrap() {
 echo -e "${RED}Stopping $COIN_DAEMON...${NC}"
-systemctl stop ${COIN_NAME^^}.service
+systemctl stop $COIN_NAME.service
 echo -e "${RED}Sleeping for 20 seconds...${NC}";
 sleep 20
 cd $CONFIGFOLDER
@@ -345,7 +345,7 @@ sleep 1
 download_bootstrap
 sleep 1
 echo -e "${YELLOW}Starting $COIN_DAEMON...${NC}"
-systemctl start ${COIN_NAME^^}.service
+systemctl start $COIN_NAME.service
 echo -e "${GREEN}${COIN_NAME^^} Masternode refreshed!${NC}"
 exit 1
 }
