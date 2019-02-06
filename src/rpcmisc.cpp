@@ -217,12 +217,12 @@ UniValue mnsync(const UniValue& params, bool fHelp)
         masternodeSync.Reset();
         return "success";
     }
-	
+
     if (strMode == "next") {
         masternodeSync.GetNextAsset();
         return masternodeSync.GetSyncStatus();
     }
-	
+
     return "failure";
 }
 
@@ -617,3 +617,47 @@ UniValue getstakingstatus(const UniValue& params, bool fHelp)
     return obj;
 }
 #endif // ENABLE_WALLET
+
+UniValue makekeypair(const UniValue& params, bool fHelp)
+{
+    if (fHelp || params.size() > 1) {
+                throw runtime_error(
+            "makekeypair [\"prefix\"]\n"
+            "\nCreates a new key pair.\n"
+            "It returns a json object with the public and private key.\n"
+
+            "\nArguments:\n"
+            "1. prefix      (string, optional) The prefix for the address.\n"
+
+            "\nResult:\n"
+            "[\n"
+            "  \"PublicKey\":\"public key\",  (string) The public key.\n"
+            "  \"PrivateKey\":\"private key\" (string) The private key.\n"
+            "]\n");
+    }
+
+    string strPrefix = "";
+    if (params.size() > 0)
+        strPrefix = params[0].get_str();
+
+    CKey key;
+    CPubKey pubkey;
+    string pubkeyhex;
+    int nCount = 0;
+    do
+    {
+        key.MakeNewKey(false);
+        nCount++;
+        pubkey = key.GetPubKey();
+        pubkeyhex = HexStr(pubkey.begin(), pubkey.end());
+    } while (nCount < 10000 && strPrefix != pubkeyhex.substr(0, strPrefix.size()));
+
+    if (strPrefix != pubkeyhex.substr(0, strPrefix.size()))
+        return NullUniValue;
+
+    UniValue result(UniValue::VOBJ);
+    result.push_back(Pair("PublicKey", pubkeyhex));
+    result.push_back(Pair("PrivateKey", CBitcoinSecret(key).ToString()));
+
+    return result;
+}
