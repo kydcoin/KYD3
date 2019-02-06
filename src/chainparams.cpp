@@ -150,7 +150,7 @@ public:
         nZerocoinStartHeight = INT_MAX-1; //Never Activated
         nZerocoinStartTime = INT_MAX-1; //Never Activated
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = 130000; //Trigger a recalculation of accumulators
+        nBlockRecalculateAccumulators = INT_MAX-1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = INT_MAX-1; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = INT_MAX-1; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = INT_MAX-1; //Start enforcing the invalid UTXO's and staking rewards
