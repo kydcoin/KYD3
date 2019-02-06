@@ -57,13 +57,14 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (250, uint256("0x0000027a906e79807e5366cb898801ddae8c1c613079b2b8d86f91d50bca9280"))
     (2500, uint256("0xc120830f40226255b0b4c9f787c99af92699712fc52ca190fc23000707813f92"))
     (5250, uint256("0x745c5e4c4e49d7f9d31d87bfe2d5ab9b94f1073c1a7363ecb217ee03104d6858"));
+    (122500, uint256("2004719bd307f37b0baaa095bb1ad5433a790e5e5b68dcb6ab8ff40672159b6c"))
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1545180276, // * UNIX timestamp of last checkpoint block
-    10361,      // * total number of transactions between genesis and last checkpoint
+    1549420078, // * UNIX timestamp of last checkpoint block
+    251748,      // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    1400        // * estimated number of transactions per day after checkpoint
+    2000        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -120,7 +121,7 @@ public:
         pchMessageStart[1] = 0xc2;
         pchMessageStart[2] = 0xd1;
         pchMessageStart[3] = 0xe6;
-        vAlertPubKey = ParseHex("045842c614ccb80d184542d6b45a6851f58de36fc898d6a38f32b4b7af28a67e16f2b809c1425c6d95eb8b39aa3e79729bfe59f6854450229ea6572045455962b7");
+        vAlertPubKey = ParseHex("04fd8606e6bbc284001d0ec860080d59d86b1d3a82dd26fde49fc8724de70f4e36fcec5ec2ac113e78e391b59b09c49fb17fc580d8f50f1e7eb1a105edd25e14b1");
         nDefaultPort = 12244;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // KYD starting difficulty is 1 / 2^20
         bnPOSWorkLimit = ~uint256(0) >> 24; // KYD max POS difficulty is 1 / 2^24
@@ -149,14 +150,14 @@ public:
         nZerocoinStartHeight = INT_MAX-1; //Never Activated
         nZerocoinStartTime = INT_MAX-1; //Never Activated
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = INT_MAX-1; //Trigger a recalculation of accumulators
+        nBlockRecalculateAccumulators = 130000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = INT_MAX-1; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = INT_MAX-1; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = INT_MAX-1; //Start enforcing the invalid UTXO's and staking rewards
         nInvalidAmountFiltered = 0*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
         nBlockZerocoinV2 = INT_MAX-1; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
-        nEnforceNewSporkKey = 1632109087; //!> Sporks signed after (GMT): Tuesday, May 1, 2018 7:00:00 AM GMT must use the new spork key
-        nRejectOldSporkKey = 1632109087; //!> Fully reject old spork key after (GMT): Friday, June 1, 2018 12:00:00 AM
+        nEnforceNewSporkKey = 1549497600; //!> Sporks signed after (GMT): 02/07/2019 @ 12:00am (UTC) must use the new spork key
+        nRejectOldSporkKey = 1549497600; //!> Fully reject old spork key after (GMT): 02/07/2019 @ 12:00am (UTC)
 
         const char* pszTimestamp = "KYD - Trust between community and developer";
         CMutableTransaction txNew;
@@ -202,9 +203,9 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "03e4668cc19a96b25e35a025387c0796ee84d81770b3bba3a1deffab6e22715b83";
+        strSporkKey = "04aab04c0811c0a0ceec6f15174c83c351c6bc2fa89f633f11ee6c4e0d5afb2c41718acf73145dcdbd12271e6a1c5fc8a1e6e242d86e3ae257ddf0831fd090231b";
         strSporkKeyOld = "03e4668cc19a96b25e35a025387c0796ee84d81770b3bba3a1deffab6e22715b83";
-        strObfuscationPoolDummyAddress = "BKcUbM3ryKwfdjbd33FnAYFspaxDp4vWLs";
+        strObfuscationPoolDummyAddress = "YKcUbM3ryKwfdjbd33FnAYFspaxDp4vWLs";
         nStartMasternodePayments = 1523435473; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
