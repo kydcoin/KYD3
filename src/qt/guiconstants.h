@@ -54,8 +54,8 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "KYD"
-#define QAPP_ORG_DOMAIN "kyd.org"
+#define QAPP_ORG_NAME "KYD-Core"
+#define QAPP_ORG_DOMAIN "kydcoin.io"
 #define QAPP_APP_NAME_DEFAULT "KYD-Qt"
 #define QAPP_APP_NAME_TESTNET "KYD-Qt-testnet"
 
