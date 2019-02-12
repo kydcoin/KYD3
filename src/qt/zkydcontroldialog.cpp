@@ -1,4 +1,5 @@
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,6 +15,14 @@ using namespace libzerocoin;
 
 std::set<std::string> ZKydControlDialog::setSelectedMints;
 std::set<CMintMeta> ZKydControlDialog::setMints;
+
+bool CZKydControlWidgetItem::operator<(const QTreeWidgetItem &other) const {
+    int column = treeWidget()->sortColumn();
+    if (column == ZKydControlDialog::COLUMN_DENOMINATION || column == ZKydControlDialog::COLUMN_VERSION || column == ZKydControlDialog::COLUMN_CONFIRMATIONS)
+        return data(column, Qt::UserRole).toLongLong() < other.data(column, Qt::UserRole).toLongLong();
+    return QTreeWidgetItem::operator<(other);
+}
+
 
 ZKydControlDialog::ZKydControlDialog(QWidget *parent) :
     QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint),
@@ -42,6 +51,7 @@ void ZKydControlDialog::setModel(WalletModel *model)
     updateList();
 }
 
+
 //Update the tree widget
 void ZKydControlDialog::updateList()
 {
@@ -53,7 +63,7 @@ void ZKydControlDialog::updateList()
     QFlags<Qt::ItemFlag> flgTristate = Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsTristate;
     map<libzerocoin::CoinDenomination, int> mapDenomPosition;
     for (auto denom : libzerocoin::zerocoinDenomList) {
-        QTreeWidgetItem* itemDenom(new QTreeWidgetItem);
+        CZKydControlWidgetItem* itemDenom(new CZKydControlWidgetItem);
         ui->treeWidget->addTopLevelItem(itemDenom);
 
         //keep track of where this is positioned in tree widget
@@ -61,11 +71,12 @@ void ZKydControlDialog::updateList()
 
         itemDenom->setFlags(flgTristate);
         itemDenom->setText(COLUMN_DENOMINATION, QString::number(denom));
+        itemDenom->setData(COLUMN_DENOMINATION, Qt::UserRole, QVariant((qlonglong) denom));
     }
 
-    // select all unused coins - including not mature. Update status of coins too.
+    // select all unused coins - including not mature and mismatching seed. Update status of coins too.
     std::set<CMintMeta> set;
-    model->listZerocoinMints(set, true, false, true);
+    model->listZerocoinMints(set, true, false, true, true);
     this->setMints = set;
 
     //populate rows with mint info
@@ -74,7 +85,7 @@ void ZKydControlDialog::updateList()
     for (const CMintMeta& mint : setMints) {
         // assign this mint to the correct denomination in the tree view
         libzerocoin::CoinDenomination denom = mint.denom;
-        QTreeWidgetItem *itemMint = new QTreeWidgetItem(ui->treeWidget->topLevelItem(mapDenomPosition.at(denom)));
+        CZKydControlWidgetItem *itemMint = new CZKydControlWidgetItem(ui->treeWidget->topLevelItem(mapDenomPosition.at(denom)));
 
         // if the mint is already selected, then it needs to have the checkbox checked
         std::string strPubCoinHash = mint.hashPubcoin.GetHex();
@@ -85,8 +96,10 @@ void ZKydControlDialog::updateList()
             itemMint->setCheckState(COLUMN_CHECKBOX, Qt::Unchecked);
 
         itemMint->setText(COLUMN_DENOMINATION, QString::number(mint.denom));
+        itemMint->setData(COLUMN_DENOMINATION, Qt::UserRole, QVariant((qlonglong) denom));
         itemMint->setText(COLUMN_PUBCOIN, QString::fromStdString(strPubCoinHash));
         itemMint->setText(COLUMN_VERSION, QString::number(mint.nVersion));
+        itemMint->setData(COLUMN_VERSION, Qt::UserRole, QVariant((qlonglong) mint.nVersion));
 
         int nConfirmations = (mint.nHeight ? nBestHeight - mint.nHeight : 0);
         if (nConfirmations < 0) {
@@ -95,6 +108,7 @@ void ZKydControlDialog::updateList()
         }
 
         itemMint->setText(COLUMN_CONFIRMATIONS, QString::number(nConfirmations));
+        itemMint->setData(COLUMN_CONFIRMATIONS, Qt::UserRole, QVariant((qlonglong) nConfirmations));
 
         // check for maturity
         bool isMature = false;
@@ -102,7 +116,7 @@ void ZKydControlDialog::updateList()
             isMature = mint.nHeight < mapMaturityHeight.at(denom);
 
         // disable selecting this mint if it is not spendable - also display a reason why
-        bool fSpendable = isMature && nConfirmations >= Params().Zerocoin_MintRequiredConfirmations();
+        bool fSpendable = isMature && nConfirmations >= Params().Zerocoin_MintRequiredConfirmations() && mint.isSeedCorrect;
         if(!fSpendable) {
             itemMint->setDisabled(true);
             itemMint->setCheckState(COLUMN_CHECKBOX, Qt::Unchecked);
@@ -114,6 +128,8 @@ void ZKydControlDialog::updateList()
             string strReason = "";
             if(nConfirmations < Params().Zerocoin_MintRequiredConfirmations())
                 strReason = strprintf("Needs %d more confirmations", Params().Zerocoin_MintRequiredConfirmations() - nConfirmations);
+            else if (!mint.isSeedCorrect)
+                strReason = "The zKYD seed used to mint this zKYD is not the same as currently hold in the wallet";
             else
                 strReason = strprintf("Needs %d more mints added to network", Params().Zerocoin_RequiredAccumulation());
 

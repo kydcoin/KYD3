@@ -1130,8 +1130,8 @@ Address: %4
         <translation>받는 사람이 %1 보다 작은 금액을 받으면 라벨이 빨간색으로 변경됩니다.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ukyd per input.</source>
-        <translation>Can vary +/- %1 ukyd per input.</translation>
+        <source>Can vary +/- %1 upiv per input.</source>
+        <translation>Can vary +/- %1 upiv per input.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2261,7 +2261,7 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <source>AutoMint is currently disabled.
 To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</source>
         <translation>자동 저장 기능이 현재 사용 중지되었습니다 .
-자동 변환을 사용하려면 kydotx.conf에서 'enablezeromint = 0'에서 'enablezeromint = 1'로 변경하십시오.</translation>
+자동 변환을 사용하려면 pivotx.conf에서 'enablezeromint = 0'에서 'enablezeromint = 1'로 변경하십시오.</translation>
     </message>
 </context>
 <context>
@@ -2929,7 +2929,7 @@ Maximum allowed: </source>
         <translation>주소를 입력하지 않아, 신규 주소를 생성합니다.</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
+        <source>Invalid Kyd Address</source>
         <translation>잘못된 KYD 주소</translation>
     </message>
     <message>
@@ -5147,8 +5147,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>환경설정에서 masternodeprivkey를 지정해야 합니다. 도움말을 참조하십시오.</translation>
     </message>
     <message>
-        <source>(9229 could be used only on mainnet)</source>
-        <translation>(9229 은 메인넷에서만 사용될 수 있습니다)</translation>
+        <source>(51472 could be used only on mainnet)</source>
+        <translation>(51472 은 메인넷에서만 사용될 수 있습니다)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5159,8 +5159,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>(기본값: 1)</translation>
     </message>
     <message>
-        <source>(must be 9229 for mainnet)</source>
-        <translation>(메인넷 일경우 9229)</translation>
+        <source>(must be 51472 for mainnet)</source>
+        <translation>(메인넷 일경우 51472)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

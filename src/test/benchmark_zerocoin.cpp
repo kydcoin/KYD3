@@ -9,7 +9,8 @@
  * @copyright  Copyright 2013 Ian Miers, Christina Garman and Matthew Green
  * @license    This project is released under the MIT license.
  **/
-// Copyright (c) 2017-2018 The PIVX developers
+ // Copyright (c) 2015-2019 The PivX developers
+ // Copyright (c) 2018-2019 The KYD developers
 
 #include <boost/test/unit_test.hpp>
 #include <string>
@@ -411,4 +412,3 @@ BOOST_AUTO_TEST_CASE(benchmark_test)
 	Testb_RunAllTests();
 }
 BOOST_AUTO_TEST_SUITE_END()
-

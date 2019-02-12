@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,7 +23,7 @@
 using namespace std;
 
 CBloomFilter::CBloomFilter(unsigned int nElements, double nFPRate, unsigned int nTweakIn, unsigned char nFlagsIn) :
- /**	
+ /**
  * The ideal size for a bloom filter with a given number of elements and false positive rate is:
  * - nElements * log(fp rate) / ln(2)^2
  * We ignore filter parameters which will create a bloom filter larger than the protocol limits

@@ -1,7 +1,8 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,7 +30,7 @@
 #include "masternodeman.h"
 #include "miner.h"
 #include "net.h"
-#include "rpcserver.h"
+#include "rpc/server.h"
 #include "script/standard.h"
 #include "scheduler.h"
 #include "spork.h"
@@ -41,7 +42,6 @@
 #include "utilmoneystr.h"
 #include "validationinterface.h"
 #include "zkydchain.h"
-#include "coinvalidator.h"
 
 #ifdef ENABLE_WALLET
 #include "db.h"
@@ -172,14 +172,15 @@ static CCoinsViewDB* pcoinsdbview = NULL;
 static CCoinsViewErrorCatcher* pcoinscatcher = NULL;
 static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle;
 
-void Interrupt(boost::thread_group& threadGroup)
+static boost::thread_group threadGroup;
+static CScheduler scheduler;
+void Interrupt()
 {
     InterruptHTTPServer();
     InterruptHTTPRPC();
     InterruptRPC();
     InterruptREST();
     InterruptTorControl();
-    threadGroup.interrupt_all();
 }
 
 /** Preparing steps before shutting down or restarting the wallet */
@@ -213,6 +214,11 @@ void PrepareShutdown()
     DumpBudgets();
     DumpMasternodePayments();
     UnregisterNodeSignals(GetNodeSignals());
+
+    // After everything has been shut down, but before things get flushed, stop the
+    // CScheduler/checkqueue threadGroup
+    threadGroup.interrupt_all();
+    threadGroup.join_all();
 
     if (fFeeEstimatesInitialized) {
         boost::filesystem::path est_path = GetDataDir() / FEE_ESTIMATES_FILENAME;
@@ -411,7 +417,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-onlynet=<net>", _("Only connect to nodes in network <net> (ipv4, ipv6 or onion)"));
     strUsage += HelpMessageOpt("-permitbaremultisig", strprintf(_("Relay non-P2SH multisig (default: %u)"), 1));
     strUsage += HelpMessageOpt("-peerbloomfilters", strprintf(_("Support filtering of blocks and transaction with bloom filters (default: %u)"), DEFAULT_PEERBLOOMFILTERS));
-    strUsage += HelpMessageOpt("-port=<port>", strprintf(_("Listen for connections on <port> (default: %u or testnet: %u)"), 9222, 19229));
+    strUsage += HelpMessageOpt("-port=<port>", strprintf(_("Listen for connections on <port> (default: %u or testnet: %u)"), 12244, 51474));
     strUsage += HelpMessageOpt("-proxy=<ip:port>", _("Connect through SOCKS5 proxy"));
     strUsage += HelpMessageOpt("-proxyrandomize", strprintf(_("Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)"), 1));
     strUsage += HelpMessageOpt("-seednode=<ip>", _("Connect to a node to retrieve peer addresses, and disconnect"));
@@ -469,6 +475,7 @@ std::string HelpMessage(HelpMessageMode mode)
 #endif
 
     strUsage += HelpMessageGroup(_("Debugging/Testing options:"));
+    strUsage += HelpMessageOpt("-uacomment=<cmt>", _("Append comment to the user agent string"));
     if (GetBoolArg("-help-debug", false)) {
         strUsage += HelpMessageOpt("-checkblockindex", strprintf("Do a full consistency check for mapBlockIndex, setBlockIndexCandidates, chainActive and mapBlocksUnlinked occasionally. Also sets -checkmempool (default: %u)", Params(CBaseChainParams::MAIN).DefaultConsistencyChecks()));
         strUsage += HelpMessageOpt("-checkmempool=<n>", strprintf("Run checks every <n> transactions (default: %u)", Params(CBaseChainParams::MAIN).DefaultConsistencyChecks()));
@@ -518,7 +525,7 @@ std::string HelpMessage(HelpMessageMode mode)
 #ifdef ENABLE_WALLET
     strUsage += HelpMessageGroup(_("Staking options:"));
     strUsage += HelpMessageOpt("-staking=<n>", strprintf(_("Enable staking functionality (0-1, default: %u)"), 1));
-    strUsage += HelpMessageOpt("-kydstake=<n>", strprintf(_("Enable or disable staking functionality for KYD inputs (0-1, default: %u)"), 1));
+    strUsage += HelpMessageOpt("-pivstake=<n>", strprintf(_("Enable or disable staking functionality for KYD inputs (0-1, default: %u)"), 1));
     strUsage += HelpMessageOpt("-zkydstake=<n>", strprintf(_("Enable or disable staking functionality for zKYD inputs (0-1, default: %u)"), 1));
     strUsage += HelpMessageOpt("-reservebalance=<amt>", _("Keep the specified amount available for spending at all times (default: 0)"));
     if (GetBoolArg("-help-debug", false)) {
@@ -532,12 +539,13 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-mnconf=<file>", strprintf(_("Specify masternode configuration file (default: %s)"), "masternode.conf"));
     strUsage += HelpMessageOpt("-mnconflock=<n>", strprintf(_("Lock masternodes from masternode configuration file (default: %u)"), 1));
     strUsage += HelpMessageOpt("-masternodeprivkey=<n>", _("Set the masternode private key"));
-    strUsage += HelpMessageOpt("-masternodeaddr=<n>", strprintf(_("Set external address:port to get to this masternode (example: %s)"), "128.127.106.235:9222"));
+    strUsage += HelpMessageOpt("-masternodeaddr=<n>", strprintf(_("Set external address:port to get to this masternode (example: %s)"), "128.127.106.235:12244"));
     strUsage += HelpMessageOpt("-budgetvotemode=<mode>", _("Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)"));
 
     strUsage += HelpMessageGroup(_("Zerocoin options:"));
 #ifdef ENABLE_WALLET
     strUsage += HelpMessageOpt("-enablezeromint=<n>", strprintf(_("Enable automatic Zerocoin minting (0-1, default: %u)"), 1));
+    strUsage += HelpMessageOpt("-enableautoconvertaddress=<n>", strprintf(_("Enable automatic Zerocoin minting from specific addresses (0-1, default: %u)"), DEFAULT_AUTOCONVERTADDRESS));
     strUsage += HelpMessageOpt("-zeromintpercentage=<n>", strprintf(_("Percentage of automatically minted Zerocoin  (1-100, default: %u)"), 10));
     strUsage += HelpMessageOpt("-preferredDenom=<n>", strprintf(_("Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)"), 0));
     strUsage += HelpMessageOpt("-backupzkyd=<n>", strprintf(_("Enable automatic wallet backups triggered after each zKYD minting (0-1, default: %u)"), 1));
@@ -571,16 +579,18 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-rpccookiefile=<loc>", _("Location of the auth cookie (default: data dir)"));
     strUsage += HelpMessageOpt("-rpcuser=<user>", _("Username for JSON-RPC connections"));
     strUsage += HelpMessageOpt("-rpcpassword=<pw>", _("Password for JSON-RPC connections"));
-    strUsage += HelpMessageOpt("-rpcport=<port>", strprintf(_("Listen for JSON-RPC connections on <port> (default: %u or testnet: %u)"), 9333, 19230));
+    strUsage += HelpMessageOpt("-rpcport=<port>", strprintf(_("Listen for JSON-RPC connections on <port> (default: %u or testnet: %u)"), 12245, 51475));
     strUsage += HelpMessageOpt("-rpcallowip=<ip>", _("Allow JSON-RPC connections from specified source. Valid for <ip> are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times"));
     strUsage += HelpMessageOpt("-rpcthreads=<n>", strprintf(_("Set the number of threads to service RPC calls (default: %d)"), DEFAULT_HTTP_THREADS));
     if (GetBoolArg("-help-debug", false)) {
         strUsage += HelpMessageOpt("-rpcworkqueue=<n>", strprintf("Set the depth of the work queue to service RPC calls (default: %d)", DEFAULT_HTTP_WORKQUEUE));
         strUsage += HelpMessageOpt("-rpcservertimeout=<n>", strprintf("Timeout during HTTP requests (default: %d)", DEFAULT_HTTP_SERVER_TIMEOUT));
     }
+
     strUsage += HelpMessageOpt("-blockspamfilter=<n>", strprintf(_("Use block spam filter (default: %u)"), DEFAULT_BLOCK_SPAM_FILTER));
     strUsage += HelpMessageOpt("-blockspamfiltermaxsize=<n>", strprintf(_("Maximum size of the list of indexes in the block spam filter (default: %u)"), DEFAULT_BLOCK_SPAM_FILTER_MAX_SIZE));
     strUsage += HelpMessageOpt("-blockspamfiltermaxavg=<n>", strprintf(_("Maximum average size of an index occurrence in the block spam filter (default: %u)"), DEFAULT_BLOCK_SPAM_FILTER_MAX_AVG));
+    
     return strUsage;
 }
 
@@ -590,9 +600,7 @@ std::string LicenseInfo()
            "\n" +
            FormatParagraph(strprintf(_("Copyright (C) 2014-%i The Dash Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
-           FormatParagraph(strprintf(_("Copyright (C) 2015-%i The PIVX Core Developers"), COPYRIGHT_YEAR)) + "\n" +
-           "\n" +
-           FormatParagraph(strprintf(_("Copyright (C) 2018-%i The KYD Core Developers"), COPYRIGHT_YEAR)) + "\n" +
+           FormatParagraph(strprintf(_("Copyright (C) 2015-%i The KYD Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
            FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +
@@ -708,7 +716,7 @@ bool InitSanityCheck(void)
     return true;
 }
 
-bool AppInitServers(boost::thread_group& threadGroup)
+bool AppInitServers()
 {
     RPCServer::OnStopped(&OnRPCStopped);
     RPCServer::OnPreCommand(&OnRPCPreCommand);
@@ -728,7 +736,7 @@ bool AppInitServers(boost::thread_group& threadGroup)
 /** Initialize kyd.
  *  @pre Parameters should be parsed and config file should be read.
  */
-bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
+bool AppInit2()
 {
 // ********************************************************* Step 1: setup
 #ifdef _MSC_VER
@@ -977,6 +985,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     bSpendZeroConfChange = GetBoolArg("-spendzeroconfchange", false);
     bdisableSystemnotifications = GetBoolArg("-disablesystemnotifications", false);
     fSendFreeTransactions = GetBoolArg("-sendfreetransactions", false);
+    fEnableAutoConvert = GetBoolArg("-enableautoconvertaddress", DEFAULT_AUTOCONVERTADDRESS);
 
     std::string strWalletFile = GetArg("-wallet", "wallet.dat");
 #endif // ENABLE_WALLET
@@ -1058,7 +1067,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
      */
     if (fServer) {
         uiInterface.InitMessage.connect(SetRPCWarmupStatus);
-        if (!AppInitServers(threadGroup))
+        if (!AppInitServers())
             return InitError(_("Unable to start HTTP server. See debug log for details."));
     }
 
@@ -1218,6 +1227,21 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     RegisterNodeSignals(GetNodeSignals());
 
+    // sanitize comments per BIP-0014, format user agent and check total size
+    std::vector<std::string> uacomments;
+    for (const std::string& cmt : mapMultiArgs["-uacomment"]) {
+        if (cmt != SanitizeString(cmt, SAFE_CHARS_UA_COMMENT))
+            return InitError(strprintf(_("User Agent comment (%s) contains unsafe characters."), cmt));
+        uacomments.push_back(cmt);
+    }
+
+    // format user agent, check total size
+    strSubVersion = FormatSubVersion(CLIENT_NAME, CLIENT_VERSION, uacomments);
+    if (strSubVersion.size() > MAX_SUBVERSION_LENGTH) {
+        return InitError(strprintf(_("Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments."),
+            strSubVersion.size(), MAX_SUBVERSION_LENGTH));
+    }
+
     if (mapArgs.count("-onlynet")) {
         std::set<enum Network> nets;
         BOOST_FOREACH (std::string snet, mapMultiArgs["-onlynet"]) {
@@ -1311,7 +1335,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         } else {
             struct in_addr inaddr_any;
             inaddr_any.s_addr = INADDR_ANY;
-            fBound |= Bind(CService(in6addr_any, GetListenPort()), BF_NONE);
+            fBound |= Bind(CService((in6_addr)IN6ADDR_ANY_INIT, GetListenPort()), BF_NONE);
             fBound |= Bind(CService(inaddr_any, GetListenPort()), !fBound ? BF_REPORT_ERROR : BF_NONE);
         }
         if (!fBound)
@@ -1339,9 +1363,6 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 #endif
 
     // ********************************************************* Step 7: load block chain
-
-    // Load coin validator
-    CoinValidator::instance().LoadStatic();
 
     //KYD: Load Accumulator Checkpoints according to network (main/test/regtest)
     assert(AccumulatorCheckpoints::LoadCheckpoints(Params().NetworkIDString()));
@@ -1678,8 +1699,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         //Inititalize zKYDWallet
         uiInterface.InitMessage(_("Syncing zKYD wallet..."));
 
-        bool fEnableZKydBackups = GetBoolArg("-backupzkyd", true);
-        pwalletMain->setZKydAutoBackups(fEnableZKydBackups);
+        pwalletMain->InitAutoConvertAddresses();
+
+        bool fEnableZPivBackups = GetBoolArg("-backupzkyd", true);
+        pwalletMain->setZPivAutoBackups(fEnableZPivBackups);
 
         //Load zerocoin mint hashes to memory
         pwalletMain->zkydTracker->Init();
@@ -1813,14 +1836,14 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
         BOOST_FOREACH (CMasternodeConfig::CMasternodeEntry mne, masternodeConfig.getEntries()) {
             LogPrintf("  %s %s\n", mne.getTxHash(), mne.getOutputIndex());
             mnTxHash.SetHex(mne.getTxHash());
-            COutPoint outpoint = COutPoint(mnTxHash, boost::lexical_cast<unsigned int>(mne.getOutputIndex()));
+            COutPoint outpoint = COutPoint(mnTxHash, (unsigned int) std::stoul(mne.getOutputIndex().c_str()));
             pwalletMain->LockCoin(outpoint);
         }
     }
 
-    fEnableZeromint = GetBoolArg("-enablezeromint", false);
+    fEnableZeromint = GetBoolArg("-enablezeromint", true);
 
-    nZeromintPercentage = GetArg("-zeromintpercentage", 0);
+    nZeromintPercentage = GetArg("-zeromintpercentage", 10);
     if (nZeromintPercentage > 100) nZeromintPercentage = 100;
     if (nZeromintPercentage < 1) nZeromintPercentage = 1;
 
@@ -1832,7 +1855,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     }
 
 // XX42 Remove/refactor code below. Until then provide safe defaults
-    nAnonymizeKYDAmount = 2;
+    nAnonymizeKydAmount = 2;
 
 //    nLiquidityProvider = GetArg("-liquidityprovider", 0); //0-100
 //    if (nLiquidityProvider != 0) {
@@ -1841,9 +1864,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 //        nZeromintPercentage = 99999;
 //    }
 //
-//    nAnonymizeKYDAmount = GetArg("-anonymizekydamount", 0);
-//    if (nAnonymizeKYDAmount > 999999) nAnonymizeKYDAmount = 999999;
-//    if (nAnonymizeKYDAmount < 2) nAnonymizeKYDAmount = 2;
+//    nAnonymizeKydAmount = GetArg("-anonymizekydamount", 0);
+//    if (nAnonymizeKydAmount > 999999) nAnonymizeKydAmount = 999999;
+//    if (nAnonymizeKydAmount < 2) nAnonymizeKydAmount = 2;
 
     fEnableSwiftTX = GetBoolArg("-enableswifttx", fEnableSwiftTX);
     nSwiftTXDepth = GetArg("-swifttxdepth", nSwiftTXDepth);
@@ -1857,7 +1880,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nSwiftTXDepth %d\n", nSwiftTXDepth);
-    LogPrintf("Anonymize KYD Amount %d\n", nAnonymizeKYDAmount);
+    LogPrintf("Anonymize KYD Amount %d\n", nAnonymizeKydAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
     /* Denominations

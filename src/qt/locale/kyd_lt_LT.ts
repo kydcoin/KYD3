@@ -255,7 +255,7 @@
     </message>
     <message>
         <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Įveskite KYD adresą, kurį norėtumėte užšifruoti naudojant BIP 38. Vidiniame laukelyje įrašykite slaptą frazę. Paspauskite užšifruoti, jei norite gauti užšifruotą privatųjį raktą.</translation>
+        <translation>Įveskite Kyd adresą, kurį norėtumėte užšifruoti naudojant BIP 38. Vidiniame laukelyje įrašykite slaptą frazę. Paspauskite užšifruoti, jei norite gauti užšifruotą privatųjį raktą.</translation>
     </message>
     <message>
         <source>The KYD address to encrypt</source>
@@ -1122,8 +1122,8 @@ MultiSend: %1</translation>
         <translation>Ši etiketė taps raudona, jei gavėjas gaus sumą mažesnę už %1</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ukyd per input.</source>
-        <translation>Gali skirtis +/- %1 ukyd kiekvienoje įvestyje.</translation>
+        <source>Can vary +/- %1 upiv per input.</source>
+        <translation>Gali skirtis +/- %1 upiv kiekvienoje įvestyje.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2604,8 +2604,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>Klaida: jūsų piniginė užrakinta. Pirmiausia įveskite piniginės slaptažodį.</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
-        <translation>Netinkamas KYD Adresas</translation>
+        <source>Invalid Kyd Address</source>
+        <translation>Netinkamas Kyd Adresas</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>

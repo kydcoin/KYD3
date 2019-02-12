@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +16,6 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
-#include <boost/lexical_cast.hpp>
 
 #include <algorithm>
 #include <boost/assign/list_of.hpp>
@@ -602,7 +602,7 @@ void CObfuscationPool::CheckFinalTransaction()
         // sign a message
 
         int64_t sigTime = GetAdjustedTime();
-        std::string strMessage = txNew.GetHash().ToString() + boost::lexical_cast<std::string>(sigTime);
+        std::string strMessage = txNew.GetHash().ToString() + std::to_string(sigTime);
         std::string strError = "";
         std::vector<unsigned char> vchSig;
         CKey key2;
@@ -1434,7 +1434,7 @@ bool CObfuscationPool::DoAutomaticDenominating(bool fDryRun)
         // should have some additional amount for them
         nLowestDenom += OBFUSCATION_COLLATERAL * 4;
 
-    CAmount nBalanceNeedsAnonymized = nAnonymizeKYDAmount * COIN - pwalletMain->GetAnonymizedBalance();
+    CAmount nBalanceNeedsAnonymized = nAnonymizeKydAmount * COIN - pwalletMain->GetAnonymizedBalance();
 
     // if balanceNeedsAnonymized is more than pool max, take the pool max
     if (nBalanceNeedsAnonymized > OBFUSCATION_POOL_MAX) nBalanceNeedsAnonymized = OBFUSCATION_POOL_MAX;
@@ -2111,7 +2111,7 @@ bool CObfuScationSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     uint256 hash;
     if (GetTransaction(vin.prevout.hash, txVin, hash, true)) {
         BOOST_FOREACH (CTxOut out, txVin.vout) {
-            if (IsMasternodeCollateral(out.nValue)) {
+            if (out.nValue == 10000 * COIN) {
                 if (out.scriptPubKey == payee2) return true;
             }
         }
@@ -2184,7 +2184,7 @@ bool CObfuscationQueue::Sign()
 {
     if (!fMasterNode) return false;
 
-    std::string strMessage = vin.ToString() + boost::lexical_cast<std::string>(nDenom) + boost::lexical_cast<std::string>(time) + boost::lexical_cast<std::string>(ready);
+    std::string strMessage = vin.ToString() + std::to_string(nDenom) + std::to_string(time) + std::to_string(ready);
 
     CKey key2;
     CPubKey pubkey2;
@@ -2224,7 +2224,7 @@ bool CObfuscationQueue::CheckSignature()
     CMasternode* pmn = mnodeman.Find(vin);
 
     if (pmn != NULL) {
-        std::string strMessage = vin.ToString() + boost::lexical_cast<std::string>(nDenom) + boost::lexical_cast<std::string>(time) + boost::lexical_cast<std::string>(ready);
+        std::string strMessage = vin.ToString() + std::to_string(nDenom) + std::to_string(time) + std::to_string(ready);
 
         std::string errorMessage = "";
         if (!obfuScationSigner.VerifyMessage(pmn->pubKeyMasternode, vchSig, strMessage, errorMessage)) {

@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2013 The Bitcoin developers
-// Copyright (c) 2016-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -24,6 +25,7 @@
 
 class CAccount;
 class CAccountingEntry;
+class CBitcoinAddress;
 struct CBlockLocator;
 class CKeyPool;
 class CMasterKey;
@@ -100,6 +102,9 @@ public:
     bool WriteKey(const CPubKey& vchPubKey, const CPrivKey& vchPrivKey, const CKeyMetadata& keyMeta);
     bool WriteCryptedKey(const CPubKey& vchPubKey, const std::vector<unsigned char>& vchCryptedSecret, const CKeyMetadata& keyMeta);
     bool WriteMasterKey(unsigned int nID, const CMasterKey& kMasterKey);
+
+    bool WriteAutoConvertKey(const CBitcoinAddress& btcAddress);
+    void LoadAutoConvertKeys(std::set<CBitcoinAddress>& setAddresses);
 
     bool WriteCScript(const uint160& hash, const CScript& redeemScript);
 

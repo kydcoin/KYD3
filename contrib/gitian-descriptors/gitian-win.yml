@@ -1,5 +1,5 @@
 ---
-name: "kyd-win-1.1.1"
+name: "kyd-win-3.2"
 enable_cache: true
 suites:
 - "bionic"
@@ -23,13 +23,13 @@ packages:
 - "python"
 - "rename"
 remotes:
-- "url": "https://github.com/kyd-actual/kyd-coin.git"
+- "url": "https://github.com/kyd-project/kyd.git"
   "dir": "kyd"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
   HOSTS="i686-w64-mingw32 x86_64-w64-mingw32"
-  CONFIGFLAGS="--enable-reduce-exports --disable-bench --disable-gui-tests --disable-tests"
+  CONFIGFLAGS="--enable-reduce-exports --disable-bench --disable-gui-tests"
   FAKETIME_HOST_PROGS="ar ranlib nm windres strip objcopy"
   FAKETIME_PROGS="date makensis zip"
   HOST_CFLAGS="-O2 -g"
@@ -133,6 +133,9 @@ script: |
   cp ../$SOURCEDIST $OUTDIR/src
   popd
 
+  # Workaround for tarball not building with the bare tag version (prep)
+  make -C src obj/build.h
+
   ORIGPATH="$PATH"
   # Extract the release tarball into a dir for each host and build
   for i in ${HOSTS}; do
@@ -143,17 +146,22 @@ script: |
     mkdir -p ${INSTALLPATH}
     tar --strip-components=1 -xf ../$SOURCEDIST
 
+    # Workaround for tarball not building with the bare tag version
+    echo '#!/bin/true' >share/genbuild.sh
+    mkdir src/obj
+    cp ../src/obj/build.h src/obj/
+
     CONFIG_SITE=${BASEPREFIX}/${i}/share/config.site ./configure --prefix=/ --disable-ccache --disable-maintainer-mode --disable-dependency-tracking ${CONFIGFLAGS} CFLAGS="${HOST_CFLAGS}" CXXFLAGS="${HOST_CXXFLAGS}"
     make ${MAKEOPTS}
-
+    make ${MAKEOPTS} -C src check-security
     make deploy
     make install DESTDIR=${INSTALLPATH}
     rename 's/-setup\.exe$/-setup-unsigned.exe/' *-setup.exe
     cp -f kyd-*setup*.exe $OUTDIR/
     cd installed
-    # mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
-    # find . -name "lib*.la" -delete
-    # find . -name "lib*.a" -delete
+    # mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/ # temporarily disabled for Zerocoin
+    # find . -name "lib*.la" -delete            # temporarily disabled for Zerocoin
+    # find . -name "lib*.a" -delete             # temporarily disabled for Zerocoin
     rm -rf ${DISTNAME}/lib/pkgconfig
     find ${DISTNAME}/bin -type f -executable -exec ${i}-objcopy --only-keep-debug {} {}.dbg \; -exec ${i}-strip -s {} \; -exec ${i}-objcopy --add-gnu-debuglink={}.dbg {} \;
     # find ${DISTNAME}/lib -type f -exec ${i}-objcopy --only-keep-debug {} {}.dbg \; -exec ${i}-strip -s {} \; -exec ${i}-objcopy --add-gnu-debuglink={}.dbg {} \;

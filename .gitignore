@@ -1,4 +1,4 @@
-.vscode/
+.gitignore
 *.sublime-project
 *.sublime-workspace
 todo.txt
@@ -13,7 +13,6 @@ src/kyd-cli
 src/kyd-tx
 src/test/test_kyd
 src/qt/test/test_kyd-qt
-src/bench/bench_kyd
 
 # autoreconf
 Makefile.in
@@ -35,22 +34,24 @@ build-aux/test-driver
 config.log
 config.status
 configure
+confdefs.h
+conftest.cpp
+conftest.err
 libtool
 src/config/kyd-config.h
 src/config/kyd-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
+contrib/devtools/split-debug.sh
 
 src/univalue/gen
-src/univalue/build-aux
 
 src/qt/*.moc
 src/qt/moc_*.cpp
 src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
-libconftest.dylib*
 
 .deps
 .dirstamp
@@ -63,6 +64,7 @@ libconftest.dylib*
 *.pyc
 *.o
 *.o-*
+*.patch
 .kyd
 *.a
 *.pb.cc
@@ -84,28 +86,25 @@ libconftest.dylib*
 Makefile
 kyd-qt
 KYD-Qt.app
+background.tiff*
 
 # Unit-tests
 Makefile.test
 kyd-qt_test
 src/test/buildenv.py
 
-# Qt creator
-*.pro.user
-src/qt/kyd-qt.creator
-src/qt/kyd-qt.creator.user
-
 # Resources cpp
 qrc_*.cpp
+
+# Qt creator
+*.pro.user
 
 # Mac specific
 .DS_Store
 build
-background.*
 
 #lcov
 *.gcno
-*.gcda
 /*.info
 test_kyd.coverage/
 total.coverage/
@@ -115,39 +114,20 @@ coverage_percent.txt
 linux-coverage-build
 linux-build
 win32-build
+test/config.ini
+test/cache/*
 qa/pull-tester/run-bitcoind-for-test.sh
-qa/pull-tester/tests_config.py
+qa/pull-tester/tests-config.sh
 qa/pull-tester/cache/*
 qa/pull-tester/test.*/*
-qa/tmp
-cache/
-share/BitcoindComparisonTool.jar
 
 !src/leveldb*/Makefile
 
 .cproject
 .project
-.autotools
-/doc/doxygen/
-
-libkydconsensus.pc
-src/qt/kyd-qt.bash
-qa/pull-tester/tests-config.sh
-
-#development symlinks
-kyd-cli
-kydd
-kyd-qt
-make
-
-.cproject
-.project
 /doc/doxygen/
 /nbproject/
-KYD-Qt.app/Contents/MacOS/KYD-Qt
-dist/KYD-Qt.app/Contents/MacOS/KYD-Qt
-
-Makefile
-src/Makefile
-src/leveldb/build_config.mk
-src/univalue/Makefile
+libbitcoinconsensus.pc
+.idea
+CMakeLists.txt
+cmake-build-debug

@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2017-2018 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -250,24 +250,24 @@ bool CScript::IsPayToScriptHash() const
 
 bool CScript::IsZerocoinMint() const
 {
-	// **** Zero Disable Start ****
-    // //fast test for Zerocoin Mint CScripts
-    // return (this->size() > 0 && this->at(0) == OP_ZEROCOINMINT);
-	// **** Zero Disable End ****
-	
-	return false;
+  // **** Zero Disable Start ****
+  // //fast test for Zerocoin Mint CScripts
+  // return (this->size() > 0 && this->at(0) == OP_ZEROCOINMINT);
+// **** Zero Disable End ****
+
+return false;
 }
 
 bool CScript::IsZerocoinSpend() const
 {
-	// **** Zero Disable Start ****
-    // if (this->empty())
-    //     return false;
-    // 
-    // return (this->at(0) == OP_ZEROCOINSPEND);
-	// **** Zero Disable End ****
-	
-	return false;
+  // **** Zero Disable Start ****
+  // if (this->empty())
+  //     return false;
+  //
+  // return (this->at(0) == OP_ZEROCOINSPEND);
+// **** Zero Disable End ****
+
+return false;
 }
 
 bool CScript::IsPushOnly(const_iterator pc) const
