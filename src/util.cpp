@@ -115,9 +115,9 @@ bool fLiteMode = false;
 bool fEnableSwiftTX = true;
 int nSwiftTXDepth = 5;
 // Automatic Zerocoin minting
-bool fEnableZeromint = true;
-bool fEnableAutoConvert = true;
-int nZeromintPercentage = 10;
+bool fEnableZeromint = false;
+bool fEnableAutoConvert = false;
+int nZeromintPercentage = 0;
 int nPreferredDenom = 0;
 const int64_t AUTOMINT_DELAY = (60 * 5); // Wait at least 5 minutes until Automint starts
 
@@ -431,7 +431,7 @@ boost::filesystem::path GetDefaultDataDir()
 // Unix: ~/.kyd
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "KYD";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "KYDcore";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -443,10 +443,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "KYD";
+    return pathRet / "KYDcore";
 #else
     // Unix
-    return pathRet / ".kyd";
+    return pathRet / ".kydcore";
 #endif
 #endif
 }

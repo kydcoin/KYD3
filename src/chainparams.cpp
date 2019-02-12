@@ -142,8 +142,8 @@ public:
         /** Height or Time Based Activations **/
         nLastPOWBlock = 250;
         nModifierUpdateBlock = 1;
-        nZerocoinStartHeight = 251; //Never Activated
-        nZerocoinStartTime = 1544339974; //Never Activated
+        nZerocoinStartHeight = INT_MAX-1; //Never Activated
+        nZerocoinStartTime = INT_MAX-1; //Never Activated
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = INT_MAX-1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = INT_MAX-1; //First block that bad serials emerged
