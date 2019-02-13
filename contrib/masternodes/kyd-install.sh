@@ -28,7 +28,6 @@ function download_node() {
   cd $TMP_FOLDER
   wget -q $COIN_TGZ
   tar xvzf $COIN_ZIP -C /usr/local/bin/ --strip=1
-  compile_error
   chmod +x $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI
   cd - >/dev/null 2>&1
   rm -r $TMP_FOLDER >/dev/null 2>&1
