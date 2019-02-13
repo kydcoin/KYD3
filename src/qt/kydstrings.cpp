@@ -185,12 +185,14 @@ QT_TRANSLATE_NOOP("kyd-core", ""
 "SwiftX requires inputs with at least 6 confirmations, you might need to wait "
 "a few minutes and try again."),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"This is a pre-release test build - use at your own risk - do not use for "
-"staking or merchant applications!"),
+""),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "This product includes software developed by the OpenSSL Project for use in "
 "the OpenSSL Toolkit <https://www.openssl.org/> and cryptographic software "
 "written by Eric Young and UPnP software written by Thomas Bernard."),
+QT_TRANSLATE_NOOP("kyd-core", ""
+"Total length of network version string (%i) exceeds maximum length (%i). "
+"Reduce the number or size of uacomments."),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Unable to bind to %s on this computer. KYD Core is probably already running."),
 QT_TRANSLATE_NOOP("kyd-core", ""
@@ -235,10 +237,10 @@ QT_TRANSLATE_NOOP("kyd-core", ""
 QT_TRANSLATE_NOOP("kyd-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("kyd-core", "(9229 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("kyd-core", "(12244 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("kyd-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("kyd-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("kyd-core", "(must be 9229 for mainnet)"),
+QT_TRANSLATE_NOOP("kyd-core", "(must be 12244 for mainnet)"),
 QT_TRANSLATE_NOOP("kyd-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("kyd-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("kyd-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
@@ -247,6 +249,7 @@ QT_TRANSLATE_NOOP("kyd-core", "Add a node to connect to and attempt to keep the 
 QT_TRANSLATE_NOOP("kyd-core", "Allow DNS lookups for -addnode, -seednode and -connect"),
 QT_TRANSLATE_NOOP("kyd-core", "Already have that input."),
 QT_TRANSLATE_NOOP("kyd-core", "Always query for peer addresses via DNS lookup (default: %u)"),
+QT_TRANSLATE_NOOP("kyd-core", "Append comment to the user agent string"),
 QT_TRANSLATE_NOOP("kyd-core", "Attempt to force blockchain corruption recovery"),
 QT_TRANSLATE_NOOP("kyd-core", "Attempt to recover private keys from a corrupt wallet.dat"),
 QT_TRANSLATE_NOOP("kyd-core", "Automatically create Tor hidden service (default: %d)"),
@@ -498,6 +501,7 @@ QT_TRANSLATE_NOOP("kyd-core", "Use UPnP to map the listening port (default: %u)"
 QT_TRANSLATE_NOOP("kyd-core", "Use UPnP to map the listening port (default: 1 when listening)"),
 QT_TRANSLATE_NOOP("kyd-core", "Use a custom max chain reorganization depth (default: %u)"),
 QT_TRANSLATE_NOOP("kyd-core", "Use the test network"),
+QT_TRANSLATE_NOOP("kyd-core", "User Agent comment (%s) contains unsafe characters."),
 QT_TRANSLATE_NOOP("kyd-core", "Username for JSON-RPC connections"),
 QT_TRANSLATE_NOOP("kyd-core", "Value is below the smallest available denomination (= 1) of zKYD"),
 QT_TRANSLATE_NOOP("kyd-core", "Value more than Obfuscation pool maximum allows."),

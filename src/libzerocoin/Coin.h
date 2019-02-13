@@ -9,7 +9,8 @@
  * @copyright  Copyright 2013 Ian Miers, Christina Garman and Matthew Green
  * @license    This project is released under the MIT license.
  **/
-// Copyright (c) 2017-2018 The PIVX developers
+ // Copyright (c) 2015-2019 The PivX developers
+ // Copyright (c) 2018-2019 The KYD developers
 
 #ifndef COIN_H_
 #define COIN_H_
@@ -48,7 +49,7 @@ public:
 	 *
 	 * @param p cryptographic paramters
 	 * @param coin the value of the commitment.
-	 * @param denomination The denomination of the coin. 
+	 * @param denomination The denomination of the coin.
 	 */
     PublicCoin(const ZerocoinParams* p, const CBigNum& coin, const CoinDenomination d);
     const CBigNum& getValue() const { return this->value; }
@@ -111,8 +112,8 @@ public:
     const uint8_t& getVersion() const { return this->version; }
 
     void setPublicCoin(PublicCoin p) { publicCoin = p; }
-    void setRandomness(Bignum n) { randomness = n; }
-    void setSerialNumber(Bignum n) { serialNumber = n; }
+    void setRandomness(CBigNum n) { randomness = n; }
+    void setSerialNumber(CBigNum n) { serialNumber = n; }
     void setVersion(uint8_t nVersion) { this->version = nVersion; }
     void setPrivKey(const CPrivKey& privkey) { this->privkey = privkey; }
     bool sign(const uint256& hash, std::vector<unsigned char>& vchSig) const;

@@ -1130,8 +1130,8 @@ MultiSend: %1</translation>
         <translation>Den här etiketten blir röd, ifall någon mottagare får en mängd som är mindre än %1.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ukyd per input.</source>
-        <translation>Kan variera med +/- %1 ukyd per inmatning.</translation>
+        <source>Can vary +/- %1 upiv per input.</source>
+        <translation>Kan variera med +/- %1 upiv per inmatning.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2905,8 +2905,8 @@ Högsta tillåtna:</translation>
         <translation>Ingen 'Betala Till' adress inmatad, skapar lokal betalning</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
-        <translation>Ogiltig KYD Adress</translation>
+        <source>Invalid Kyd Address</source>
+        <translation>Ogiltig Kyd Adress</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -5062,8 +5062,8 @@ Minta antingen högre valörer (så att färre inputs behövs) eller spendera mi
         <translation>Du måste specifiera en masternodeprivkey i konfigurationen. Var vänlig se dokumentationen för hjälp.</translation>
     </message>
     <message>
-        <source>(9229 could be used only on mainnet)</source>
-        <translation>(9229 kunde endast användas på mainnet)</translation>
+        <source>(51472 could be used only on mainnet)</source>
+        <translation>(51472 kunde endast användas på mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5074,8 +5074,8 @@ Minta antingen högre valörer (så att färre inputs behövs) eller spendera mi
         <translation>(standard: 1)</translation>
     </message>
     <message>
-        <source>(must be 9229 for mainnet)</source>
-        <translation>(måste vara 9229 för mainnet)</translation>
+        <source>(must be 51472 for mainnet)</source>
+        <translation>(måste vara 51472 för mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

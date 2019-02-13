@@ -1130,8 +1130,8 @@ Višestruko slanje: %1</translation>
         <translation>Ova oznaka postaje crvena ako neki primatelj prima iznos manji od %1.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ukyd per input.</source>
-        <translation>Može varirati +/- %1 ukyd po unosu.</translation>
+        <source>Can vary +/- %1 upiv per input.</source>
+        <translation>Može varirati +/- %1 upiv po unosu.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2926,8 +2926,8 @@ Maksimalno dopušteno:</translation>
         <translation>Nije dodijeljena adresa "Plati", stvarajući lokalnu uplatu</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
-        <translation>Nevažeća KYD Adresa</translation>
+        <source>Invalid Kyd Address</source>
+        <translation>Nevažeća Kyd Adresa</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -5147,8 +5147,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Morate odrediti masternodeprivkey u konfiguraciji. Za pomoć pogledajte dokumentaciju.</translation>
     </message>
     <message>
-        <source>(9229 could be used only on mainnet)</source>
-        <translation>(9229 se može koristiti samo na mainnetu)</translation>
+        <source>(51472 could be used only on mainnet)</source>
+        <translation>(51472 se može koristiti samo na mainnetu)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5159,8 +5159,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 9229 for mainnet)</source>
-        <translation>(mora biti 9229 za glavnu mrežu)</translation>
+        <source>(must be 51472 for mainnet)</source>
+        <translation>(mora biti 51472 za glavnu mrežu)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

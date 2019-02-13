@@ -2220,7 +2220,7 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
     </message>
     <message>
         <source>Cannot start kyd: click-to-pay handler</source>
-        <translation>KYD başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
+        <translation>Kyd başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid KYD address or malformed URI parameters.</source>
@@ -2705,8 +2705,8 @@ Maksimum bırakılan: </translation>
         <translation>Sağlanan 'Ödeme Yapmak İçin' adresi yok, yerel ödeme oluşturun</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
-        <translation>Geçersiz KYD Adresi</translation>
+        <source>Invalid Kyd Address</source>
+        <translation>Geçersiz Kyd Adresi</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>

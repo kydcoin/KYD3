@@ -1,4 +1,5 @@
-// Copyright (c) 2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,6 +10,7 @@
 #include "main.h"
 #include "txdb.h"
 #include "walletdb.h"
+#include "zkydwallet.h"
 #include "accumulators.h"
 
 using namespace std;
@@ -133,7 +135,7 @@ CAmount CzKYDTracker::GetBalance(bool fConfirmedOnly, bool fUnconfirmedOnly) con
     }
 
     {
-        //LOCK(cs_kydtracker);
+        //LOCK(cs_pivtracker);
         // Get Unused coins
         for (auto& it : mapSerialHashes) {
             CMintMeta meta = it.second;
@@ -276,8 +278,9 @@ bool CzKYDTracker::UpdateState(const CMintMeta& meta)
     return true;
 }
 
-void CzKYDTracker::Add(const CDeterministicMint& dMint, bool isNew, bool isArchived)
+void CzKYDTracker::Add(const CDeterministicMint& dMint, bool isNew, bool isArchived, CzKYDWallet* zKYDWallet)
 {
+    bool iszKYDWalletInitialized = (NULL != zKYDWallet);
     CMintMeta meta;
     meta.hashPubcoin = dMint.GetPubcoinHash();
     meta.nHeight = dMint.GetHeight();
@@ -289,6 +292,11 @@ void CzKYDTracker::Add(const CDeterministicMint& dMint, bool isNew, bool isArchi
     meta.denom = dMint.GetDenomination();
     meta.isArchived = isArchived;
     meta.isDeterministic = true;
+    if (! iszKYDWalletInitialized)
+        zKYDWallet = new CzKYDWallet(strWalletFile);
+    meta.isSeedCorrect = zKYDWallet->CheckSeed(dMint);
+    if (! iszKYDWalletInitialized)
+        delete zKYDWallet;
     mapSerialHashes[meta.hashSerial] = meta;
 
     if (isNew)
@@ -309,6 +317,7 @@ void CzKYDTracker::Add(const CZerocoinMint& mint, bool isNew, bool isArchived)
     meta.denom = mint.GetDenomination();
     meta.isArchived = isArchived;
     meta.isDeterministic = false;
+    meta.isSeedCorrect = true;
     mapSerialHashes[meta.hashSerial] = meta;
 
     if (isNew)
@@ -428,7 +437,7 @@ bool CzKYDTracker::UpdateStatusInternal(const std::set<uint256>& setMempool, CMi
     return false;
 }
 
-std::set<CMintMeta> CzKYDTracker::ListMints(bool fUnusedOnly, bool fMatureOnly, bool fUpdateStatus)
+std::set<CMintMeta> CzKYDTracker::ListMints(bool fUnusedOnly, bool fMatureOnly, bool fUpdateStatus, bool fWrongSeed)
 {
     CWalletDB walletdb(strWalletFile);
     if (fUpdateStatus) {
@@ -438,8 +447,12 @@ std::set<CMintMeta> CzKYDTracker::ListMints(bool fUnusedOnly, bool fMatureOnly, 
         LogPrint("zero", "%s: added %d zerocoinmints from DB\n", __func__, listMintsDB.size());
 
         std::list<CDeterministicMint> listDeterministicDB = walletdb.ListDeterministicMints();
-        for (auto& dMint : listDeterministicDB)
-            Add(dMint);
+
+        CzKYDWallet* zKYDWallet = new CzKYDWallet(strWalletFile);
+        for (auto& dMint : listDeterministicDB) {
+            Add(dMint, false, false, zKYDWallet);
+        }
+        delete zKYDWallet;
         LogPrint("zero", "%s: added %d dzkyd from DB\n", __func__, listDeterministicDB.size());
     }
 
@@ -478,6 +491,10 @@ std::set<CMintMeta> CzKYDTracker::ListMints(bool fUnusedOnly, bool fMatureOnly, 
             if (mint.nHeight >= mapMaturity.at(mint.denom))
                 continue;
         }
+
+        if (!fWrongSeed && !mint.isSeedCorrect)
+            continue;
+
         setMints.insert(mint);
     }
 

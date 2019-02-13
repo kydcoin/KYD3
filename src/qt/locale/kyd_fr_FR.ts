@@ -1114,8 +1114,8 @@ Adresse : %4
         <translation>Ce label devient rouge si l'un des destinataires reçoit un montant inférieur à %1.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ukyd per input.</source>
-        <translation>Peut varier de +/- %1 ukyd par entrée.</translation>
+        <source>Can vary +/- %1 upiv per input.</source>
+        <translation>Peut varier de +/- %1 upiv par entrée.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2860,8 +2860,8 @@ Maximum autorisé:</translation>
         <translation>Aucune adresse 'Payer à' de fournie, création d'un paiement local</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
-        <translation>Adresse KYD incorrecte</translation>
+        <source>Invalid Kyd Address</source>
+        <translation>Adresse Kyd incorrecte</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>

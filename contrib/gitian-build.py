@@ -23,13 +23,13 @@ def setup():
         programs += ['lxc', 'debootstrap']
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/kyd-actual/gitian.sigs.git'])
-    if not os.path.isdir('kyd-detached-sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/kyd-actual/kyd-detached-sigs.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/KYD-Project/gitian.sigs.git'])
+    if not os.path.isdir('KYD-detached-sigs'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/KYD-Project/KYD-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
-    if not os.path.isdir('kyd'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/kyd-actual/kyd-coin.git', 'kyd'])
+    if not os.path.isdir('KYD'):
+        subprocess.check_call(['git', 'clone', 'https://github.com/KYD-Project/KYD.git'])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'bionic', '--arch', 'amd64']
     if args.docker:
@@ -46,43 +46,47 @@ def setup():
 def build():
     global args, workdir
 
-    os.makedirs('kyd-binaries/' + args.version, exist_ok=True)
+    os.makedirs('KYD-binaries/' + args.version, exist_ok=True)
     print('\nBuilding Dependencies\n')
     os.chdir('gitian-builder')
     os.makedirs('inputs', exist_ok=True)
 
     subprocess.check_call(['wget', '-N', '-P', 'inputs', 'http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz'])
     subprocess.check_call(['wget', '-N', '-P', 'inputs', 'https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch'])
-    subprocess.check_call(['make', '-C', '../kyd/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
+    subprocess.check_call(['make', '-C', '../KYD/depends', 'download', 'SOURCES_PATH=' + os.getcwd() + '/cache/common'])
 
     if args.linux:
         print('\nCompiling ' + args.version + ' Linux')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'kyd='+args.commit, '--url', 'kyd='+args.url, '../kyd/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../kyd/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/kyd-*.tar.gz build/out/src/kyd-*.tar.gz ../kyd-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'kyd='+args.commit, '--url', 'kyd='+args.url, '../KYD/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../KYD/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call('mv build/out/kyd-*.tar.gz build/out/src/kyd-*.tar.gz ../KYD-binaries/'+args.version, shell=True)
 
     if args.windows:
         print('\nCompiling ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'kyd='+args.commit, '--url', 'kyd='+args.url, '../kyd/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../kyd/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call('mv build/out/kyd-*-win-unsigned.tar.gz inputs/kyd-win-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/kyd-*.zip build/out/kyd-*.exe ../kyd-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'kyd='+args.commit, '--url', 'kyd='+args.url, '../KYD/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../KYD/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call('mv build/out/kyd-*-win-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/kyd-*.zip build/out/kyd-*.exe ../KYD-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nCompiling ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'kyd='+args.commit, '--url', 'kyd='+args.url, '../kyd/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../kyd/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call('mv build/out/kyd-*-osx-unsigned.tar.gz inputs/kyd-osx-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/kyd-*.tar.gz build/out/kyd-*.dmg ../kyd-binaries/'+args.version, shell=True)
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'kyd='+args.commit, '--url', 'kyd='+args.url, '../KYD/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../KYD/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call('mv build/out/kyd-*-osx-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/kyd-*.tar.gz build/out/kyd-*.dmg ../KYD-binaries/'+args.version, shell=True)
 
     os.chdir(workdir)
 
     if args.commit_files:
         print('\nCommitting '+args.version+' Unsigned Sigs\n')
         os.chdir('gitian.sigs')
-        subprocess.check_call(['git', 'add', args.version+'-linux/'+args.signer])
-        subprocess.check_call(['git', 'add', args.version+'-win-unsigned/'+args.signer])
-        subprocess.check_call(['git', 'add', args.version+'-osx-unsigned/'+args.signer])
+        subprocess.check_call(['git', 'config', 'user.signingkey', args.signer])
+        if args.linux:
+            subprocess.check_call(['git', 'add', args.version+'-linux/'+args.signer])
+        if args.windows:
+            subprocess.check_call(['git', 'add', args.version+'-win-unsigned/'+args.signer])
+        if args.macos:
+            subprocess.check_call(['git', 'add', args.version+'-osx-unsigned/'+args.signer])
         subprocess.check_call(['git', 'commit', '-m', 'Add '+args.version+' unsigned sigs for '+args.signer])
         os.chdir(workdir)
 
@@ -92,41 +96,56 @@ def sign():
 
     if args.windows:
         print('\nSigning ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../kyd/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../kyd/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call('mv build/out/kyd-*win64-setup.exe ../kyd-binaries/'+args.version, shell=True)
-        subprocess.check_call('mv build/out/kyd-*win32-setup.exe ../kyd-binaries/'+args.version, shell=True)
+        subprocess.check_call('cp inputs/KYD-' + args.version + '-win-unsigned.tar.gz inputs/KYD-win-unsigned.tar.gz', shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../KYD/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../KYD/contrib/gitian-descriptors/gitian-win-signer.yml'])
+        subprocess.check_call('mv build/out/kyd-*win64-setup.exe ../KYD-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/kyd-*win32-setup.exe ../KYD-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nSigning ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../kyd/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../kyd/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call('mv build/out/kyd-osx-signed.dmg ../kyd-binaries/'+args.version+'/kyd-'+args.version+'-osx.dmg', shell=True)
+        subprocess.check_call('cp inputs/KYD-' + args.version + '-osx-unsigned.tar.gz inputs/KYD-osx-unsigned.tar.gz', shell=True)
+        subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../KYD/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../KYD/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+        subprocess.check_call('mv build/out/kyd-osx-signed.dmg ../KYD-binaries/'+args.version+'/KYD-'+args.version+'-osx.dmg', shell=True)
 
     os.chdir(workdir)
 
     if args.commit_files:
         print('\nCommitting '+args.version+' Signed Sigs\n')
         os.chdir('gitian.sigs')
-        subprocess.check_call(['git', 'add', args.version+'-win-signed/'+args.signer])
-        subprocess.check_call(['git', 'add', args.version+'-osx-signed/'+args.signer])
-        subprocess.check_call(['git', 'commit', '-a', '-m', 'Add '+args.version+' signed binary sigs for '+args.signer])
+
+        if args.windows:
+            subprocess.check_call(['git', 'add', args.version+'-win-signed/'+args.signer])
+        if args.macos:
+            subprocess.check_call(['git', 'add', args.version+'-osx-signed/'+args.signer])
+
+        subprocess.check_call(['git', 'commit', '-S', '-m', 'Add '+args.version+' signed binary sigs for '+args.signer])
         os.chdir(workdir)
 
 def verify():
     global args, workdir
     os.chdir('gitian-builder')
 
-    print('\nVerifying v'+args.version+' Linux\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../kyd/contrib/gitian-descriptors/gitian-linux.yml'])
-    print('\nVerifying v'+args.version+' Windows\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../kyd/contrib/gitian-descriptors/gitian-win.yml'])
-    print('\nVerifying v'+args.version+' MacOS\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../kyd/contrib/gitian-descriptors/gitian-osx.yml'])
-    print('\nVerifying v'+args.version+' Signed Windows\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../kyd/contrib/gitian-descriptors/gitian-win-signer.yml'])
-    print('\nVerifying v'+args.version+' Signed MacOS\n')
-    subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../kyd/contrib/gitian-descriptors/gitian-osx-signer.yml'])
+    if args.linux:
+        print('\nVerifying v'+args.version+' Linux\n')
+        subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../KYD/contrib/gitian-descriptors/gitian-linux.yml'])
+        print('\nVerifying v'+args.version+' Linux\n')
+        subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-linux', '../KYD/contrib/gitian-descriptors/gitian-linux.yml'])
+
+    if args.windows:
+        print('\nVerifying v'+args.version+' Windows\n')
+        subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-unsigned', '../KYD/contrib/gitian-descriptors/gitian-win.yml'])
+        if args.sign:
+            print('\nVerifying v'+args.version+' Signed Windows\n')
+            subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-win-signed', '../KYD/contrib/gitian-descriptors/gitian-win-signer.yml'])
+
+    if args.macos:
+        print('\nVerifying v'+args.version+' MacOS\n')
+        subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-unsigned', '../KYD/contrib/gitian-descriptors/gitian-osx.yml'])
+        if args.sign:
+            print('\nVerifying v'+args.version+' Signed MacOS\n')
+            subprocess.check_call(['bin/gverify', '-v', '-d', '../gitian.sigs/', '-r', args.version+'-osx-signed', '../KYD/contrib/gitian-descriptors/gitian-osx-signer.yml'])
 
     os.chdir(workdir)
 
@@ -135,7 +154,8 @@ def main():
 
     parser = argparse.ArgumentParser(usage='%(prog)s [options] signer version')
     parser.add_argument('-c', '--commit', action='store_true', dest='commit', help='Indicate that the version argument is for a commit or branch')
-    parser.add_argument('-u', '--url', dest='url', default='https://github.com/kyd-actual/kyd-coin', help='Specify the URL of the repository. Default is %(default)s')
+    parser.add_argument('-p', '--pull', action='store_true', dest='pull', help='Indicate that the version argument is the number of a github repository pull request')
+    parser.add_argument('-u', '--url', dest='url', default='https://github.com/KYD-Project/KYD', help='Specify the URL of the repository. Default is %(default)s')
     parser.add_argument('-v', '--verify', action='store_true', dest='verify', help='Verify the Gitian build')
     parser.add_argument('-b', '--build', action='store_true', dest='build', help='Do a Gitian build')
     parser.add_argument('-s', '--sign', action='store_true', dest='sign', help='Make signed binaries for Windows and MacOS')
@@ -169,7 +189,7 @@ def main():
 
     args.sign_prog = 'true' if args.detach_sign else 'gpg --detach-sign'
 
-    # Set enviroment variable USE_LXC or USE_DOCKER, let gitian-builder know that we use lxc or docker
+    # Set environment variable USE_LXC or USE_DOCKER, let gitian-builder know that we use lxc or docker
     if args.docker:
         os.environ['USE_DOCKER'] = '1'
     elif not args.kvm:
@@ -196,14 +216,21 @@ def main():
         exit(1)
 
     # Add leading 'v' for tags
-    # args.commit = ('' if args.commit else 'v') + args.version
-    args.commit = args.version
-    print(args.commit)
+    if args.commit and args.pull:
+        raise Exception('Cannot have both commit and pull')
+    args.commit = ('' if args.commit else 'v') + args.version
 
     if args.setup:
         setup()
 
-    os.chdir('kyd')
+    os.chdir('KYD')
+    if args.pull:
+        subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
+        os.chdir('../gitian-builder/inputs/KYD')
+        subprocess.check_call(['git', 'fetch', args.url, 'refs/pull/'+args.version+'/merge'])
+        args.commit = subprocess.check_output(['git', 'show', '-s', '--format=%H', 'FETCH_HEAD'], universal_newlines=True, encoding='utf8').strip()
+        args.version = 'pull-' + args.version
+    print(args.commit)
     subprocess.check_call(['git', 'fetch'])
     subprocess.check_call(['git', 'checkout', args.commit])
     os.chdir(workdir)
