@@ -372,7 +372,6 @@ cp /etc/systemd/system/KYD.service /etc/systemd/system/kyd.service > /dev/null 2
 systemctl stop $COIN_NAME.service > /dev/null 2>&1
 systemctl stop KYD.service > /dev/null 2>&1
 rm /etc/systemd/system/KYD.service > /dev/null 2>&1
-echo -e "Downloading updated daemon files"
 download_node
 echo -e "Restarting Node"
   systemctl start $COIN_NAME.service
