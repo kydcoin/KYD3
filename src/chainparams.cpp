@@ -137,7 +137,7 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         nWalletForkBlock = 275;
-        nDiffForkBlock = 150000;
+        nDiffForkBlock = 145000;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 250;

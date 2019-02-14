@@ -23,8 +23,8 @@ unsigned int GetDGWNextWorkRequired(const CBlockIndex* pindexLast, const CBlockH
 	const CBlockIndex* BlockReading = pindexLast;
 	int64_t nActualTimespan = 0;
 	int64_t LastBlockTime = 0;
-	int64_t PastBlocksMin = pindexLast->nHeight <= 150000 ? 24 : 180 ;
-  int64_t PastBlocksMax = pindexLast->nHeight <= 150000 ? 24 : 180;
+	int64_t PastBlocksMin = pindexLast->nHeight <= params().DIFF_FORK_BLOCK ? 24 : 180 ;
+  int64_t PastBlocksMax = pindexLast->nHeight <= params().DIFF_FORK_BLOCK ? 24 : 180;
 	int64_t CountBlocks = 0;
 	uint256 PastDifficultyAverage;
 	uint256 PastDifficultyAveragePrev;
