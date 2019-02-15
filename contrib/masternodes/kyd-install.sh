@@ -9,7 +9,7 @@ CONFIGFOLDER='/root/.kydcore'
 COIN_DAEMON='kydd'
 COIN_CLI='kyd-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.1.3.1/kydcoin-3.1.3.1-ubuntu16-full.tar.gz'
+COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.2.0.1/kyd-3.2.0.1-Ubuntu16-x86_64.tar.gz'
 COIN_BOOTSTRAP='https://raw.githubusercontent.com/kydcoin/KYD3/master/contrib/masternodes/kyd-bootstrap.tar.gz'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
@@ -28,7 +28,6 @@ function download_node() {
   cd $TMP_FOLDER
   wget -q $COIN_TGZ
   tar xvzf $COIN_ZIP -C /usr/local/bin/ --strip=1
-  compile_error
   chmod +x $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI
   cd - >/dev/null 2>&1
   rm -r $TMP_FOLDER >/dev/null 2>&1
@@ -374,6 +373,7 @@ systemctl stop $COIN_NAME.service > /dev/null 2>&1
 systemctl stop KYD.service > /dev/null 2>&1
 rm /etc/systemd/system/KYD.service > /dev/null 2>&1
 download_node
+echo -e "Restarting Node"
   systemctl start $COIN_NAME.service
   echo -e "${GREEN}$COIN_NAME Masternode has been updated!${NC}"
 exit 1
