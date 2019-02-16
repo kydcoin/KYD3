@@ -6454,7 +6454,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 int ActiveProtocol()
 {
     // SPORK_14 is used for 70913 (v3.1.0+)
-    if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) || chainActive.Height() >= Params().DGW_POS_FORK_BLOCK()) {
+    if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) || chainActive.Height() >= Params().DIFF_FORK_BLOCK()) {
             return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
     }
     // SPORK_15 was used for 70912 (v3.0.5+), commented out now.

@@ -58,12 +58,13 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (250, uint256("0x0000027a906e79807e5366cb898801ddae8c1c613079b2b8d86f91d50bca9280"))
     (2500, uint256("0xc120830f40226255b0b4c9f787c99af92699712fc52ca190fc23000707813f92"))
     (5250, uint256("0x745c5e4c4e49d7f9d31d87bfe2d5ab9b94f1073c1a7363ecb217ee03104d6858"))
-    (122500, uint256("2004719bd307f37b0baaa095bb1ad5433a790e5e5b68dcb6ab8ff40672159b6c"));
+    (122500, uint256("2004719bd307f37b0baaa095bb1ad5433a790e5e5b68dcb6ab8ff40672159b6c"))
+    (140000, uint256("280db0c6c619b220d6ab11c34006d9e2644e2060c50ad1806efd7792cd247378"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1549420078, // * UNIX timestamp of last checkpoint block
-    251748,      // * total number of transactions between genesis and last checkpoint
+    1550066841, // * UNIX timestamp of last checkpoint block
+    287552,      // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -137,7 +138,7 @@ public:
         nMaxMoneyOut = 21000000 * COIN;
 
         nWalletForkBlock = 275;
-        nDiffForkBlock = 145000;
+        nDiffForkBlock = 150000;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 250;
@@ -151,8 +152,8 @@ public:
         nBlockEnforceInvalidUTXO = INT_MAX-1; //Start enforcing the invalid UTXO's and staking rewards
         nInvalidAmountFiltered = 0*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
         nBlockZerocoinV2 = INT_MAX-1; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
-        nEnforceNewSporkKey = 1549497600; //!> Sporks signed after (GMT): 02/07/2019 @ 12:00am (UTC) must use the new spork key
-        nRejectOldSporkKey = 1549497600; //!> Fully reject old spork key after (GMT): Friday, June 1, 2018 12:00:00 AM
+        nEnforceNewSporkKey = 1550880000; //!> Sporks signed after (GMT): 02/07/2019 @ 12:00am (UTC) must use the new spork key
+        nRejectOldSporkKey = 1550900000; //!> Fully reject old spork key after (GMT): Friday, June 1, 2018 12:00:00 AM
 
          const char* pszTimestamp = "KYD - Trust between community and developer";
          CMutableTransaction txNew;
