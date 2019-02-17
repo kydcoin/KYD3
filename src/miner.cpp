@@ -1,7 +1,8 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -113,12 +114,8 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
     if (Params().MineBlocksOnDemand())
         pblock->nVersion = GetArg("-blockversion", pblock->nVersion);
 
-    // Make sure to create the correct block version after zerocoin is enabled
     bool fZerocoinActive = GetAdjustedTime() >= Params().Zerocoin_StartTime();
-    if (fZerocoinActive)
-        pblock->nVersion = 4;
-    else
-        pblock->nVersion = 3;
+    pblock->nVersion = 5;   // Supports CLTV activation
 
     // Create coinbase tx
     CMutableTransaction txNew;
@@ -355,7 +352,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                     continue;
 
                 bool fDoubleSerial = false;
-                for (const CTxIn txIn : tx.vin) {
+                for (const CTxIn& txIn : tx.vin) {
                     if (txIn.scriptSig.IsZerocoinSpend()) {
                         libzerocoin::CoinSpend spend = TxInToZerocoinSpend(txIn);
                         bool fUseV1Params = libzerocoin::ExtractVersionFromSerial(spend.getCoinSerialNumber()) < libzerocoin::PrivateCoin::PUBKEY_VERSION;
@@ -384,6 +381,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             // Note that flags: we don't want to set mempool/IsStandard()
             // policy here, but we still have to ensure that the block we
             // create only contains transactions that are valid in new blocks.
+
             CValidationState state;
             if (!CheckInputs(tx, state, view, true, MANDATORY_SCRIPT_VERIFY_FLAGS, true))
                 continue;
@@ -400,7 +398,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             nBlockSigOps += nTxSigOps;
             nFees += nTxFees;
 
-            for (const CBigNum bnSerial : vTxSerials)
+            for (const CBigNum& bnSerial : vTxSerials)
                 vBlockSerials.emplace_back(bnSerial);
 
             if (fPrintPriority) {
@@ -437,11 +435,11 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         LogPrintf("CreateNewBlock(): total size %u\n", nBlockSize);
 
         // Compute final coinbase transaction.
+        pblock->vtx[0].vin[0].scriptSig = CScript() << nHeight << OP_0;
         if (!fProofOfStake) {
             pblock->vtx[0] = txNew;
             pblocktemplate->vTxFees[0] = -nFees;
         }
-        pblock->vtx[0].vin[0].scriptSig = CScript() << nHeight << OP_0;
 
         // Fill in header
         pblock->hashPrevBlock = pindexPrev->GetBlockHash();
@@ -451,15 +449,8 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         pblock->nNonce = 0;
 
         //Calculate the accumulator checkpoint only if the previous cached checkpoint need to be updated
-        uint256 nCheckpoint = 0;
-        uint256 hashBlockLastAccumulated = 0;
-        if (nHeight < 10) {
-               hashBlockLastAccumulated = chainActive.Genesis()->GetBlockHash();
-        }
-        else {
-               hashBlockLastAccumulated = chainActive[nHeight - (nHeight % 10) - 10]->GetBlockHash();
-        }
-
+        uint256 nCheckpoint;
+        uint256 hashBlockLastAccumulated = chainActive[nHeight - (nHeight % 10) - 10]->GetBlockHash();
         if (nHeight >= pCheckpointCache.first || pCheckpointCache.second.first != hashBlockLastAccumulated) {
             //For the period before v2 activation, zKYD will be disabled and previous block's checkpoint is all that will be needed
             pCheckpointCache.second.second = pindexPrev->nAccumulatorCheckpoint;
@@ -482,7 +473,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         pblocktemplate->vTxSigOps[0] = GetLegacySigOpCount(pblock->vtx[0]);
 
         CValidationState state;
-        if (!TestBlockValidity(state, *pblock, pindexPrev, false, false, true)) {
+        if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
             LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
             mempool.clear();
             return NULL;

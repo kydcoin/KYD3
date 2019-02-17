@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2013 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,8 +28,8 @@ bool CCrypter::SetKeyFromPassphrase(const SecureString& strKeyData, const std::v
             (unsigned char*)&strKeyData[0], strKeyData.size(), nRounds, chKey, chIV);
 
     if (i != (int)WALLET_CRYPTO_KEY_SIZE) {
-        OPENSSL_cleanse(chKey, sizeof(chKey));
-        OPENSSL_cleanse(chIV, sizeof(chIV));
+        memory_cleanse(chKey, sizeof(chKey));
+        memory_cleanse(chIV, sizeof(chIV));
         return false;
     }
 

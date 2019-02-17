@@ -1130,8 +1130,8 @@ MultiSend: %1</translation>
         <translation>Dit label wordt rood, als een ontvanger een hoeveelheid kleiner dan %1 ontvangt.</translation>
     </message>
     <message>
-        <source>Can vary +/- %1 ukyd per input.</source>
-        <translation>Kan +/-%1 ukyd per invoer variëren.</translation>
+        <source>Can vary +/- %1 upiv per input.</source>
+        <translation>Kan +/-%1 upiv per invoer variëren.</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2929,8 +2929,8 @@ Maximaal toegestaan:</translation>
         <translation>Geen 'Betaal aan' adres verstrekt, lokale betaling wordt gemaakt</translation>
     </message>
     <message>
-        <source>Invalid KYD Address</source>
-        <translation>Ongeldig KYD addres</translation>
+        <source>Invalid Kyd Address</source>
+        <translation>Ongeldig Kyd addres</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -5146,8 +5146,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Je moet een masternodeprivkey opgeven in de configuratie. Raadpleeg de documentatie voor hulp.</translation>
     </message>
     <message>
-        <source>(9229 could be used only on mainnet)</source>
-        <translation>(9229 kan alleen op mainnet worden gebruikt)</translation>
+        <source>(51472 could be used only on mainnet)</source>
+        <translation>(51472 kan alleen op mainnet worden gebruikt)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5158,8 +5158,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>(standaard: 1)</translation>
     </message>
     <message>
-        <source>(must be 9229 for mainnet)</source>
-        <translation>(moet 9229 voor mainnet zijn)</translation>
+        <source>(must be 51472 for mainnet)</source>
+        <translation>(moet 51472 voor mainnet zijn)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

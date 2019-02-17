@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -73,6 +74,10 @@ void OptionsModel::Init()
         settings.setValue("fHideZeroBalances", true);
     fHideZeroBalances = settings.value("fHideZeroBalances").toBool();
 
+    if (!settings.contains("fHideOrphans"))
+        settings.setValue("fHideOrphans", false);
+    fHideOrphans = settings.value("fHideOrphans").toBool();
+
     if (!settings.contains("fCoinControlFeatures"))
         settings.setValue("fCoinControlFeatures", false);
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
@@ -80,6 +85,10 @@ void OptionsModel::Init()
     if (!settings.contains("fZeromintEnable"))
         settings.setValue("fZeromintEnable", false);
     fEnableZeromint = settings.value("fZeromintEnable").toBool();
+
+    if (!settings.contains("fEnableAutoConvert"))
+        settings.setValue("fEnableAutoConvert", false);
+    fEnableAutoConvert = settings.value("fEnableAutoConvert").toBool();
 
     if (!settings.contains("nZeromintPercentage"))
         settings.setValue("nZeromintPercentage", 0);
@@ -89,10 +98,10 @@ void OptionsModel::Init()
         settings.setValue("nPreferredDenom", 0);
     nPreferredDenom = settings.value("nPreferredDenom", "0").toLongLong();
 
-    if (!settings.contains("nAnonymizeKYDAmount"))
-        settings.setValue("nAnonymizeKYDAmount", 1000);
+    if (!settings.contains("nAnonymizeKydAmount"))
+        settings.setValue("nAnonymizeKydAmount", 1000);
 
-    nAnonymizeKYDAmount = settings.value("nAnonymizeKYDAmount").toLongLong();
+    nAnonymizeKydAmount = settings.value("nAnonymizeKydAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -162,12 +171,14 @@ void OptionsModel::Init()
 
     if (settings.contains("fZeromintEnable"))
         SoftSetBoolArg("-enablezeromint", settings.value("fZeromintEnable").toBool());
+    if (settings.contains("fEnableAutoConvert"))
+        SoftSetBoolArg("-enableautoconvertaddress", settings.value("fEnableAutoConvert").toBool());
     if (settings.contains("nZeromintPercentage"))
         SoftSetArg("-zeromintpercentage", settings.value("nZeromintPercentage").toString().toStdString());
     if (settings.contains("nPreferredDenom"))
         SoftSetArg("-preferredDenom", settings.value("nPreferredDenom").toString().toStdString());
-    if (settings.contains("nAnonymizeKYDAmount"))
-        SoftSetArg("-anonymizekydamount", settings.value("nAnonymizeKYDAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeKydAmount"))
+        SoftSetArg("-anonymizekydamount", settings.value("nAnonymizeKydAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -252,14 +263,18 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case HideZeroBalances:
             return settings.value("fHideZeroBalances");
+        case HideOrphans:
+            return settings.value("fHideOrphans");
         case ZeromintEnable:
             return QVariant(fEnableZeromint);
+        case ZeromintAddresses:
+            return QVariant(fEnableAutoConvert);
         case ZeromintPercentage:
             return QVariant(nZeromintPercentage);
         case ZeromintPrefDenom:
             return QVariant(nPreferredDenom);
-        case AnonymizeKYDAmount:
-            return QVariant(nAnonymizeKYDAmount);
+        case AnonymizeKydAmount:
+            return QVariant(nAnonymizeKydAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -372,6 +387,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("fZeromintEnable", fEnableZeromint);
             emit zeromintEnableChanged(fEnableZeromint);
             break;
+        case ZeromintAddresses:
+            fEnableAutoConvert = value.toBool();
+            settings.setValue("fEnableAutoConvert", fEnableAutoConvert);
+            emit zeromintAddressesChanged(fEnableAutoConvert);
         case ZeromintPercentage:
             nZeromintPercentage = value.toInt();
             settings.setValue("nZeromintPercentage", nZeromintPercentage);
@@ -387,11 +406,15 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("fHideZeroBalances", fHideZeroBalances);
             emit hideZeroBalancesChanged(fHideZeroBalances);
             break;
-
-        case AnonymizeKYDAmount:
-            nAnonymizeKYDAmount = value.toInt();
-            settings.setValue("nAnonymizeKYDAmount", nAnonymizeKYDAmount);
-            emit anonymizeKYDAmountChanged(nAnonymizeKYDAmount);
+        case HideOrphans:
+            fHideOrphans = value.toBool();
+            settings.setValue("fHideOrphans", fHideOrphans);
+            emit hideOrphansChanged(fHideOrphans);
+            break;
+        case AnonymizeKydAmount:
+            nAnonymizeKydAmount = value.toInt();
+            settings.setValue("nAnonymizeKydAmount", nAnonymizeKydAmount);
+            emit anonymizeKydAmountChanged(nAnonymizeKydAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

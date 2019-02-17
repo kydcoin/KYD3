@@ -1,4 +1,5 @@
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,7 +31,7 @@ public:
 // zKYDStake can take two forms
 // 1) the stake candidate, which is a zcmint that is attempted to be staked
 // 2) a staked zkyd, which is a zcspend that has successfully staked
-class CZKydStake : public CStakeInput
+class CZPivStake : public CStakeInput
 {
 private:
     uint32_t nChecksum;
@@ -39,7 +40,7 @@ private:
     uint256 hashSerial;
 
 public:
-    explicit CZKydStake(libzerocoin::CoinDenomination denom, const uint256& hashSerial)
+    explicit CZPivStake(libzerocoin::CoinDenomination denom, const uint256& hashSerial)
     {
         this->denom = denom;
         this->hashSerial = hashSerial;
@@ -47,7 +48,7 @@ public:
         fMint = true;
     }
 
-    explicit CZKydStake(const libzerocoin::CoinSpend& spend);
+    explicit CZPivStake(const libzerocoin::CoinSpend& spend);
 
     CBlockIndex* GetIndexFrom() override;
     bool GetTxFrom(CTransaction& tx) override;
@@ -63,13 +64,13 @@ public:
     uint32_t GetChecksum();
 };
 
-class CKydStake : public CStakeInput
+class CPivStake : public CStakeInput
 {
 private:
     CTransaction txFrom;
     unsigned int nPosition;
 public:
-    CKydStake()
+    CPivStake()
     {
         this->pindexFrom = nullptr;
     }

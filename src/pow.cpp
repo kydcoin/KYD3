@@ -1,7 +1,8 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,8 +23,8 @@ unsigned int GetDGWNextWorkRequired(const CBlockIndex* pindexLast, const CBlockH
 	const CBlockIndex* BlockReading = pindexLast;
 	int64_t nActualTimespan = 0;
 	int64_t LastBlockTime = 0;
-	int64_t PastBlocksMin = 24;
-	int64_t PastBlocksMax = 24;
+	int64_t PastBlocksMin = pindexLast->nHeight <= 150000 ? 24 : 180 ;
+  int64_t PastBlocksMax = pindexLast->nHeight <= 150000 ? 24 : 180;
 	int64_t CountBlocks = 0;
 	uint256 PastDifficultyAverage;
 	uint256 PastDifficultyAveragePrev;

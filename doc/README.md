@@ -3,7 +3,7 @@ KYD Core
 
 Setup
 ---------------------
-[KYD Core](http://kydcoin.io) is the original KYD client and it builds the backbone of the network. However, it downloads and stores the entire history of KYD transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[KYD Core](http://kyd.org/wallet) is the original KYD client and it builds the backbone of the network. However, it downloads and stores the entire history of KYD transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -26,7 +26,11 @@ Drag KYD-Qt to your applications folder, and then run KYD-Qt.
 
 ### Need Help?
 
-* Join the [KYD Discord Channel](https://discord.gg/zQMrU3s)
+* See the documentation at the [KYD Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+for help and more information.
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [KYD Forum](http://forum.kyd.org/).
+* Join our Discord server [Discord Server](https://discord.kyd.org)
+* Join one of our Slack groups [KYD Slack Groups](https://kyd.org/slack-logins/) (Main community is replaced by Discord).
 
 Building
 ---------------------
@@ -34,13 +38,32 @@ The following are developer notes on how to build KYD on your native platform. T
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
+- [Gitian Building Guide](gitian-building.md)
+
+Development
+---------------------
+The Pivx repo's [root README](https://github.com/KYD-Project/KYD/blob/master/README.md) contains relevant information on the development process and automated testing.
+
+- [Developer Notes](developer-notes.md)
+- [Multiwallet Qt Development](multiwallet-qt.md)
+- [Release Notes](release-notes.md)
+- [Release Process](release-process.md)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/bitcoin/doxygen/) ***TODO***
+- [Translation Process](translation_process.md)
+- [Unit Tests](unit-tests.md)
+- [Unauthenticated REST Interface](REST-interface.md)
+- [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
 
-* Join the [KYD Discord Channel](https://discord.gg/uMHKEm2)
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [KYD](http://forum.kyd.org/) forum.
+* Join the [KYD-Dev](https://kyd-dev.slack.com/) Slack group ([Sign-Up](https://kyd-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
+- [Files](files.md)
+- [Tor Support](tor.md)
+- [Init Scripts (systemd/upstart/openrc)](init.md)
 
 License
 ---------------------

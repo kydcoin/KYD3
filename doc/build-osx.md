@@ -44,8 +44,8 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/kyd-actual/kyd-coin.git
-        cd kyd-coin
+        git clone https://github.com/KYD-Project/KYD.git
+        cd KYD
 
 2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
 
@@ -86,7 +86,7 @@ Creating a release build
 ------------------------
 You can ignore this section if you are building `kydd` for your own use.
 
-kydd/kyd-cli binaries are not included in the KYD-Qt.app bundle.
+kydd/kyd-cli binaries are not included in the kyd-Qt.app bundle.
 
 If you are building `kydd` or `kyd-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
