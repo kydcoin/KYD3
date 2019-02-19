@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.kyd.Pivx-Qt</string>
+  <string>io.kyd.KYD-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.kyd.PivxPayment</string>
+      <string>io.kyd.KYDPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>kyd</string>
