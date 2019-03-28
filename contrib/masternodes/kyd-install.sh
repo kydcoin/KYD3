@@ -10,7 +10,7 @@ COIN_DAEMON='kydd'
 COIN_CLI='kyd-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.2.0.3/kyd-3.2.0.3-Ubuntu16-x86_64.tar.gz'
-COIN_BOOTSTRAP='https://raw.githubusercontent.com/kydcoin/KYD3/master/contrib/masternodes/kyd-bootstrap.tar.gz'
+COIN_BOOTSTRAP='https://review.kydcoin.io/bootstrap/kyd-bootstrap.zip'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='kyd'
@@ -336,7 +336,7 @@ cd $CONFIGFOLDER
 echo -e "${YELLOW}Clearing existing files...${NC}"
 mv wallet{.dat,.keep}
 mv ${COIN_NAME,,}{.conf,.keep}
-rm -rf *.conf *.dat *.log blocks chainstate backups database sporks .lock -r
+rm -rf *.conf *.dat *.log blocks chainstate database sporks zerocoin .lock -r
 mv wallet{.keep,.dat}
 mv ${COIN_NAME,,}{.keep,.conf}
 ls -al
@@ -351,9 +351,10 @@ exit 1
 
 function download_bootstrap() {
 cd $CONFIGFOLDER
+apt-get -qq install unzip
 echo -e "Downloading Bootstrap"
 wget -q $COIN_BOOTSTRAP
-tar -xzvf $BOOTSTRAP_ZIP
+unzip -q $BOOTSTRAP_ZIP
 rm $BOOTSTRAP_ZIP
 }
 
