@@ -351,7 +351,7 @@ exit 1
 
 function download_bootstrap() {
 cd $CONFIGFOLDER
-apt-get -q install unzip -q
+apt-get -qq install unzip
 echo -e "Downloading Bootstrap"
 wget -q $COIN_BOOTSTRAP
 unzip -q $BOOTSTRAP_ZIP
