@@ -351,10 +351,10 @@ exit 1
 
 function download_bootstrap() {
 cd $CONFIGFOLDER
-apt-get install unzip
+apt-get -q install unzip -q
 echo -e "Downloading Bootstrap"
 wget -q $COIN_BOOTSTRAP
-unzip $BOOTSTRAP_ZIP
+unzip -q $BOOTSTRAP_ZIP
 rm $BOOTSTRAP_ZIP
 }
 
