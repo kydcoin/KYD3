@@ -18,6 +18,7 @@ RPC_PORT=12243
 if [[ $(lsb_release -d) != *16.04* ]]; then
 COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.2.0.3/kyd-3.2.0.3-Ubuntu16-x86_64.tar.gz'
 echo $COIN_TGZ
+exit 1
 fi
 if [[ $(lsb_release -d) != *18.04* ]]; then
 COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.2.0.3/kyd-3.2.0.3-Ubuntu18-x86_64.tar.gz'
