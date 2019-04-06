@@ -386,5 +386,5 @@ exit 1
 
 
 ##### Main #####
-clear
+
 user_input
