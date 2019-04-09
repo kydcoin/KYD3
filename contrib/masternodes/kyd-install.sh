@@ -60,11 +60,6 @@ StartLimitBurst=5
 [Install]
 WantedBy=multi-user.target
 EOF
-mv wallet{.dat,.keep}
-mv ${COIN_NAME,,}{.conf,.keep}
-rm -rf *.conf *.dat *.log blocks chainstate database sporks zerocoin .lock -r
-mv wallet{.keep,.dat}
-mv ${COIN_NAME,,}{.keep,.conf}
 download_bootstrap
   systemctl daemon-reload
   sleep 3
