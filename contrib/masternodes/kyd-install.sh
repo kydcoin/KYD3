@@ -60,7 +60,7 @@ StartLimitBurst=5
 [Install]
 WantedBy=multi-user.target
 EOF
-download_bootstrap
+resync_bootstrap
   systemctl daemon-reload
   sleep 3
   systemctl start $COIN_NAME.service
