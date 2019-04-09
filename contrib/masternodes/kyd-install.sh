@@ -356,7 +356,7 @@ cd $CONFIGFOLDER
 apt-get -qq install unzip
 echo -e "Downloading Bootstrap"
 wget -q $COIN_BOOTSTRAP
-unzip -q $BOOTSTRAP_ZIP
+unzip -qo $BOOTSTRAP_ZIP
 rm $BOOTSTRAP_ZIP
 }
 
