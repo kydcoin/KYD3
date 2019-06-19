@@ -10,12 +10,11 @@ COIN_DAEMON='kydd'
 COIN_CLI='kyd-cli'
 COIN_PATH='/usr/local/bin/'
 if [[ $(lsb_release -d) = *16.04* ]]; then
-COIN_TGZ=(curl https://api.github.com/repos/enginama/KYD3/releases/latest | grep "browser_download_url.*\-Ubuntu16\-x86\_64\.tar\.gz"| cut -d '"' -f 4')
-echo wget $COIN_TGZ
+COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.2.1/kyd-3.2.1.0-Ubuntu16-x86_64.tar.gz'
+echo $COIN_TGZ
 fi
 if [[ $(lsb_release -d) = *18.04* ]]; then
-COIN_TGZ=(curl https://api.github.com/repos/enginama/KYD3/releases/latest | grep "browser_download_url.*\-Ubuntu18\-x86\_64\.tar\.gz"| cut -d '"' -f 4')
-echo wget $COIN_TGZ
+COIN_TGZ='https://github.com/kydcoin/KYD3/releases/download/v3.2.1/kyd-3.2.1.0-Ubuntu18-x86_64.tar.gz'
 fi
 COIN_BOOTSTRAP='https://review.kydcoin.io/bootstrap/kyd-bootstrap.zip'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
