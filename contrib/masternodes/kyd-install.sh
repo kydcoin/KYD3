@@ -32,7 +32,7 @@ NC='\033[0m'
 function download_node() {
   echo -e "Preparing to download updated $COIN_NAME binaries..."
   cd $TMP_FOLDER
-  $COIN_TGZ
+  wget -q $COIN_TGZ
   tar xvzf $COIN_ZIP -C /usr/local/bin/ --strip=1
   chmod +x $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI
   cd - >/dev/null 2>&1
