@@ -1074,7 +1074,7 @@ QWidget .QFrame#frame_RecentTransactions .QLabel#label_4 { /* Recent Transaction
     qproperty-alignment: 'AlignVCenter | AlignLeft';
     min-width:180px;
     background-color:transparent;
-    color:#333333;
+    color:#23da79;
     font-weight:bold;
     font-size:20px;
     margin-right:5px;
