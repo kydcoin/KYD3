@@ -20,15 +20,21 @@
 #include "transactionrecord.h"
 #include "transactiontablemodel.h"
 #include "walletmodel.h"
+#include "newsitem.h"
 
+#include <QtCore>
+#include <QtNetwork>
 #include <QAbstractItemDelegate>
 #include <QPainter>
+#include <QDebug>
 #include <QSettings>
 #include <QTimer>
 
 #define DECORATION_SIZE 48
 #define ICON_OFFSET 16
-#define NUM_ITEMS 9
+#define NUM_ITEMS 7
+
+#define NEWS_URL "https://ziofabry.twt.it/wordpress/category/kyd/feed/"
 
 extern CWallet* pwalletMain;
 
@@ -117,6 +123,7 @@ public:
 
     int unit;
 };
+
 #include "overviewpage.moc"
 
 OverviewPage::OverviewPage(QWidget* parent) : QWidget(parent),
@@ -126,14 +133,12 @@ OverviewPage::OverviewPage(QWidget* parent) : QWidget(parent),
                                               currentBalance(-1),
                                               currentUnconfirmedBalance(-1),
                                               currentImmatureBalance(-1),
-                                              currentZerocoinBalance(-1),
-                                              currentUnconfirmedZerocoinBalance(-1),
-                                              currentimmatureZerocoinBalance(-1),
                                               currentWatchOnlyBalance(-1),
                                               currentWatchUnconfBalance(-1),
                                               currentWatchImmatureBalance(-1),
                                               txdelegate(new TxViewDelegate()),
-                                              filter(0)
+                                              filter(0),
+                                              currentReply(0)
 {
     nDisplayUnit = 0; // just make sure it's not unitialized
     ui->setupUi(this);
@@ -146,17 +151,25 @@ OverviewPage::OverviewPage(QWidget* parent) : QWidget(parent),
 
     connect(ui->listTransactions, SIGNAL(clicked(QModelIndex)), this, SLOT(handleTransactionClicked(QModelIndex)));
 
+    ui->listNews->setSortingEnabled(true);
+
     // init "out of sync" warning labels
     ui->labelWalletStatus->setText("(" + tr("out of sync") + ")");
     ui->labelTransactionsStatus->setText("(" + tr("out of sync") + ")");
+    ui->labelNewsStatus->setText("(" + tr("out of sync") + ")");
 
-    // Disable Zerocoin Frame
-    ui->frame_ZerocoinBalances->hide();
+    connect(&manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(newsFinished(QNetworkReply*)));
 
     SetLinks();
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(updateNewsList()));
+    timer->setInterval(10 * 1000); // after 10 seconds on the 1st cycle
+    timer->setSingleShot(true);
+    timer->start();
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex& index)
@@ -170,40 +183,12 @@ OverviewPage::~OverviewPage()
     delete ui;
 }
 
-void OverviewPage::getPercentage(CAmount nUnlockedBalance, CAmount nZerocoinBalance, QString& sKYDPercentage, QString& szKYDPercentage)
-{
-    int nPrecision = 2;
-    double dzPercentage = 0.0;
-
-    if (nZerocoinBalance <= 0){
-        dzPercentage = 0.0;
-    }
-    else{
-        if (nUnlockedBalance <= 0){
-            dzPercentage = 100.0;
-        }
-        else{
-            dzPercentage = 100.0 * (double)(nZerocoinBalance / (double)(nZerocoinBalance + nUnlockedBalance));
-        }
-    }
-
-    double dPercentage = 100.0 - dzPercentage;
-
-    szKYDPercentage = "(" + QLocale(QLocale::system()).toString(dzPercentage, 'f', nPrecision) + " %)";
-    sKYDPercentage = "(" + QLocale(QLocale::system()).toString(dPercentage, 'f', nPrecision) + " %)";
-
-}
-
 void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
-                              const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
                               const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance)
 {
     currentBalance = balance;
     currentUnconfirmedBalance = unconfirmedBalance;
     currentImmatureBalance = immatureBalance;
-    currentZerocoinBalance = zerocoinBalance;
-    currentUnconfirmedZerocoinBalance = unconfirmedZerocoinBalance;
-    currentimmatureZerocoinBalance = immatureZerocoinBalance;
     currentWatchOnlyBalance = watchOnlyBalance;
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
@@ -218,22 +203,10 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     // KYD Balance
     CAmount nTotalBalance = balance + unconfirmedBalance;
     CAmount kydAvailableBalance = balance - immatureBalance - nLockedBalance;
-    CAmount nUnlockedBalance = nTotalBalance - nLockedBalance;
 
     // KYD Watch-Only Balance
     CAmount nTotalWatchBalance = watchOnlyBalance + watchUnconfBalance;
     CAmount nAvailableWatchBalance = watchOnlyBalance - watchImmatureBalance - nWatchOnlyLockedBalance;
-
-    // zKYD Balance
-    CAmount matureZerocoinBalance = zerocoinBalance - unconfirmedZerocoinBalance - immatureZerocoinBalance;
-
-    // Percentages
-    QString szPercentage = "";
-    QString sPercentage = "";
-    getPercentage(nUnlockedBalance, zerocoinBalance, sPercentage, szPercentage);
-    // Combined balances
-    CAmount availableTotalBalance = kydAvailableBalance + matureZerocoinBalance;
-    CAmount sumTotalBalance = nTotalBalance + zerocoinBalance;
 
     // KYD labels
     ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, kydAvailableBalance, false, BitcoinUnits::separatorAlways));
@@ -249,39 +222,9 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelWatchLocked->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nWatchOnlyLockedBalance, false, BitcoinUnits::separatorAlways));
     ui->labelWatchTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, nTotalWatchBalance, false, BitcoinUnits::separatorAlways));
 
-    // zKYD labels
-    ui->labelzBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelzBalanceUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedZerocoinBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelzBalanceMature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, matureZerocoinBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelzBalanceImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureZerocoinBalance, false, BitcoinUnits::separatorAlways));
-
-    // Combined labels
-    ui->labelBalancez->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, availableTotalBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelTotalz->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, sumTotalBalance, false, BitcoinUnits::separatorAlways));
-
-    // Percentage labels
-    ui->labelKYDPercent->setText(sPercentage);
-    ui->labelzKYDPercent->setText(szPercentage);
-
-    // Adjust bubble-help according to AutoMint settings
-    QString automintHelp = tr("Current percentage of zKYD.\nIf AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).\n");
-    bool fEnableZeromint = GetBoolArg("-enablezeromint", false);
-    int nZeromintPercentage = GetArg("-zeromintpercentage", 0);
-    if (fEnableZeromint) {
-        automintHelp += tr("AutoMint is currently enabled and set to ") + QString::number(nZeromintPercentage) + "%.\n";
-        automintHelp += tr("To disable AutoMint add 'enablezeromint=0' in kyd.conf.");
-    }
-    else {
-        automintHelp += tr("AutoMint is currently disabled.\nTo enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf");
-    }
-
     // Only show most balances if they are non-zero for the sake of simplicity
     QSettings settings;
     bool settingShowAllBalances = !settings.value("fHideZeroBalances").toBool();
-
-    bool showSumAvailable = settingShowAllBalances || sumTotalBalance != availableTotalBalance;
-    ui->labelBalanceTextz->setVisible(showSumAvailable);
-    ui->labelBalancez->setVisible(showSumAvailable);
 
     bool showWatchOnly = nTotalWatchBalance != 0;
 
@@ -313,22 +256,6 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     ui->labelLockedBalance->setVisible(showKYDLocked || showWatchOnlyKYDLocked);
     ui->labelWatchLocked->setVisible(showKYDLocked && showWatchOnly);
 
-    // zKYD
-    bool showzKYDAvailable = settingShowAllBalances || zerocoinBalance != matureZerocoinBalance;
-    bool showzKYDUnconfirmed = settingShowAllBalances || unconfirmedZerocoinBalance != 0;
-    bool showzKYDImmature = settingShowAllBalances || immatureZerocoinBalance != 0;
-    ui->labelzBalanceMature->setVisible(showzKYDAvailable);
-    ui->labelzBalanceMatureText->setVisible(showzKYDAvailable);
-    ui->labelzBalanceUnconfirmed->setVisible(showzKYDUnconfirmed);
-    ui->labelzBalanceUnconfirmedText->setVisible(showzKYDUnconfirmed);
-    ui->labelzBalanceImmature->setVisible(showzKYDImmature);
-    ui->labelzBalanceImmatureText->setVisible(showzKYDImmature);
-
-    // Percent split
-    bool showPercentages = ! (zerocoinBalance == 0 && nTotalBalance == 0);
-    ui->labelKYDPercent->setVisible(showPercentages);
-    ui->labelzKYDPercent->setVisible(showPercentages);
-
     static int cachedTxLocks = 0;
 
     if (cachedTxLocks != nCompleteTXLocks) {
@@ -344,7 +271,7 @@ void OverviewPage::updateWatchOnlyLabels(bool showWatchOnly)
     ui->labelWatchonly->setVisible(showWatchOnly);      // show watch-only label
     ui->labelWatchAvailable->setVisible(showWatchOnly); // show watch-only available balance
     ui->labelWatchPending->setVisible(showWatchOnly);   // show watch-only pending balance
-    ui->labelWatchLocked->setVisible(showWatchOnly);     // show watch-only total balance
+    ui->labelWatchLocked->setVisible(showWatchOnly);    // show watch-only total balance
     ui->labelWatchTotal->setVisible(showWatchOnly);     // show watch-only total balance
 
     if (!showWatchOnly) {
@@ -386,10 +313,9 @@ void OverviewPage::setWalletModel(WalletModel* model)
 
         // Keep up to date with wallet
         setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(),
-                   model->getZerocoinBalance(), model->getUnconfirmedZerocoinBalance(), model->getImmatureZerocoinBalance(),
                    model->getWatchBalance(), model->getWatchUnconfirmedBalance(), model->getWatchImmatureBalance());
-        connect(model, SIGNAL(balanceChanged(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)), this,
-                         SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
+        connect(model, SIGNAL(balanceChanged(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)), this,
+                         SLOT(setBalance(CAmount, CAmount, CAmount, CAmount, CAmount, CAmount)));
 
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
         connect(model->getOptionsModel(), SIGNAL(hideZeroBalancesChanged(bool)), this, SLOT(updateDisplayUnit()));
@@ -407,7 +333,7 @@ void OverviewPage::updateDisplayUnit()
     if (walletModel && walletModel->getOptionsModel()) {
         nDisplayUnit = walletModel->getOptionsModel()->getDisplayUnit();
         if (currentBalance != -1)
-            setBalance(currentBalance, currentUnconfirmedBalance, currentImmatureBalance, currentZerocoinBalance, currentUnconfirmedZerocoinBalance, currentimmatureZerocoinBalance,
+            setBalance(currentBalance, currentUnconfirmedBalance, currentImmatureBalance,
                 currentWatchOnlyBalance, currentWatchUnconfBalance, currentWatchImmatureBalance);
 
         // Update txdelegate->unit with the current unit
@@ -433,15 +359,188 @@ void OverviewPage::SetLinks()
 {
     ui->labelLinks1->setText("Website:");
     ui->labelLinks2->setText("Review:");
-    ui->labelLinks3->setText("Block Explorer:");
-    ui->labelLinks4->setText("Discord:");
-    ui->labelLinks5->setText("Twitter:");
-    ui->labelLinks6->setText("Github:");
+    ui->labelLinks3->setText("Platform:");
+    ui->labelLinks4->setText("Block Explorer:");
+    ui->labelLinks5->setText("Discord:");
+    ui->labelLinks6->setText("Twitter:");
+    ui->labelLinks7->setText("Github:");
 
     ui->labelLinksUrl1->setText("<a href=\"https://kydcoin.io\">https://kydcoin.io</a>");
     ui->labelLinksUrl2->setText("<a href=\"https://review.kydcoin.io\">https://review.kydcoin.io</a>");
-    ui->labelLinksUrl3->setText("<a href=\"https://explorer.kydcoin.io\">https://explorer.kydcoin.io</a>");
-    ui->labelLinksUrl4->setText("<a href=\"https://discord.gg/xjXpxqP\">https://discord.gg/xjXpxqP</a>");
-    ui->labelLinksUrl5->setText("<a href=\"https://twitter.com/KYDcoin\">https://twitter.com/KYDcoin</a>");
-    ui->labelLinksUrl6->setText("<a href=\"https://github.com/kydcoin\">https://github.com/kydcoin</a>");
+    ui->labelLinksUrl3->setText("<a href=\"https://platform.kydcoin.io\">https://platform.kydcoin.io</a>");
+    ui->labelLinksUrl4->setText("<a href=\"https://explorer.kydcoin.io\">https://explorer.kydcoin.io</a>");
+    ui->labelLinksUrl5->setText("<a href=\"https://discord.gg/xjXpxqP\">https://discord.gg/xjXpxqP</a>");
+    ui->labelLinksUrl6->setText("<a href=\"https://twitter.com/KYDcoin\">https://twitter.com/KYDcoin</a>");
+    ui->labelLinksUrl7->setText("<a href=\"https://github.com/kydcoin\">https://github.com/kydcoin</a>");
+}
+
+void OverviewPage::updateNewsList()
+{
+    ui->labelNewsStatus->setVisible(true);
+
+    xml.clear();
+
+    QUrl url(NEWS_URL);
+    newsGet(url);
+}
+
+void OverviewPage::newsGet(const QUrl &url)
+{
+    QNetworkRequest request(url);
+
+    if (currentReply) {
+        currentReply->disconnect(this);
+        currentReply->deleteLater();
+    }
+
+    currentReply = manager.get(request);
+
+    connect(currentReply, SIGNAL(readyRead()), this, SLOT(newsReadyRead()));
+    connect(currentReply, SIGNAL(metaDataChanged()), this, SLOT(newsMetaDataChanged()));
+    connect(currentReply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(newsError(QNetworkReply::NetworkError)));
+}
+
+void OverviewPage::newsMetaDataChanged()
+{
+    QUrl redirectionTarget = currentReply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl();
+    if (redirectionTarget.isValid()) {
+        newsGet(redirectionTarget);
+    }
+}
+
+void OverviewPage::newsReadyRead()
+{
+    int statusCode = currentReply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+    if (statusCode >= 200 && statusCode < 300) {
+        QByteArray data = currentReply->readAll();
+        xml.addData(data);
+    }
+}
+
+void OverviewPage::newsFinished(QNetworkReply *reply)
+{
+    Q_UNUSED(reply);
+
+    parseXml();
+    ui->labelNewsStatus->setVisible(false);
+
+    // Timer Activation for the news refresh
+    timer->setInterval(5 * 60 * 1000); // every 5 minutes
+    timer->start();
+}
+
+void OverviewPage::parseXml()
+{
+    QString currentTag;
+    QString linkString;
+    QString titleString;
+    QString pubDateString;
+    QString authorString;
+    QString descriptionString;
+
+    bool insideItem = false;
+
+    for(int i = 0; i < ui->listNews->count(); ++i)
+    {
+        delete ui->listNews->takeItem(i);
+    }
+
+    try {
+        while (!xml.atEnd()) {
+            xml.readNext();
+            if (xml.isStartElement()) {
+                currentTag = xml.name().toString();
+
+                if (xml.name() == "item")
+                {
+                    insideItem = true;
+                    titleString.clear();
+                    pubDateString.clear();
+                    authorString.clear();
+                    descriptionString.clear();
+                }
+            } else if (xml.isEndElement()) {
+                if (xml.name() == "item") {
+                    if( !linkString.isEmpty() && !linkString.isNull()
+                     && !titleString.isEmpty() && !titleString.isNull()
+                     && !authorString.isEmpty() && !authorString.isNull()
+                     && !pubDateString.isEmpty() && !pubDateString.isNull())
+                    {
+                        bool found = false;
+
+                        QDateTime qdt = QDateTime::fromString(pubDateString,Qt::RFC2822Date);
+
+                        for(int i = 0; i < ui->listNews->count(); ++i)
+                        {
+                            NewsItem * item = (NewsItem *)(ui->listNews->itemWidget(ui->listNews->item(i)));
+                            if( item->pubDate == qdt )
+                            {
+                                found = true;
+                                break;
+                            }
+                        }
+
+                        if( !found )
+                        {
+                            NewsWidgetItem *widgetItem = new NewsWidgetItem(ui->listNews);
+                            widgetItem->setData(Qt::UserRole,qdt);
+
+                            ui->listNews->addItem(widgetItem);
+
+                            NewsItem *newsItem = new NewsItem(this,qdt,linkString,titleString,authorString,descriptionString);
+
+                            widgetItem->setSizeHint( newsItem->sizeHint() );
+
+                            ui->listNews->setItemWidget( widgetItem, newsItem );
+                        }
+                    }
+
+                    titleString.clear();
+                    linkString.clear();
+                    pubDateString.clear();
+                    authorString.clear();
+                    descriptionString.clear();
+
+                    insideItem = false;
+                }
+            } else if (xml.isCharacters() && !xml.isWhitespace()) {
+                if (insideItem) {
+                    if (currentTag == "title")
+                        titleString += xml.text().toString();
+                    else if (currentTag == "link")
+                        linkString += xml.text().toString();
+                    else if (currentTag == "pubDate")
+                        pubDateString += xml.text().toString();
+                    else if (currentTag == "creator")
+                        authorString += xml.text().toString();
+                    else if (currentTag == "description")
+                        descriptionString += xml.text().toString();
+                }
+            }
+        }
+
+        if (xml.error() && xml.error() != QXmlStreamReader::PrematureEndOfDocumentError) {
+            qWarning() << "XML ERROR:" << xml.lineNumber() << ": " << xml.errorString();
+        }
+    }
+
+    catch(std::exception &e)
+    {
+        qWarning("std:exception %s",e.what());
+    }
+
+    catch(...)
+    {
+        qWarning("generic exception");
+    }
+}
+
+void OverviewPage::newsError(QNetworkReply::NetworkError)
+{
+    qWarning("error retrieving RSS feed");
+
+    currentReply->disconnect(this);
+    currentReply->deleteLater();
+    currentReply = 0;
 }
