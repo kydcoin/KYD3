@@ -34,7 +34,7 @@
 #define ICON_OFFSET 16
 #define NUM_ITEMS 7
 
-#define NEWS_URL "https://ziofabry.twt.it/wordpress/category/kyd/feed/"
+#define NEWS_URL "https://wallet-news.kydcoin.io/?call_custom_simple_rss=1"
 
 extern CWallet* pwalletMain;
 
