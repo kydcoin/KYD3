@@ -1,4 +1,5 @@
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,4 +26,3 @@ struct ZeroSetup {
 };
 
 BOOST_GLOBAL_FIXTURE(ZeroSetup);
-

@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -84,7 +85,7 @@ private:
 
     UnitDisplayStatusBarControl* unitDisplayControl;
     QLabel* labelStakingIcon;
-    QPushButton* labelAutoMintIcon;
+    //QPushButton* labelAutoMintIcon;
     QPushButton* labelEncryptionIcon;
     QLabel* labelTorIcon;
     QPushButton* labelConnectionsIcon;
@@ -109,7 +110,7 @@ private:
     QAction* multisigSignAction;
     QAction* aboutAction;
     QAction* receiveCoinsAction;
-    QAction* privacyAction;
+    //QAction* privacyAction;
     QAction* optionsAction;
     QAction* toggleHideAction;
     QAction* encryptWalletAction;
@@ -185,7 +186,7 @@ public slots:
 
 #ifdef ENABLE_WALLET
     void setStakingStatus();
-    void setAutoMintStatus();
+    //void setAutoMintStatus();
 
     /** Set the encryption status as shown in the UI.
        @param[in] status            current encryption status
@@ -213,10 +214,10 @@ private slots:
     void gotoBlockExplorerPage();
     /** Switch to masternode page */
     void gotoMasternodePage();
-    /** Switch to privacy page */
-    void gotoReceiveCoinsPage();
     /** Switch to receive coins page */
-    void gotoPrivacyPage();
+    void gotoReceiveCoinsPage();
+    /** Switch to privacy page */
+    //void gotoPrivacyPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
 

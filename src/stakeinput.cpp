@@ -1,4 +1,5 @@
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +10,7 @@
 #include "stakeinput.h"
 #include "wallet.h"
 
-CZKydStake::CZKydStake(const libzerocoin::CoinSpend& spend)
+CZPivStake::CZPivStake(const libzerocoin::CoinSpend& spend)
 {
     this->nChecksum = spend.getAccumulatorChecksum();
     this->denom = spend.getDenomination();
@@ -19,7 +20,7 @@ CZKydStake::CZKydStake(const libzerocoin::CoinSpend& spend)
     fMint = false;
 }
 
-int CZKydStake::GetChecksumHeightFromMint()
+int CZPivStake::GetChecksumHeightFromMint()
 {
     int nHeightChecksum = chainActive.Height() - Params().Zerocoin_RequiredStakeDepth();
 
@@ -30,12 +31,12 @@ int CZKydStake::GetChecksumHeightFromMint()
     return GetChecksumHeight(nChecksum, denom);
 }
 
-int CZKydStake::GetChecksumHeightFromSpend()
+int CZPivStake::GetChecksumHeightFromSpend()
 {
     return GetChecksumHeight(nChecksum, denom);
 }
 
-uint32_t CZKydStake::GetChecksum()
+uint32_t CZPivStake::GetChecksum()
 {
     return nChecksum;
 }
@@ -43,7 +44,7 @@ uint32_t CZKydStake::GetChecksum()
 // The zKYD block index is the first appearance of the accumulator checksum that was used in the spend
 // note that this also means when staking that this checksum should be from a block that is beyond 60 minutes old and
 // 100 blocks deep.
-CBlockIndex* CZKydStake::GetIndexFrom()
+CBlockIndex* CZPivStake::GetIndexFrom()
 {
     if (pindexFrom)
         return pindexFrom;
@@ -65,13 +66,13 @@ CBlockIndex* CZKydStake::GetIndexFrom()
     return pindexFrom;
 }
 
-CAmount CZKydStake::GetValue()
+CAmount CZPivStake::GetValue()
 {
     return denom * COIN;
 }
 
 //Use the first accumulator checkpoint that occurs 60 minutes after the block being staked from
-bool CZKydStake::GetModifier(uint64_t& nStakeModifier)
+bool CZPivStake::GetModifier(uint64_t& nStakeModifier)
 {
     CBlockIndex* pindex = GetIndexFrom();
     if (!pindex)
@@ -91,7 +92,7 @@ bool CZKydStake::GetModifier(uint64_t& nStakeModifier)
     }
 }
 
-CDataStream CZKydStake::GetUniqueness()
+CDataStream CZPivStake::GetUniqueness()
 {
     //The unique identifier for a zKYD is a hash of the serial
     CDataStream ss(SER_GETHASH, 0);
@@ -99,7 +100,7 @@ CDataStream CZKydStake::GetUniqueness()
     return ss;
 }
 
-bool CZKydStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
+bool CZPivStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
 {
     CBlockIndex* pindexCheckpoint = GetIndexFrom();
     if (!pindexCheckpoint)
@@ -120,7 +121,7 @@ bool CZKydStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
     return true;
 }
 
-bool CZKydStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
+bool CZPivStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
 {
     //Create an output returning the zKYD that was staked
     CTxOut outReward;
@@ -148,12 +149,12 @@ bool CZKydStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nT
     return true;
 }
 
-bool CZKydStake::GetTxFrom(CTransaction& tx)
+bool CZPivStake::GetTxFrom(CTransaction& tx)
 {
     return false;
 }
 
-bool CZKydStake::MarkSpent(CWallet *pwallet, const uint256& txid)
+bool CZPivStake::MarkSpent(CWallet *pwallet, const uint256& txid)
 {
     CzKYDTracker* zkydTracker = pwallet->zkydTracker.get();
     CMintMeta meta;
@@ -165,31 +166,31 @@ bool CZKydStake::MarkSpent(CWallet *pwallet, const uint256& txid)
 }
 
 //!KYD Stake
-bool CKydStake::SetInput(CTransaction txPrev, unsigned int n)
+bool CPivStake::SetInput(CTransaction txPrev, unsigned int n)
 {
     this->txFrom = txPrev;
     this->nPosition = n;
     return true;
 }
 
-bool CKydStake::GetTxFrom(CTransaction& tx)
+bool CPivStake::GetTxFrom(CTransaction& tx)
 {
     tx = txFrom;
     return true;
 }
 
-bool CKydStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
+bool CPivStake::CreateTxIn(CWallet* pwallet, CTxIn& txIn, uint256 hashTxOut)
 {
     txIn = CTxIn(txFrom.GetHash(), nPosition);
     return true;
 }
 
-CAmount CKydStake::GetValue()
+CAmount CPivStake::GetValue()
 {
     return txFrom.vout[nPosition].nValue;
 }
 
-bool CKydStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
+bool CPivStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTotal)
 {
     vector<valtype> vSolutions;
     txnouttype whichType;
@@ -224,7 +225,7 @@ bool CKydStake::CreateTxOuts(CWallet* pwallet, vector<CTxOut>& vout, CAmount nTo
     return true;
 }
 
-bool CKydStake::GetModifier(uint64_t& nStakeModifier)
+bool CPivStake::GetModifier(uint64_t& nStakeModifier)
 {
     int nStakeModifierHeight = 0;
     int64_t nStakeModifierTime = 0;
@@ -238,7 +239,7 @@ bool CKydStake::GetModifier(uint64_t& nStakeModifier)
     return true;
 }
 
-CDataStream CKydStake::GetUniqueness()
+CDataStream CPivStake::GetUniqueness()
 {
     //The unique identifier for a KYD stake is the outpoint
     CDataStream ss(SER_NETWORK, 0);
@@ -247,7 +248,7 @@ CDataStream CKydStake::GetUniqueness()
 }
 
 //The block that the UTXO was added to the chain
-CBlockIndex* CKydStake::GetIndexFrom()
+CBlockIndex* CPivStake::GetIndexFrom()
 {
     uint256 hashBlock = 0;
     CTransaction tx;

@@ -9,7 +9,8 @@
  * @copyright  Copyright 2013 Ian Miers, Christina Garman and Matthew Green
  * @license    This project is released under the MIT license.
  **/
-// Copyright (c) 2017 The PIVX developers
+ // Copyright (c) 2015-2019 The PivX developers
+ // Copyright (c) 2018-2019 The KYD developers
 
 #ifndef ACCUMULATEPROOF_H_
 #define ACCUMULATEPROOF_H_
@@ -32,11 +33,11 @@ public:
 	 * @param witness The witness to the accumulation of the coin
 	 * @param a
 	 */
-	AccumulatorProofOfKnowledge(const AccumulatorAndProofParams* p, const Commitment& commitmentToCoin, const AccumulatorWitness& witness, Accumulator& a);
+    AccumulatorProofOfKnowledge(const AccumulatorAndProofParams* p, const Commitment& commitmentToCoin, const AccumulatorWitness& witness);
 	/** Verifies that  a commitment c is accumulated in accumulated a
 	 */
 	bool Verify(const Accumulator& a,const CBigNum& valueOfCommitmentToCoin) const;
-	
+
 	ADD_SERIALIZE_METHODS;
   template <typename Stream, typename Operation>  inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion) {
 	    READWRITE(C_e);
@@ -60,7 +61,7 @@ public:
 	    READWRITE(s_phi);
 	    READWRITE(s_gamma);
 	    READWRITE(s_psi);
-  }	
+  }
 private:
 	const AccumulatorAndProofParams* params;
 

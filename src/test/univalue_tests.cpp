@@ -1,5 +1,6 @@
 // Copyright 2014 BitPay, Inc.
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -315,4 +316,3 @@ BOOST_AUTO_TEST_CASE(univalue_readwrite)
 }
 
 BOOST_AUTO_TEST_SUITE_END()
-

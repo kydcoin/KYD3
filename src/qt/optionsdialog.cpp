@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -81,7 +82,7 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet) : QDialog(paren
         digits.setNum(index);
         ui->digits->addItem(digits, digits);
     }
-    
+
     /* Theme selector static themes */
     ui->theme->addItem(QString("Default"), QVariant("default"));
 
@@ -145,6 +146,19 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet) : QDialog(paren
 
     /* setup/change UI elements when proxy IP is invalid/valid */
     connect(this, SIGNAL(proxyIpChecks(QValidatedLineEdit*, QLineEdit*)), this, SLOT(doProxyIpChecks(QValidatedLineEdit*, QLineEdit*)));
+
+    /* Disable Zerocoin */
+    ui->checkBoxZeromintEnable->setEnabled(false);
+    ui->percentage_label->setEnabled(false);
+    ui->zeromintPercentage->setEnabled(false);
+    ui->labelPreferredDenom->setEnabled(false);
+    ui->preferredDenom->setEnabled(false);
+
+    ui->checkBoxZeromintEnable->setVisible(false);
+    ui->percentage_label->setVisible(false);
+    ui->zeromintPercentage->setVisible(false);
+    ui->labelPreferredDenom->setVisible(false);
+    ui->preferredDenom->setVisible(false);
 }
 
 OptionsDialog::~OptionsDialog()

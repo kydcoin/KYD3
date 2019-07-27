@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2014 The Bitcoin Core developers
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -143,7 +144,7 @@ static void RunCreate(const long& num)
 {
     CheckCreateInt(num);
     CScriptNum scriptnum(num);
-    if (scriptnum.getvch().size() <= CScriptNum::nMaxNumSize)
+    if (scriptnum.getvch().size() <= CScriptNum::nDefaultMaxNumSize)
         CheckCreateVch(num);
     else
     {

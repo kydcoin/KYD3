@@ -1,4 +1,5 @@
-// Copyright (c) 2017-2018 The PIVX developers
+// Copyright (c) 2015-2019 The PivX developers
+// Copyright (c) 2018-2019 The KYD developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -40,6 +41,7 @@ public:
     void UpdateCount();
     void Lock();
     void SeedToZKYD(const uint512& seed, CBigNum& bnValue, CBigNum& bnSerial, CBigNum& bnRandomness, CKey& key);
+    bool CheckSeed(const CDeterministicMint& dMint);
 
 private:
     uint512 GetZerocoinSeed(uint32_t n);

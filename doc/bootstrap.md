@@ -1,4 +1,3 @@
-### To-Do - Update this document with BiKyd links
 ### Bootstrap the Blockchain Synchronization
 
 Normally the Bitcoin client will download the transaction and network information, called the blockchain, from the network by syncing with the other clients. This process can take quite some time as the [Bitcoin blockchain](https://blockchain.info/charts/blocks-size) is growing bigger and bigger for each day. Luckily there is a safe and fast way to speed up this process. We'll show you how to bootstrap your blockchain to bring your client up to speed in just a few simple steps.
