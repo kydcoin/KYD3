@@ -10,6 +10,12 @@
 #include "amount.h"
 
 #include <QWidget>
+#include <QTimer>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QBuffer>
+#include <QXmlStreamReader>
+#include <QUrl>
 
 class ClientModel;
 class TransactionFilterProxy;
@@ -38,10 +44,15 @@ public:
     void setWalletModel(WalletModel* walletModel);
     void showOutOfSyncWarning(bool fShow);
 
+public Q_SLOTS:
+    void updateNewsList();
+
 public slots:
-    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
-                    const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
-                    const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
+    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
+    void newsFinished(QNetworkReply *reply);
+    void newsReadyRead();
+    void newsMetaDataChanged();
+    void newsError(QNetworkReply::NetworkError);
 
 signals:
     void transactionClicked(const QModelIndex& index);
@@ -54,17 +65,21 @@ private:
     CAmount currentBalance;
     CAmount currentUnconfirmedBalance;
     CAmount currentImmatureBalance;
-    CAmount currentZerocoinBalance;
-    CAmount currentUnconfirmedZerocoinBalance;
-    CAmount currentimmatureZerocoinBalance;
     CAmount currentWatchOnlyBalance;
     CAmount currentWatchUnconfBalance;
     CAmount currentWatchImmatureBalance;
     int nDisplayUnit;
-    void getPercentage(CAmount nTotalBalance, CAmount nZerocoinBalance, QString& sKYDPercentage, QString& szKYDPercentage);
 
     TxViewDelegate* txdelegate;
     TransactionFilterProxy* filter;
+
+    void parseXml();
+    void newsGet(const QUrl &url);
+
+    QXmlStreamReader xml;
+
+    QNetworkAccessManager manager;
+    QNetworkReply *currentReply;
 
     void SetLinks();
 

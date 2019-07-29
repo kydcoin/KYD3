@@ -15,7 +15,6 @@ src/test/test_kyd
 src/qt/test/test_kyd-qt
 
 # autoreconf
-Makefile.in
 aclocal.m4
 autom4te.cache/
 build-aux/config.guess
