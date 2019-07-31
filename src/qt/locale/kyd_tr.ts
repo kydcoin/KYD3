@@ -62,12 +62,12 @@
         <translation>Alıcı Adres</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödemeleri göndermek için olan KYD adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödemeleri göndermek için olan KYDC adreslerinizdir.Coinleri göndermeden önce her zaman gönderilen miktarı ve adresi kontrol edin</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödemeleri almak için olan KYD adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödemeleri almak için olan KYDC adreslerinizdirHer işlem için yeni bir adres kullanmanız önerilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,15 +176,15 @@
         <translation>cüzdan şifrelemesini onayla</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, KYD'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD şifreleme işlemini tamamlamak için şimdi kapanacaktır. Cüzdanınızı şifrelemenin, KYDC'lerinizi bilgisayarınıza bulaşan kötücül yazılımlar tarafından çalınmasına tamamen engelleyemediğini unutmayın</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Cüzdanınızı şifrelemek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
         <translation>Dikkat! Eğer cüzdanınızı şifrelerseniz ve şifrenizi unutursanız &lt;b&gt;Tüm Pıvlerinizi kaybedersiniz&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -254,12 +254,12 @@
         <translation>adres</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>BIP 38 ile şifrelemek isteğiniz KYD Adresini giriniz. Ortadaki kutucuğa bir parola giriniz. Şifrelenmiş özel anahtarı hesaplamak için şifrele tuşuna basınız. </translation>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>BIP 38 ile şifrelemek isteğiniz KYDC Adresini giriniz. Ortadaki kutucuğa bir parola giriniz. Şifrelenmiş özel anahtarı hesaplamak için şifrele tuşuna basınız. </translation>
     </message>
     <message>
-        <source>The KYD address to encrypt</source>
-        <translation>Şifrelenecek KYD adresi</translation>
+        <source>The KYDC address to encrypt</source>
+        <translation>Şifrelenecek KYDC adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -290,8 +290,8 @@
         <translation>Geçerli imzayı sistem panosuna kopyala</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this KYD address</source>
-        <translation>Bu KYD adresinin özel anahtarını şifreleyin</translation>
+        <source>Encrypt the private key for this KYDC address</source>
+        <translation>Bu KYDC adresinin özel anahtarını şifreleyin</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>İşlem geçmişini ara</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>Gizlilik Aksiyonları zKYD</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>Gizlilik Aksiyonları zKYDC</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -641,12 +641,12 @@
         <translation>KYD CORE</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Koinleri KYD adresine gönder</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Koinleri KYDC adresine gönder</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Ödeme talep etme (QR kodları ve kyd üretir: URI'ler)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Ödeme talep etme (QR kodları ve KYDC üretir: URI'ler)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -673,12 +673,12 @@
         <translation>KYD için yapılandırma seçeneklerini değiştirin</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Sahip olduğunuzu kanıtlamak için mesajlarınızı KYD adresleriyle imzalayın</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Sahip olduğunuzu kanıtlamak için mesajlarınızı KYDC adresleriyle imzalayın</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Belirtilen KYD adresleriyle imzalanmış olduklarından emin olmak için iletileri doğrulayın</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Belirtilen KYDC adresleriyle imzalanmış olduklarından emin olmak için iletileri doğrulayın</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1154,8 +1154,8 @@ Adres: %4
         <translation>Gönderen adresini düzenle</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>Girilen "%1" adresi geçerli bir KYD adresi değil.</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>Girilen "%1" adresi geçerli bir KYDC adresi değil.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1417,12 +1417,12 @@ Adres: %4
         <translation>Gönderim adresi girin</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYD addresses after it matures.
-To Add: enter percentage to give and KYD address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYDC addresses after it matures.
+To Add: enter percentage to give and KYDC address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend, olgunlaştıktan sonra diğer KYD adreslerinin bir listesine otomatik olarak kazancınızın 100% 'ünü veya grup yazınızı ödüllendirmenize olanak tanır.
-Eklemek için: Verilecek yüzdeyi ve MultiSend vektörüne eklemek için KYD adresi girin.
+        <translation>MultiSend, olgunlaştıktan sonra diğer KYDC adreslerinin bir listesine otomatik olarak kazancınızın 100% 'ünü veya grup yazınızı ödüllendirmenize olanak tanır.
+Eklemek için: Verilecek yüzdeyi ve MultiSend vektörüne eklemek için KYDC adresi girin.
 Silme: Silinecek adresi girin ve silmek için basın.
 MultiSend, Etkinleştir'i tıklamadığınız sürece etkinleştirilmeyecektir</translation>
     </message>
@@ -1644,8 +1644,8 @@ Unutmayın, cüzdan, yeni adresi içeren işlemleri bulmak için blok zinciri ye
         <translation>Address /miktar:</translation>
     </message>
     <message>
-        <source>Add destinations to send KYD to</source>
-        <translation>KYD göndermek için varış yerleri ekleyin</translation>
+        <source>Add destinations to send KYDC to</source>
+        <translation>KYDC göndermek için varış yerleri ekleyin</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1743,32 +1743,32 @@ Unutmayın, cüzdan, yeni adresi içeren işlemleri bulmak için blok zinciri ye
         <translation>Lütfen bir gizlilik düzeyi seçin.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>10000 KYD'e kadar fonları karıştırmak için 2 ayrı matternod kullanın</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>10000 KYDC'e kadar fonları karıştırmak için 2 ayrı matternod kullanın</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>10000 KYD'ye kadar olan fonları karıştırmak için 8 ayrı matternod kullanın</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>10000 KYDC'ye kadar olan fonları karıştırmak için 8 ayrı matternod kullanın</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>16 ayrı matternod kullan</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>Bu seçenek en hızlıdır ve 10000 KYD'yi anonimleştirmek için ~ 0.025 KYD'lik bir maliyeti olacaktır</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>Bu seçenek en hızlıdır ve 10000 KYDC'yi anonimleştirmek için ~ 0.025 KYDC'lik bir maliyeti olacaktır</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>Bu seçenek orta derecede hızlıdır ve 10000 KYD'yi anonimleştirmek için yaklaşık 0.05 KYD'e mal olur</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>Bu seçenek orta derecede hızlıdır ve 10000 KYDC'yi anonimleştirmek için yaklaşık 0.05 KYDC'e mal olur</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Bu en yavaş ve en güvenli seçenektir. Maksimum anonimlik kullanmak maliyete gelecek</translation>
     </message>
     <message>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
-        <translation>0.1 KYD her 10000 KYD anonimleştirmeye.</translation>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
+        <translation>0.1 KYDC her 10000 KYDC anonimleştirmeye.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1911,24 +1911,24 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Map port using &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable zKYD Automint</source>
-        <translation>zKYD Otomatik basımı etkinleştir</translation>
+        <source>Enable zKYDC Automint</source>
+        <translation>zKYDC Otomatik basımı etkinleştir</translation>
     </message>
     <message>
-        <source>Percentage of incoming KYD which get automatically converted to zKYD via Zerocoin Protocol (min: 10%)</source>
-        <translation>Zerocoin Protokolü üzerinden otomatik olarak zKYD'ye dönüştürülen gelen KYD yüzdesi (dakika: 10%)</translation>
+        <source>Percentage of incoming KYDC which get automatically converted to zKYDC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Zerocoin Protokolü üzerinden otomatik olarak zKYDC'ye dönüştürülen gelen KYDC yüzdesi (dakika: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zKYD</source>
-        <translation>Otomatikleştirilmiş zKYD yüzdesi</translation>
+        <source>Percentage of autominted zKYDC</source>
+        <translation>Otomatikleştirilmiş zKYDC yüzdesi</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough KYD for this denomination is available</source>
-        <translation>Bu mezhebi için yeterli KYD bulunana kadar Zerocoin'e otomatik dönüşümle birlikte bekleyin</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough KYDC for this denomination is available</source>
+        <translation>Bu mezhebi için yeterli KYDC bulunana kadar Zerocoin'e otomatik dönüşümle birlikte bekleyin</translation>
     </message>
     <message>
-        <source>Preferred Automint zKYD Denomination</source>
-        <translation>Tercih edilen Automint zKYD Nominal değeri</translation>
+        <source>Preferred Automint zKYDC Denomination</source>
+        <translation>Tercih edilen Automint zKYDC Nominal değeri</translation>
     </message>
     <message>
         <source>Connect to the KYD network through a SOCKS5 proxy.</source>
@@ -2078,8 +2078,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Toplam Bakiye, mevcut olmayan tüm paralar dahil.</translation>
     </message>
     <message>
-        <source>KYD Balance</source>
-        <translation>KYD Bakiyesi</translation>
+        <source>KYDC Balance</source>
+        <translation>KYDC Bakiyesi</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -2098,12 +2098,12 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Staklanmış veya masternod ödülleri henüz olgunlaşmamış</translation>
     </message>
     <message>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
-        <translation>Güncel KYD bakiyeniz, onaylanmamış ve olgunlaşmamış işlemler dahil</translation>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
+        <translation>Güncel KYDC bakiyeniz, onaylanmamış ve olgunlaşmamış işlemler dahil</translation>
     </message>
     <message>
-        <source>zKYD Balance</source>
-        <translation>zKYD Bakiyesi</translation>
+        <source>zKYDC Balance</source>
+        <translation>zKYDC Bakiyesi</translation>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the KYD network after a connection is established, but this process has not completed yet.</source>
@@ -2150,8 +2150,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Harcanabilir:</translation>
     </message>
     <message>
-        <source>Locked KYD or Masternode collaterals. These are excluded from zKYD minting.</source>
-        <translation>Kilitli KYD veya Masternode teminatları. Bunlar zKYD matlaştırmadan çıkarılır.</translation>
+        <source>Locked KYDC or Masternode collaterals. These are excluded from zKYDC minting.</source>
+        <translation>Kilitli KYDC veya Masternode teminatları. Bunlar zKYDC matlaştırmadan çıkarılır.</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2162,8 +2162,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>onaylanmamış:</translation>
     </message>
     <message>
-        <source>Your current zKYD balance, unconfirmed and immature zKYD included.</source>
-        <translation>Güncel zKYD bakiyeniz, onaylanmamış ve olgunlaşmamış zKYD'ler dahil.</translation>
+        <source>Your current zKYDC balance, unconfirmed and immature zKYDC included.</source>
+        <translation>Güncel zKYDC bakiyeniz, onaylanmamış ve olgunlaşmamış zKYDC'ler dahil.</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2174,10 +2174,10 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>senkronizasyon dışı</translation>
     </message>
     <message>
-        <source>Current percentage of zKYD.
+        <source>Current percentage of zKYDC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
-        <translation>Mevcut zKYD yüzdesi.
+        <translation>Mevcut zKYDC yüzdesi.
 AutoMint etkinleştirilirse, bu yüzde, yapılandırılmış AutoMint yüzdesi etrafında düzelir (varsayılan = 10%).
 </translation>
     </message>
@@ -2223,8 +2223,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>Kyd başlatılamıyor: tıkla ve ödeme işleyicisi</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid KYD address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamaz! Bunun nedeni, geçersiz bir KYD adresi veya hatalı biçimlendirilmiş URI parametrelerinden kaynaklanabilir.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid KYDC address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamaz! Bunun nedeni, geçersiz bir KYDC adresi veya hatalı biçimlendirilmiş URI parametrelerinden kaynaklanabilir.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2321,8 +2321,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Available for minting are coins which are confirmed and not locked or Masternode collaterals.</source>
@@ -2333,8 +2333,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>Mintinge hazır</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2385,24 +2385,24 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>Harca Zerocoin</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending</source>
-        <translation>Mevcut (olgun ve harcanabilir) harcama için zKYD</translation>
+        <source>Available (mature and spendable) zKYDC for spending</source>
+        <translation>Mevcut (olgun ve harcanabilir) harcama için zKYDC</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>Kullanılabilir Bakiye:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending
+        <source>Available (mature and spendable) zKYDC for spending
 
-zKYD are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
-        <translation>Mevcut (olgun ve harcanabilir) harcama için zKYD
+zKYDC are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+        <translation>Mevcut (olgun ve harcanabilir) harcama için zKYDC
 
-zKYD, 20'den fazla teyit bulunduğunda olgunlaşır ve bundan sonra aynı mezhepten 2 kat fazla darphane çekilir.</translation>
+zKYDC, 20'den fazla teyit bulunduğunda olgunlaşır ve bundan sonra aynı mezhepten 2 kat fazla darphane çekilir.</translation>
     </message>
     <message>
-        <source>0 zKYD</source>
-        <translation>0 zKYD</translation>
+        <source>0 zKYDC</source>
+        <translation>0 zKYDC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2421,8 +2421,8 @@ zKYD, 20'den fazla teyit bulunduğunda olgunlaşır ve bundan sonra aynı mezhep
         <translation>şuna öde:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>Ödemeyi göndermek için KYD adresi. Boş olduğunda kendinize yerel ödeme oluşturur.</translation>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>Ödemeyi göndermek için KYDC adresi. Boş olduğunda kendinize yerel ödeme oluşturur.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2473,8 +2473,8 @@ zKYD, 20'den fazla teyit bulunduğunda olgunlaşır ve bundan sonra aynı mezhep
         <translation>Zerocoin durumu:</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
-        <translation>Doğrulanmamış ve olgunlaşmamış zKYD dahil toplam bakiye</translation>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
+        <translation>Doğrulanmamış ve olgunlaşmamış zKYDC dahil toplam bakiye</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -2649,12 +2649,12 @@ Maximum allowed: </source>
 Maksimum bırakılan: </translation>
     </message>
     <message>
-        <source>zKYD is currently disabled due to maintenance.</source>
-        <translation>zKYD bakım nedeniyle şu an kullanıma kapalı.</translation>
+        <source>zKYDC is currently disabled due to maintenance.</source>
+        <translation>zKYDC bakım nedeniyle şu an kullanıma kapalı.</translation>
     </message>
     <message>
-        <source>zKYD is currently undergoing maintenance.</source>
-        <translation>zKYD halen bakım alıyor.</translation>
+        <source>zKYDC is currently undergoing maintenance.</source>
+        <translation>zKYDC halen bakım alıyor.</translation>
     </message>
     <message>
         <source>AutoMint Status:</source>
@@ -2677,8 +2677,8 @@ Maksimum bırakılan: </translation>
         <translation>Başarılı şekilde mint edildi</translation>
     </message>
     <message>
-        <source> zKYD in </source>
-        <translation> zKYD in </translation>
+        <source> zKYDC in </source>
+        <translation> zKYDC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2705,8 +2705,8 @@ Maksimum bırakılan: </translation>
         <translation>Sağlanan 'Ödeme Yapmak İçin' adresi yok, yerel ödeme oluşturun</translation>
     </message>
     <message>
-        <source>Invalid Kyd Address</source>
-        <translation>Geçersiz Kyd Adresi</translation>
+        <source>Invalid KYDC Address</source>
+        <translation>Geçersiz KYDC Adresi</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2790,8 +2790,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Miktar</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>Gir bir KYD addres (e.g. %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>Gir bir KYDC addres (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3428,8 +3428,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>UTXO Boyutu:</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3484,16 +3484,16 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Koinler otomatik seçildi</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Özel ücret 1000 uKYD olarak ayarlanmış ve işlem sadece 250 bayt ise, "kilobayt başına" ücret karşılığında yalnızca 250 uKYD öder,&lt;br /&gt;"en az" ise 1000 uKYD öder. Bir kilobayttan daha büyük işlemler için kilobayt ödersiniz.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Özel ücret 1000 uKYDC olarak ayarlanmış ve işlem sadece 250 bayt ise, "kilobayt başına" ücret karşılığında yalnızca 250 uKYDC öder,&lt;br /&gt;"en az" ise 1000 uKYDC öder. Bir kilobayttan daha büyük işlemler için kilobayt ödersiniz.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Özel ücret 1000 uKYD olarak ayarlanırsa ve işlem sadece 250 bayt ise, "kilobayt başına" ücret karşılığında yalnızca 250 uKYD ücreti verilir,&lt;br /&gt;"toplam en az" ise 1000 uKYD ödüyor. Bir kilobayttan daha büyük işlemler için kilobayt ödersiniz.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Özel ücret 1000 uKYDC olarak ayarlanırsa ve işlem sadece 250 bayt ise, "kilobayt başına" ücret karşılığında yalnızca 250 uKYDC ücreti verilir,&lt;br /&gt;"toplam en az" ise 1000 uKYDC ödüyor. Bir kilobayttan daha büyük işlemler için kilobayt ödersiniz.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</source>
-        <translation>Yalnızca minimum ücreti ödemek, işlem hacmi bloklardaki alana göre daha az olduğu sürece iyidir.&lt;br /&gt;Ancak, bunun, KYD işlemleri için ağın işleyebileceğinden daha fazla talep olması durumunda, onaylama işleminde asla sonuçlanamayacağına dikkat edin.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</source>
+        <translation>Yalnızca minimum ücreti ödemek, işlem hacmi bloklardaki alana göre daha az olduğu sürece iyidir.&lt;br /&gt;Ancak, bunun, KYDC işlemleri için ağın işleyebileceğinden daha fazla talep olması durumunda, onaylama işleminde asla sonuçlanamayacağına dikkat edin.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3540,8 +3540,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Alıcı ekle</translation>
     </message>
     <message>
-        <source>Anonymized KYD</source>
-        <translation>anonim edilmiş KYD</translation>
+        <source>Anonymized KYDC</source>
+        <translation>anonim edilmiş KYDC</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -3588,8 +3588,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Bloğu böl aygıtı multipl adresle çalışmaz Tekrar deneyin</translation>
     </message>
     <message>
-        <source>Warning: Invalid KYD address</source>
-        <translation>Uyarı: Geçersiz KYD adresi</translation>
+        <source>Warning: Invalid KYDC address</source>
+        <translation>Uyarı: Geçersiz KYDC adresi</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -3683,8 +3683,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>şuna öde:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to</source>
-        <translation>Ödemeyi göndermek için KYD adresi</translation>
+        <source>The KYDC address to send the payment to</source>
+        <translation>Ödemeyi göndermek için KYDC adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3723,8 +3723,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Mesaj:</translation>
     </message>
     <message>
-        <source>A message that was attached to the KYD: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
-        <translation>KYD e eklenmiş olan bir mesaj: İşleminizle beraber saklanacak olan URI hatırlamanız için. Not: Bu mesaj KYD ağında yayınlanmayacak.</translation>
+        <source>A message that was attached to the KYDC: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
+        <translation>KYDC e eklenmiş olan bir mesaj: İşleminizle beraber saklanacak olan URI hatırlamanız için. Not: Bu mesaj KYD ağında yayınlanmayacak.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -3773,8 +3773,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Sahip olduğunuzu kanıtlamak için adreslerinizle mesaj imzalayabilirsiniz. Kimlik avı saldırıları sizi kimliğini onlara yazmaya kandırmaya çalışabilir, çünkü belirsiz bir şey imzalamamaya dikkat edin. Kabul ettiğiniz tamamen ayrıntılı ifadeleri yalnızca imzalayın.</translation>
     </message>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>Ile mesaj imzalamak için KYD adresi</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>Ile mesaj imzalamak için KYDC adresi</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3805,16 +3805,16 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Geçerli imzayı sistem panosuna kopyala</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Bu KYD adresinin sahibi olduğunuzu kanıtlamak için mesajı imzala</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Bu KYDC adresinin sahibi olduğunuzu kanıtlamak için mesajı imzala</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>Mesajın imzalandığı KYD adresi</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>Mesajın imzalandığı KYDC adresi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Belirtilen KYD adresi ile imzalanmış olduğundan emin olmak için iletiyi doğrulayın</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Belirtilen KYDC adresi ile imzalanmış olduğundan emin olmak için iletiyi doğrulayın</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4436,8 +4436,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>Koinleri göder</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYD.</source>
-        <translation>SwiftX yüksek değerler göndermeyi desteklemiyor. İşlemler şu anda %1 KYD ile sınırlıdır.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYDC.</source>
+        <translation>SwiftX yüksek değerler göndermeyi desteklemiyor. İşlemler şu anda %1 KYDC ile sınırlıdır.</translation>
     </message>
 </context>
 <context>
@@ -4474,8 +4474,8 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4565,12 +4565,12 @@ Ya daha yüksek mezhepleri daraltın (daha az girdi gereklidir) veya harcama mik
         <translation>En iyi blok değiştirildiğinde komutu yürütün (cmd'deki %s yerine blok karması verilir)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Bundan daha küçük ücretler (KYD / Kb cinsinden), aktarma için sıfır ücret olarak kabul edilir (varsayılan: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Bundan daha küçük ücretler (KYDC / Kb cinsinden), aktarma için sıfır ücret olarak kabul edilir (varsayılan: %s)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Bundan daha küçük ücretler (KYD / Kb cinsinden), işlem yaratmada sıfır ücret olarak kabul edilir (varsayılan: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Bundan daha küçük ücretler (KYDC / Kb cinsinden), işlem yaratmada sıfır ücret olarak kabul edilir (varsayılan: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>

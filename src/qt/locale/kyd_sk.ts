@@ -62,12 +62,12 @@
         <translation>Prijímacia adresa</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú vaše KYD adresy na odosielanie platieb. Pred odoslaním vždy skontrolujte výšku a adresu prijemcu.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto sú vaše KYDC adresy na odosielanie platieb. Pred odoslaním vždy skontrolujte výšku a adresu prijemcu.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše KYD adresy na prijímanie platieb. Pre každú transakciu sa odporúča použiť novú prijímaciu adresu.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto sú vaše KYDC adresy na prijímanie platieb. Pre každú transakciu sa odporúča použiť novú prijímaciu adresu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše KYD pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše KYDC pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Naozaj chcete zašifrovať svoju peňaženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY KYD &lt;/ b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY KYDC &lt;/ b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -573,12 +573,12 @@
         <translation>KYD Core</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Odoslať mince na adresu KYD</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Odoslať mince na adresu KYDC</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Vyžiadať platby (generuje QR kódy a kyd: identifikátory URI)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Vyžiadať platby (generuje QR kódy a KYDC: identifikátory URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -601,12 +601,12 @@
         <translation>Zmeňte možnosti konfigurácie pre KYD</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Podpíšte správy pomocou adresy KYD, aby ste preukázali, že ich vlastníte</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Podpíšte správy pomocou adresy KYDC, aby ste preukázali, že ich vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Overte správy, aby sa zabezpečilo, že boli podpísané zadanými KYD adresami</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Overte správy, aby sa zabezpečilo, že boli podpísané zadanými KYDC adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -637,8 +637,8 @@
         <translation>Otvoriť konfiguračný súbor masternodu</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Otvorte KYD: URI alebo žiadosť o platbu</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Otvorte KYDC: URI alebo žiadosť o platbu</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1114,8 +1114,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>Adresa KYD, ktorou chcete správu podpísať</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>Adresa KYDC, ktorou chcete správu podpísať</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1138,16 +1138,16 @@ MultiSend: %1</translation>
         <translation>Skopírujte aktuálny podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto KYD adresy</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto KYDC adresy</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>KYD adresa, ktorou bola správa podpísaná</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>KYDC adresa, ktorou bola správa podpísaná</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou KYD adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou KYDC adresou</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>

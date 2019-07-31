@@ -31,10 +31,10 @@ CzKYDWallet::CzKYDWallet(std::string strWalletFile)
             hashSeed = Hash(seed.begin(), seed.end());
             if (pwalletMain->AddDeterministicSeed(seed)) {
                 if (walletdb.EraseZKYDSeed_deprecated()) {
-                    LogPrintf("%s: Updated zKYD seed databasing\n", __func__);
+                    LogPrintf("%s: Updated zKYDC seed databasing\n", __func__);
                     fFirstRun = false;
                 } else {
-                    LogPrintf("%s: failed to remove old zkyd seed\n", __func__);
+                    LogPrintf("%s: failed to remove old zKYDC seed\n", __func__);
                 }
             }
         }
@@ -56,7 +56,7 @@ CzKYDWallet::CzKYDWallet(std::string strWalletFile)
         key.MakeNewKey(true);
         seed = key.GetPrivKey_256();
         seedMaster = seed;
-        LogPrintf("%s: first run of zkyd wallet detected, new seed generated. Seedhash=%s\n", __func__, Hash(seed.begin(), seed.end()).GetHex());
+        LogPrintf("%s: first run of zKYDC wallet detected, new seed generated. Seedhash=%s\n", __func__, Hash(seed.begin(), seed.end()).GetHex());
     } else if (!pwalletMain->GetDeterministicSeed(hashSeed, seed)) {
         LogPrintf("%s: failed to get deterministic seed for hashseed %s\n", __func__, hashSeed.GetHex());
         return;

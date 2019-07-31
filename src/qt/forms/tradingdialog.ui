@@ -442,7 +442,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy KYD</string>
+      <string>Buy KYDC</string>
      </property>
      <property name="icon">
       <iconset resource="../kyd.qrc">
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>KYD</string>
+      <string>KYDC</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,7 +1704,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>KYD</string>
+      <string>KYDC</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="UnitsInputKYD">
@@ -1751,7 +1751,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell KYD</string>
+      <string>Sell KYDC</string>
      </property>
      <property name="icon">
       <iconset resource="../kyd">
@@ -1777,7 +1777,7 @@
          </font>
         </property>
         <property name="text">
-         <string>KYD Available:</string>
+         <string>KYDC Available:</string>
         </property>
        </widget>
       </item>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>KYD</string>
+         <string>KYDC</string>
         </property>
        </widget>
       </item>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>KYD Balance:</string>
+      <string>KYDC Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>KYD Available:</string>
+      <string>KYDC Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,7 +2832,7 @@
       </font>
      </property>
      <property name="text">
-      <string>KYD Pending:</string>
+      <string>KYDC Pending:</string>
      </property>
     </widget>
     <widget class="QLabel" name="KYDPendingLabel">
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex KYD Deposit Address:</string>
+      <string>Bittrex KYDC Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">
@@ -2941,7 +2941,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Generate KYD Deposit Address</string>
+      <string>Generate KYDC Deposit Address</string>
      </property>
      <property name="icon">
       <iconset resource="../kyd.qrc">

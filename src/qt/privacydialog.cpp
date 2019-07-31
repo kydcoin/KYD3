@@ -162,7 +162,7 @@ void PrivacyDialog::on_pushButtonMintzKYD_clicked()
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         QMessageBox::information(this, tr("Mint Zerocoin"),
-                                 tr("zKYD is currently undergoing maintenance."), QMessageBox::Ok,
+                                 tr("zKYDC is currently undergoing maintenance."), QMessageBox::Ok,
                                  QMessageBox::Ok);
         return;
     }
@@ -190,7 +190,7 @@ void PrivacyDialog::on_pushButtonMintzKYD_clicked()
         return;
     }
 
-    ui->TEMintStatus->setPlainText(tr("Minting ") + ui->labelMintAmountValue->text() + " zKYD...");
+    ui->TEMintStatus->setPlainText(tr("Minting ") + ui->labelMintAmountValue->text() + " zKYDC...");
     ui->TEMintStatus->repaint ();
 
     int64_t nTime = GetTimeMillis();
@@ -208,7 +208,7 @@ void PrivacyDialog::on_pushButtonMintzKYD_clicked()
     double fDuration = (double)(GetTimeMillis() - nTime)/1000.0;
 
     // Minting successfully finished. Show some stats for entertainment.
-    QString strStatsHeader = tr("Successfully minted ") + ui->labelMintAmountValue->text() + tr(" zKYD in ") +
+    QString strStatsHeader = tr("Successfully minted ") + ui->labelMintAmountValue->text() + tr(" zKYDC in ") +
                              QString::number(fDuration) + tr(" sec. Used denominations:\n");
 
     // Clear amount to avoid double spending when accidentally clicking twice
@@ -273,7 +273,7 @@ void PrivacyDialog::on_pushButtonSpendzKYD_clicked()
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         QMessageBox::information(this, tr("Mint Zerocoin"),
-                                 tr("zKYD is currently undergoing maintenance."), QMessageBox::Ok, QMessageBox::Ok);
+                                 tr("zKYDC is currently undergoing maintenance."), QMessageBox::Ok, QMessageBox::Ok);
         return;
     }
 
@@ -325,7 +325,7 @@ void PrivacyDialog::sendzKYD()
     }
     else{
         if (!address.IsValid()) {
-            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Invalid KYD Address"), QMessageBox::Ok, QMessageBox::Ok);
+            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Invalid KYDC Address"), QMessageBox::Ok, QMessageBox::Ok);
             ui->payTo->setFocus();
             return;
         }
@@ -358,7 +358,7 @@ void PrivacyDialog::sendzKYD()
 
     if(!fWholeNumber && fMintChange){
         QString strFeeWarning = "You've entered an amount with fractional digits and want the change to be converted to Zerocoin.<br /><br /><b>";
-        strFeeWarning += QString::number(dzFee, 'f', 8) + " KYD </b>will be added to the standard transaction fees!<br />";
+        strFeeWarning += QString::number(dzFee, 'f', 8) + " KYDC </b>will be added to the standard transaction fees!<br />";
         QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm additional Fees"),
             strFeeWarning,
             QMessageBox::Yes | QMessageBox::Cancel,
@@ -385,7 +385,7 @@ void PrivacyDialog::sendzKYD()
 
     // General info
     QString strQuestionString = tr("Are you sure you want to send?<br /><br />");
-    QString strAmount = "<b>" + QString::number(dAmount, 'f', 8) + " zKYD</b>";
+    QString strAmount = "<b>" + QString::number(dAmount, 'f', 8) + " zKYDC</b>";
     QString strAddress = tr(" to address ") + QString::fromStdString(address.ToString()) + strAddressLabel + " <br />";
 
     if(ui->payTo->text().isEmpty()){
@@ -421,8 +421,8 @@ void PrivacyDialog::sendzKYD()
             if (meta.nVersion < libzerocoin::PrivateCoin::PUBKEY_VERSION) {
                 //version 1 coins have to use full security level to successfully spend.
                 if (nSecurityLevel < 100) {
-                    QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zKYD require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
-                    ui->TEMintStatus->setPlainText(tr("Failed to spend zKYD"));
+                    QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zKYDC require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
+                    ui->TEMintStatus->setPlainText(tr("Failed to spend zKYDC"));
                     ui->TEMintStatus->repaint();
                     return;
                 }
@@ -453,8 +453,8 @@ void PrivacyDialog::sendzKYD()
     // Display errors during spend
     if (!fSuccess) {
         if (receipt.GetStatus() == ZKYD_SPEND_V1_SEC_LEVEL) {
-            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zKYD require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
-            ui->TEMintStatus->setPlainText(tr("Failed to spend zKYD"));
+            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zKYDC require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
+            ui->TEMintStatus->setPlainText(tr("Failed to spend zKYDC"));
             ui->TEMintStatus->repaint();
             return;
         }
@@ -496,7 +496,7 @@ void PrivacyDialog::sendzKYD()
     CAmount nValueIn = 0;
     int nCount = 0;
     for (CZerocoinSpend spend : receipt.GetSpends()) {
-        strStats += tr("zKYD Spend #: ") + QString::number(nCount) + ", ";
+        strStats += tr("zKYDC Spend #: ") + QString::number(nCount) + ", ";
         strStats += tr("denomination: ") + QString::number(spend.GetDenomination()) + ", ";
         strStats += tr("serial: ") + spend.GetSerial().ToString().c_str() + "\n";
         strStats += tr("Spend is 1 of : ") + QString::number(spend.GetMintCount()) + " mints in the accumulator\n";
@@ -506,13 +506,13 @@ void PrivacyDialog::sendzKYD()
 
     CAmount nValueOut = 0;
     for (const CTxOut& txout: wtxNew.vout) {
-        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Kyd, ";
+        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " KYDC, ";
         nValueOut += txout.nValue;
 
         strStats += tr("address: ");
         CTxDestination dest;
         if(txout.scriptPubKey.IsZerocoinMint())
-            strStats += tr("zKYD Mint");
+            strStats += tr("zKYDC Mint");
         else if(ExtractDestination(txout.scriptPubKey, dest))
             strStats += tr(CBitcoinAddress(dest).ToString().c_str());
         strStats += "\n";
@@ -662,7 +662,7 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
 
         strDenomStats = strUnconfirmed + QString::number(mapDenomBalances.at(denom)) + " x " +
                         QString::number(nCoins) + " = <b>" +
-                        QString::number(nSumPerCoin) + " zKYD </b>";
+                        QString::number(nSumPerCoin) + " zKYDC </b>";
 
         switch (nCoins) {
             case libzerocoin::CoinDenomination::ZQ_ONE:
@@ -700,8 +700,8 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
         nLockedBalance = walletModel->getLockedBalance();
     }
 
-    ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance/COIN) + QString(" zKYD "));
-    ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance/COIN) + QString(" zKYD "));
+    ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance/COIN) + QString(" zKYDC "));
+    ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance/COIN) + QString(" zKYDC "));
     ui->labelzKYDAmountValue->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance - nLockedBalance, false, BitcoinUnits::separatorAlways));
 
     // Display AutoMint status
@@ -711,11 +711,11 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
     updateSPORK16Status();
 
     // Display global supply
-    ui->labelZsupplyAmount->setText(QString::number(chainActive.Tip()->GetZerocoinSupply()/COIN) + QString(" <b>zKYD </b> "));
+    ui->labelZsupplyAmount->setText(QString::number(chainActive.Tip()->GetZerocoinSupply()/COIN) + QString(" <b>zKYDC </b> "));
     for (auto denom : libzerocoin::zerocoinDenomList) {
         int64_t nSupply = chainActive.Tip()->mapZerocoinSupply.at(denom);
         QString strSupply = QString::number(nSupply) + " x " + QString::number(denom) + " = <b>" +
-                            QString::number(nSupply*denom) + " zKYD </b> ";
+                            QString::number(nSupply*denom) + " zKYDC </b> ";
         switch (denom) {
             case libzerocoin::CoinDenomination::ZQ_ONE:
                 ui->labelZsupplyAmount1->setText(strSupply);
@@ -797,15 +797,15 @@ void PrivacyDialog::updateSPORK16Status()
     if (fMaintenanceMode && fButtonsEnabled) {
         // Mint zKYD
         ui->pushButtonMintzKYD->setEnabled(false);
-        ui->pushButtonMintzKYD->setToolTip(tr("zKYD is currently disabled due to maintenance."));
+        ui->pushButtonMintzKYD->setToolTip(tr("zKYDC is currently disabled due to maintenance."));
 
         // Spend zKYD
         ui->pushButtonSpendzKYD->setEnabled(false);
-        ui->pushButtonSpendzKYD->setToolTip(tr("zKYD is currently disabled due to maintenance."));
+        ui->pushButtonSpendzKYD->setToolTip(tr("zKYDC is currently disabled due to maintenance."));
     } else if (!fMaintenanceMode && !fButtonsEnabled) {
         // Mint zKYD
         ui->pushButtonMintzKYD->setEnabled(true);
-        ui->pushButtonMintzKYD->setToolTip(tr("PrivacyDialog", "Enter an amount of KYD to convert to zKYD", 0));
+        ui->pushButtonMintzKYD->setToolTip(tr("PrivacyDialog", "Enter an amount of KYDC to convert to zKYDC", 0));
 
         // Spend zKYD
         ui->pushButtonSpendzKYD->setEnabled(true);

@@ -62,12 +62,12 @@
         <translation>받을 주소</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>이 주소들은 송금할 KYD 주소입니다. 송금하기 전 항상 금액과 주소를 확인해주세요.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>이 주소들은 송금할 KYDC 주소입니다. 송금하기 전 항상 금액과 주소를 확인해주세요.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>이 주소들은 입금 받을 KYD 주소입니다. 매 거래마다 새로운 입금 주소를 사용하는 것이 좋습니다.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>이 주소들은 입금 받을 KYDC 주소입니다. 매 거래마다 새로운 입금 주소를 사용하는 것이 좋습니다.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>지갑 암호화 확인</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 KYDs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 KYDCs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>지갑을 암호화 하시겠습니까?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>경고: 지갑 암호화 후 암호를 분실하게 되면 &lt;b&gt;모든 KYD를 잃게 됩니다&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>경고: 지갑 암호화 후 암호를 분실하게 되면 &lt;b&gt;모든 KYDC를 잃게 됩니다&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -254,12 +254,12 @@
         <translation>주소:</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>BIP 38 알고리즘으로 암호화할 KYD 지갑 주소를 입력. 중간박스에 암호구절 입력. 암호화된 개인키를 계산하시려면 암호화 클릭</translation>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>BIP 38 알고리즘으로 암호화할 KYDC 지갑 주소를 입력. 중간박스에 암호구절 입력. 암호화된 개인키를 계산하시려면 암호화 클릭</translation>
     </message>
     <message>
-        <source>The KYD address to encrypt</source>
-        <translation>암호화할 KYD 주소</translation>
+        <source>The KYDC address to encrypt</source>
+        <translation>암호화할 KYDC 주소</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -290,8 +290,8 @@
         <translation>현재 서명을 시스템 클립 보드에 복사</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this KYD address</source>
-        <translation>이 KYD 주소의 개인키 암호화</translation>
+        <source>Encrypt the private key for this KYDC address</source>
+        <translation>이 KYDC 주소의 개인키 암호화</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>겨래내역 보기</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>zKYD 생성 및 관리</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>zKYDC 생성 및 관리</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -649,12 +649,12 @@
         <translation>KYD Core</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>KYD 주소로 입금하기</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>KYDC 주소로 입금하기</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>결제 요청 (QR 코드 및 kyd: URI 생성)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>결제 요청 (QR 코드 및 KYDC: URI 생성)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -681,12 +681,12 @@
         <translation>KYD에 대한 구성 옵션 수정</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>KYD 주소로 메시지에 서명하여 소유하고 있음을 증명하십시오.</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>KYDC 주소로 메시지에 서명하여 소유하고 있음을 증명하십시오.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>메시지가 지정된 KYD 주소로 서명되었는지 확인합니다.</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>메시지가 지정된 KYDC 주소로 서명되었는지 확인합니다.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -717,8 +717,8 @@
         <translation>마스터노드 구성 파일 열기</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>KYD: URI 또는 ​​결제 요청 열기</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>KYDC: URI 또는 ​​결제 요청 열기</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1185,8 +1185,8 @@ Address: %4
         <translation>보내는 주소 수정</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>입력된 주소 "%1"는 올바른 KYD 주소가 아닙니다.</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>입력된 주소 "%1"는 올바른 KYDC 주소가 아닙니다.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1448,12 +1448,12 @@ Address: %4
         <translation>보낼 주소 입력</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYD addresses after it matures.
-To Add: enter percentage to give and KYD address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYDC addresses after it matures.
+To Add: enter percentage to give and KYDC address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>다중전송을 사용하면 성취 한 뒤 다른 KYD 주소 목록에 최대 100% 스테이크 또는 마스터노드 보상을 자동으로 보낼 수 있습니다.
-추가하려면 : 부여 할 백분율과 다중전송 벡터에 추가 할 KYD 주소를 입력하십시오.
+        <translation>다중전송을 사용하면 성취 한 뒤 다른 KYDC 주소 목록에 최대 100% 스테이크 또는 마스터노드 보상을 자동으로 보낼 수 있습니다.
+추가하려면 : 부여 할 백분율과 다중전송 벡터에 추가 할 KYDC 주소를 입력하십시오.
 삭제하려면 삭제할 주소를 입력하고 삭제를 누릅니다.
 활성화를 클릭하지 않으면 다중전송이 활성화되지 않습니다.</translation>
     </message>
@@ -1681,8 +1681,8 @@ Please be patient after clicking import.</source>
         <translation>주소 / 금액:</translation>
     </message>
     <message>
-        <source>Add destinations to send KYD to</source>
-        <translation>KYD를 보낼 목적지 추가</translation>
+        <source>Add destinations to send KYDC to</source>
+        <translation>KYDC를 보낼 목적지 추가</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1780,32 +1780,32 @@ Please be patient after clicking import.</source>
         <translation>익명화 레벨을 선택해주세요.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>2개의 개별 마스터노드를 이용하여 최대 10000 KYD 를 섞을 수 있습니다.</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>2개의 개별 마스터노드를 이용하여 최대 10000 KYDC 를 섞을 수 있습니다.</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>8개의 개별 마스터노드를 이용하여 최대 10000 KYD 를 섞을 수 있습니다.</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>8개의 개별 마스터노드를 이용하여 최대 10000 KYDC 를 섞을 수 있습니다.</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>16개의 개별 마스터노드를 사용</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>이 옵션은 가장 빠르게 전송되며 10000 KYD 익명화에 약 ~0.025 KYD의 비용이 들어갑니다.</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>이 옵션은 가장 빠르게 전송되며 10000 KYDC 익명화에 약 ~0.025 KYDC의 비용이 들어갑니다.</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>이 옵션은 중간 정도의 속도로 전송되며 10000 KYD 익명화에 약 0.05 KYD의 비용이 들어갑니다.</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>이 옵션은 중간 정도의 속도로 전송되며 10000 KYDC 익명화에 약 0.05 KYDC의 비용이 들어갑니다.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>이것은 가장 느리고 안전한 옵션입니다. 최고 익명성을 사용하면 비용이 발생합니다.</translation>
     </message>
     <message>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
-        <translation>10000 KYD 익명화에 0.1 KYD 가 듭니다.</translation>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
+        <translation>10000 KYDC 익명화에 0.1 KYDC 가 듭니다.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1948,28 +1948,28 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>&amp;UPnp를 사용하여 포트 매핑</translation>
     </message>
     <message>
-        <source>Enable automatic minting of KYD units to zKYD</source>
-        <translation>보상받은 KYD를 zKYD로 자동변환 활성화</translation>
+        <source>Enable automatic minting of KYDC units to zKYDC</source>
+        <translation>보상받은 KYDC를 zKYDC로 자동변환 활성화</translation>
     </message>
     <message>
-        <source>Enable zKYD Automint</source>
-        <translation>zKYD 자동생성 활성화</translation>
+        <source>Enable zKYDC Automint</source>
+        <translation>zKYDC 자동생성 활성화</translation>
     </message>
     <message>
-        <source>Percentage of incoming KYD which get automatically converted to zKYD via Zerocoin Protocol (min: 10%)</source>
-        <translation>KYD수신시 자동변환 zKYD 비율 (최소값:10%)</translation>
+        <source>Percentage of incoming KYDC which get automatically converted to zKYDC via Zerocoin Protocol (min: 10%)</source>
+        <translation>KYDC수신시 자동변환 zKYDC 비율 (최소값:10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zKYD</source>
-        <translation>자동 변환되는 zKYD 비율</translation>
+        <source>Percentage of autominted zKYDC</source>
+        <translation>자동 변환되는 zKYDC 비율</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough KYD for this denomination is available</source>
-        <translation>이 디노미네이션의 KYD가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough KYDC for this denomination is available</source>
+        <translation>이 디노미네이션의 KYDC가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
     </message>
     <message>
-        <source>Preferred Automint zKYD Denomination</source>
-        <translation>선호하는 자동생성 zKYD 디노미네이션 </translation>
+        <source>Preferred Automint zKYDC Denomination</source>
+        <translation>선호하는 자동생성 zKYDC 디노미네이션 </translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
@@ -2131,8 +2131,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>전체 잔액, (현재 전송이 불가능한 코인 포함)</translation>
     </message>
     <message>
-        <source>KYD Balance</source>
-        <translation>KYD 잔액</translation>
+        <source>KYDC Balance</source>
+        <translation>KYDC 잔액</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -2155,18 +2155,18 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>현재 보기전용 주소의 잠긴 잔액 </translation>
     </message>
     <message>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
-        <translation>현재 KYD 잔액, 미확정, 생성중인 코인 포함</translation>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
+        <translation>현재 KYDC 잔액, 미확정, 생성중인 코인 포함</translation>
     </message>
     <message>
-        <source>zKYD Balance</source>
-        <translation>zKYD 잔액</translation>
+        <source>zKYDC Balance</source>
+        <translation>zKYDC 잔액</translation>
     </message>
     <message>
         <source>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
-These zKYD are spendable.</source>
+These zKYDC are spendable.</source>
         <translation>성숙한 : 그것이 발행 된 후 같은 명칭의 20 개 이상의 확인 및 1 개 민트.
-이 zKYD는 쓸만합니다.</translation>
+이 zKYDC는 쓸만합니다.</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -2219,8 +2219,8 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
         <translation>출금 가능 액수:</translation>
     </message>
     <message>
-        <source>Locked KYD or Masternode collaterals. These are excluded from zKYD minting.</source>
-        <translation>잠금 KYD 또는 Masternode collaterals. 이들은 zKYD minting에서 제외됩니다.</translation>
+        <source>Locked KYDC or Masternode collaterals. These are excluded from zKYDC minting.</source>
+        <translation>잠금 KYDC 또는 Masternode collaterals. 이들은 zKYDC minting에서 제외됩니다.</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2231,8 +2231,8 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
         <translation>미승인:</translation>
     </message>
     <message>
-        <source>Your current zKYD balance, unconfirmed and immature zKYD included.</source>
-        <translation>zKYD 잔액, 미확정, 생성중인 zKYD 포함.</translation>
+        <source>Your current zKYDC balance, unconfirmed and immature zKYDC included.</source>
+        <translation>zKYDC 잔액, 미확정, 생성중인 zKYDC 포함.</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2243,10 +2243,10 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
         <translation>동기화되지 않음</translation>
     </message>
     <message>
-        <source>Current percentage of zKYD.
+        <source>Current percentage of zKYDC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
-        <translation>현재 zKYD의 백분율 .
+        <translation>현재 zKYDC의 백분율 .
 자동 저장 기능이 활성화 된 경우이 비율은 구성된 자동 저장 비율 (기본값 = 10 %)을 기준으로 정해집니다.</translation>
     </message>
     <message>
@@ -2287,12 +2287,12 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>잘못된 결제 주소 %1</translation>
     </message>
     <message>
-        <source>Cannot start kyd: click-to-pay handler</source>
-        <translation>KYD을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
+        <source>Cannot start KYDC: click-to-pay handler</source>
+        <translation>KYDC을 시작할 수 없습니다: 결제하기 위한 클릭 처리</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid KYD address or malformed URI parameters.</source>
-        <translation>URI를 분석할 수 없습니다! 이는 잘못된 KYD 주소 또는 URI 매개변수 손상으로 인해 발생할 수 있습니다.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid KYDC address or malformed URI parameters.</source>
+        <translation>URI를 분석할 수 없습니다! 이는 잘못된 KYDC 주소 또는 URI 매개변수 손상으로 인해 발생할 수 있습니다.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2389,8 +2389,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Available for minting are coins which are confirmed and not locked or Masternode collaterals.</source>
@@ -2401,8 +2401,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>생성 가능한 수량:</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2441,16 +2441,16 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>프라이버시</translation>
     </message>
     <message>
-        <source>Enter an amount of Kyd to convert to zKYD</source>
-        <translation>zKYD로 변환할 KYD 수량을 입력하세요.</translation>
+        <source>Enter an amount of KYDC to convert to zKYDC</source>
+        <translation>zKYDC로 변환할 KYDC 수량을 입력하세요.</translation>
     </message>
     <message>
-        <source>zKYD Control</source>
-        <translation>zKYD 컨트롤</translation>
+        <source>zKYDC Control</source>
+        <translation>zKYDC 컨트롤</translation>
     </message>
     <message>
-        <source>zKYD Selected:</source>
-        <translation>선택된 zKYD :</translation>
+        <source>zKYDC Selected:</source>
+        <translation>선택된 zKYDC :</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2465,24 +2465,24 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>제로코인 보내기</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending</source>
-        <translation>전송 가능한 zKYD</translation>
+        <source>Available (mature and spendable) zKYDC for spending</source>
+        <translation>전송 가능한 zKYDC</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>가능한 잔액:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending
+        <source>Available (mature and spendable) zKYDC for spending
 
-zKYD are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
-        <translation>지출에 사용할 수있는 성숙한 소비재 zKYD
+zKYDC are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+        <translation>지출에 사용할 수있는 성숙한 소비재 zKYDC
 
-zKYD는 성명서가 20 개 이상 있고 명칭이 동일하지 않은 2 개 이상의 민트가 작성되었을 때 성숙합니다.</translation>
+zKYDC는 성명서가 20 개 이상 있고 명칭이 동일하지 않은 2 개 이상의 민트가 작성되었을 때 성숙합니다.</translation>
     </message>
     <message>
-        <source>0 zKYD</source>
-        <translation>0 zKYD</translation>
+        <source>0 zKYDC</source>
+        <translation>0 zKYDC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2501,8 +2501,8 @@ zKYD는 성명서가 20 개 이상 있고 명칭이 동일하지 않은 2 개 �
         <translation>지불 &amp;대상:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>KYD를 전송할 KYD 주소입니다. 비어있을 때 자신에게 지불할 주소를 생성합니다.</translation>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>KYDC를 전송할 KYDC 주소입니다. 비어있을 때 자신에게 지불할 주소를 생성합니다.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2553,7 +2553,7 @@ zKYD는 성명서가 20 개 이상 있고 명칭이 동일하지 않은 2 개 �
         <translation>제로코인 상태 :</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
         <translation>승인중이거나, 생성중인 제로코인도 포함된 전체 잔액입니다.</translation>
     </message>
     <message>
@@ -2575,24 +2575,24 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
 미성숙 : 확인되었지만 발행 된 후 같은 종파 1 개 미만</translation>
     </message>
     <message>
-        <source>Show the current status of automatic zKYD minting.
+        <source>Show the current status of automatic zKYDC minting.
 
 To change the status (restart required):
 - enable: add 'enablezeromint=1' to kyd.conf
 - disable: add 'enablezeromint=0' to kyd.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zKYD
+- menu Settings-&gt;Options-&gt;Percentage of autominted zKYDC
 
 </source>
-        <translation>현재 zKYD 자동 생성 상태를 보여줍니다.
+        <translation>현재 zKYDC 자동 생성 상태를 보여줍니다.
 
 자동생성 상태를 변경하시려면 (지갑 재시작 필요함):
 - 활성화: 'enablezeromint=1' 를 kyd.conf 파일에 추가
 - 비활성화: 'enablezeromint=0' 를 kyd.conf 파일에 추가
 
 자동 생성 비율 변경하시려면 (지갑 재시작 필요없음):
-- 메뉴 설정-&gt;옵션-&gt;zKYD 자동생성 비율
+- 메뉴 설정-&gt;옵션-&gt;zKYDC 자동생성 비율
 
 </translation>
     </message>
@@ -2789,12 +2789,12 @@ Maximum allowed: </source>
 가능한 최대값 :</translation>
     </message>
     <message>
-        <source>zKYD Spend #: </source>
-        <translation>zKYD 전송 # :</translation>
+        <source>zKYDC Spend #: </source>
+        <translation>zKYDC 전송 # :</translation>
     </message>
     <message>
-        <source>zKYD Mint</source>
-        <translation>zKYD 생성</translation>
+        <source>zKYDC Mint</source>
+        <translation>zKYDC 생성</translation>
     </message>
     <message>
         <source> &lt;b&gt;enabled&lt;/b&gt;.</source>
@@ -2809,12 +2809,12 @@ Maximum allowed: </source>
         <translation> 구성된 목표 비율 : &lt;b&gt;</translation>
     </message>
     <message>
-        <source>zKYD is currently disabled due to maintenance.</source>
-        <translation>zKYD는 현재 점검중이라 사용하실수 없습니다.</translation>
+        <source>zKYDC is currently disabled due to maintenance.</source>
+        <translation>zKYDC는 현재 점검중이라 사용하실수 없습니다.</translation>
     </message>
     <message>
-        <source>zKYD is currently undergoing maintenance.</source>
-        <translation>zKYD는 현재 점검중입니다.</translation>
+        <source>zKYDC is currently undergoing maintenance.</source>
+        <translation>zKYDC는 현재 점검중입니다.</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;1&lt;/b&gt;:</source>
@@ -2901,8 +2901,8 @@ Maximum allowed: </source>
         <translation>성공적으로 발행됨</translation>
     </message>
     <message>
-        <source> zKYD in </source>
-        <translation> zKYD in </translation>
+        <source> zKYDC in </source>
+        <translation> zKYDC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2929,8 +2929,8 @@ Maximum allowed: </source>
         <translation>주소를 입력하지 않아, 신규 주소를 생성합니다.</translation>
     </message>
     <message>
-        <source>Invalid Kyd Address</source>
-        <translation>잘못된 KYD 주소</translation>
+        <source>Invalid KYDC Address</source>
+        <translation>잘못된 KYDC 주소</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2961,12 +2961,12 @@ Maximum allowed: </source>
         <translation>코인 전송 확인</translation>
     </message>
     <message>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
-        <translation>zKYD 버전 1은 성공적으로 보내기 위해서 100 시큐리티 레벨이 필요합니다.</translation>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
+        <translation>zKYDC 버전 1은 성공적으로 보내기 위해서 100 시큐리티 레벨이 필요합니다.</translation>
     </message>
     <message>
-        <source>Failed to spend zKYD</source>
-        <translation>zKYD 전송 실패</translation>
+        <source>Failed to spend zKYDC</source>
+        <translation>zKYDC 전송 실패</translation>
     </message>
     <message>
         <source>Failed to fetch mint associated with serial hash</source>
@@ -2987,7 +2987,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message numerus="yes">
         <source>PrivacyDialog</source>
-        <comment>Enter an amount of KYD to convert to zKYD</comment>
+        <comment>Enter an amount of KYDC to convert to zKYDC</comment>
         <translation><numerusform>PrivacyDialog</numerusform></translation>
     </message>
     <message>
@@ -3030,8 +3030,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>금액</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>KYD 주소를 입력하세요 (예 %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>KYDC 주소를 입력하세요 (예 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3304,8 +3304,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>맞춤 백업 경로 :</translation>
     </message>
     <message>
-        <source>Custom zKYD Backup Path:</source>
-        <translation>맞춤 zKYD 백업 경로 :</translation>
+        <source>Custom zKYDC Backup Path:</source>
+        <translation>맞춤 zKYDC 백업 경로 :</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -3749,8 +3749,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>UTXO 크기:</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3805,16 +3805,16 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>자동으로 선택됩니다.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uKYDs로 설정되고,&lt;br /&gt;1000 uKYDs 안에는 최소 "킬로바이트당" 250 uKYDs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uKYDCs로 설정되고,&lt;br /&gt;1000 uKYDCs 안에는 최소 "킬로바이트당" 250 uKYDCs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uKYDs로 설정되고,&lt;br /&gt;1000 uKYDs 안에는 전체에서 최소 "킬로바이트당" 250 uKYDs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uKYDCs로 설정되고,&lt;br /&gt;1000 uKYDCs 안에는 전체에서 최소 "킬로바이트당" 250 uKYDCs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</source>
-        <translation>블록의 공간보다 트랜잭션량이 적으면 최소 수수료만 지불하면 됩니다.&lt;br /&gt;하지만 KYD 트랜잭션 수가 많으면 미확인된 트랜잭션로 네트워크가 처리할 수도 있습니다.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</source>
+        <translation>블록의 공간보다 트랜잭션량이 적으면 최소 수수료만 지불하면 됩니다.&lt;br /&gt;하지만 KYDC 트랜잭션 수가 많으면 미확인된 트랜잭션로 네트워크가 처리할 수도 있습니다.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3861,8 +3861,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>&amp;받는 사람 추가</translation>
     </message>
     <message>
-        <source>Anonymized KYD</source>
-        <translation>익명화된 KYD</translation>
+        <source>Anonymized KYDC</source>
+        <translation>익명화된 KYDC</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -3909,8 +3909,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>분할 블록 도구는 여러 주소에서 작동하지 않습니다. 다시 시도하십시오.</translation>
     </message>
     <message>
-        <source>Warning: Invalid KYD address</source>
-        <translation>경고: 잘못된 KYD 주소</translation>
+        <source>Warning: Invalid KYDC address</source>
+        <translation>경고: 잘못된 KYDC 주소</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -4012,8 +4012,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>지불 &amp;대상:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to</source>
-        <translation>보낼 KYD 주소</translation>
+        <source>The KYDC address to send the payment to</source>
+        <translation>보낼 KYDC 주소</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4052,8 +4052,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>메세지:</translation>
     </message>
     <message>
-        <source>A message that was attached to the KYD: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
-        <translation>참조용으로 트랜잭션과 함께 기록되는 KYD : URI에 첨부된 메세지입니다. 참고: 이 메세지는 KYD 네트워크를 통해 전송되지 않습니다.</translation>
+        <source>A message that was attached to the KYDC: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
+        <translation>참조용으로 트랜잭션과 함께 기록되는 KYDC : URI에 첨부된 메세지입니다. 참고: 이 메세지는 KYD 네트워크를 통해 전송되지 않습니다.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -4102,8 +4102,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>자신의 주소로 메세지에 서명할 수 있습니다. 피싱 공격으로 사용자를 속일 수 있으므로 서명에 주의해주세요. 동의하는 바에 한하여 서명하십시오.</translation>
     </message>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>메세지를 서명하기 위한 KYD 주소</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>메세지를 서명하기 위한 KYDC 주소</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4134,16 +4134,16 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>현재 서명을 시스템 클립 보드에 복사</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>이 KYD 주소를 소유하고 있다는 것을 증명하기 위해 메세지에 서명하십시오</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>이 KYDC 주소를 소유하고 있다는 것을 증명하기 위해 메세지에 서명하십시오</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>메세지에 서명된 KYD 주소</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>메세지에 서명된 KYDC 주소</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>메세지가 지정된 KYD 주소로 서명되었는지 확인해주세요</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>메세지가 지정된 KYDC 주소로 서명되었는지 확인해주세요</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4526,12 +4526,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>난독화를 통해 수신 됨</translation>
     </message>
     <message>
-        <source>KYD Stake</source>
-        <translation>KYD stake</translation>
+        <source>KYDC Stake</source>
+        <translation>KYDC stake</translation>
     </message>
     <message>
-        <source>zKYD Stake</source>
-        <translation>zKYD stake</translation>
+        <source>zKYDC Stake</source>
+        <translation>zKYDC stake</translation>
     </message>
     <message>
         <source>Obfuscation Denominate</source>
@@ -4550,32 +4550,32 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>난독화 표시 만들기</translation>
     </message>
     <message>
-        <source>Converted KYD to zKYD</source>
-        <translation>KYD를 zKYD로 변환</translation>
+        <source>Converted KYDC to zKYDC</source>
+        <translation>KYDC를 zKYDC로 변환</translation>
     </message>
     <message>
-        <source>Spent zKYD</source>
-        <translation>zKYD 사용</translation>
+        <source>Spent zKYDC</source>
+        <translation>zKYDC 사용</translation>
     </message>
     <message>
-        <source>Received KYD from zKYD</source>
-        <translation>zKYD를 KYD로 받음</translation>
+        <source>Received KYDC from zKYDC</source>
+        <translation>zKYDC를 KYDC로 받음</translation>
     </message>
     <message>
-        <source>Minted Change as zKYD from zKYD Spend</source>
-        <translation>zKYD 전송후 남은 zKYD로 잔돈 생성</translation>
+        <source>Minted Change as zKYDC from zKYDC Spend</source>
+        <translation>zKYDC 전송후 남은 zKYDC로 잔돈 생성</translation>
     </message>
     <message>
-        <source>Converted zKYD to KYD</source>
-        <translation>zKYD를 KYD로 변환</translation>
+        <source>Converted zKYDC to KYDC</source>
+        <translation>zKYDC를 KYDC로 변환</translation>
     </message>
     <message>
-        <source>Anonymous (zKYD Transaction)</source>
-        <translation>Anonymous (zKYD 거래)</translation>
+        <source>Anonymous (zKYDC Transaction)</source>
+        <translation>Anonymous (zKYDC 거래)</translation>
     </message>
     <message>
-        <source>Anonymous (zKYD Stake)</source>
-        <translation>Anonymous (zKYD 스테이킹)</translation>
+        <source>Anonymous (zKYDC Stake)</source>
+        <translation>Anonymous (zKYDC 스테이킹)</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -4785,12 +4785,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>내보내기 성공</translation>
     </message>
     <message>
-        <source>Received KYD from zKYD</source>
-        <translation>zKYD를 KYD로 받음</translation>
+        <source>Received KYDC from zKYDC</source>
+        <translation>zKYDC를 KYDC로 받음</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zKYD</source>
-        <translation>제로코인 전송, 잔돈은 zKYD</translation>
+        <source>Zerocoin Spend, Change in zKYDC</source>
+        <translation>제로코인 전송, 잔돈은 zKYDC</translation>
     </message>
     <message>
         <source>The transaction history was successfully saved to %1.</source>
@@ -4826,8 +4826,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>코인 전송 </translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYD.</source>
-        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 KYD로 제한됩니다.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYDC.</source>
+        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 KYDC로 제한됩니다.</translation>
     </message>
 </context>
 <context>
@@ -4860,8 +4860,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
 <context>
     <name>ZKydControlDialog</name>
     <message>
-        <source>Select zKYD to Spend</source>
-        <translation>사용할 zKYD 선택</translation>
+        <source>Select zKYDC to Spend</source>
+        <translation>사용할 zKYDC 선택</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4872,8 +4872,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4939,16 +4939,16 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>MIT 소프트웨어 라이센스에 따라 배포, 첨부 파일 COPYING 또는 &lt;http://www.opensource.org/licenses/mit-license.php&gt; 를 참조하십시오.</translation>
     </message>
     <message>
-        <source>Enable automatic wallet backups triggered after each zKYD minting (0-1, default: %u)</source>
-        <translation>Enable automatic wallet backups triggered after each zKYD minting (0-1, default: %u)</translation>
+        <source>Enable automatic wallet backups triggered after each zKYDC minting (0-1, default: %u)</source>
+        <translation>Enable automatic wallet backups triggered after each zKYDC minting (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for KYD inputs (0-1, default: %u)</source>
-        <translation>Enable or disable staking functionality for KYD inputs (0-1, default: %u)</translation>
+        <source>Enable or disable staking functionality for KYDC inputs (0-1, default: %u)</source>
+        <translation>Enable or disable staking functionality for KYDC inputs (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zKYD inputs (0-1, default: %u)</source>
-        <translation>Enable or disable staking functionality for zKYD inputs (0-1, default: %u)</translation>
+        <source>Enable or disable staking functionality for zKYDC inputs (0-1, default: %u)</source>
+        <translation>Enable or disable staking functionality for zKYDC inputs (0-1, default: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -4983,12 +4983,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>최고 블록이 변경될 경우 명령을 실행하십시오 (명령 내 %s 는 블록 해시로 대체 되었습니다)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>이것보다 작은 수수료 (KYD/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>이것보다 작은 수수료 (KYDC/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>이것보다 작은 수수료 (KYD/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>이것보다 작은 수수료 (KYDC/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5095,12 +5095,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>이 트랜잭션를 위해 난독화 표기된 충분한 금액을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>이 트랜잭션를 위해 난독화 표기가 안된 충분한 금액을 찾을 수 없습니다. 10000 KYD과 일치하지 않음.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>이 트랜잭션를 위해 난독화 표기가 안된 충분한 금액을 찾을 수 없습니다. 10000 KYDC과 일치하지 않음.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>트랜잭션에 대한 충분한 금액을 찾을 수 없습니다. 10000 KYD와 같지 않음</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>트랜잭션에 대한 충분한 금액을 찾을 수 없습니다. 10000 KYDC와 같지 않음</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5411,8 +5411,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>블록을 받아오는데 실패했습니다.</translation>
     </message>
     <message>
-        <source>Fee (in KYD/kB) to add to transactions you send (default: %s)</source>
-        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (KYD/kB) (기본값: %s)</translation>
+        <source>Fee (in KYDC/kB) to add to transactions you send (default: %s)</source>
+        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (KYDC/kB) (기본값: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5540,11 +5540,11 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <source>Percentage of automatically minted Zerocoin  (1-100, default: %u)</source>
-        <translation>자동생성 zKYD 비율  (1-100, default: %u)</translation>
+        <translation>자동생성 zKYDC 비율  (1-100, default: %u)</translation>
     </message>
     <message>
-        <source>Reindex the KYD and zKYD money supply statistics</source>
-        <translation>KYD 및 zKYD 공급량 다시 색인</translation>
+        <source>Reindex the KYDC and zKYDC money supply statistics</source>
+        <translation>KYDC 및 zKYDC 공급량 다시 색인</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -5619,8 +5619,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>자동생성 제로코인 선호 디노미네이션 (1/5/10/50/100/500/1000/5000) 0사용안됨, 기본값 : %u)</translation>
     </message>
     <message>
-        <source>Specify custom backup path to add a copy of any automatic zKYD backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Specify custom backup path to add a copy of any automatic zKYD backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</translation>
+        <source>Specify custom backup path to add a copy of any automatic zKYDC backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
+        <translation>Specify custom backup path to add a copy of any automatic zKYDC backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</translation>
     </message>
     <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
@@ -6119,8 +6119,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>sporks와 동기화 중입니다...</translation>
     </message>
     <message>
-        <source>Syncing zKYD wallet...</source>
-        <translation>zKYD 지갑 동기화중...</translation>
+        <source>Syncing zKYDC wallet...</source>
+        <translation>zKYDC 지갑 동기화중...</translation>
     </message>
     <message>
         <source>The coin spend has been used</source>
@@ -6267,8 +6267,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>JSON-RPC 연결 사용자 이름</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zKYD</source>
-        <translation>Value is below the smallest available denomination (= 1) of zKYD</translation>
+        <source>Value is below the smallest available denomination (= 1) of zKYDC</source>
+        <translation>Value is below the smallest available denomination (= 1) of zKYDC</translation>
     </message>
     <message>
         <source>Value more than Obfuscation pool maximum allows.</source>
@@ -6283,8 +6283,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>지갑 인증 중...</translation>
     </message>
     <message>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
-        <translation>zKYD 버전 1은 성공적으로 보내기 위해서 100 시큐리티 레벨이 필요합니다.</translation>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
+        <translation>zKYDC 버전 1은 성공적으로 보내기 위해서 100 시큐리티 레벨이 필요합니다.</translation>
     </message>
     <message>
         <source>Wallet %s resides outside data directory %s</source>
@@ -6328,7 +6328,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <source>You don't have enough Zerocoins in your wallet</source>
-        <translation>지갑에 zKYD 가 부족합니다.</translation>
+        <translation>지갑에 zKYDC 가 부족합니다.</translation>
     </message>
     <message>
         <source>You need to rebuild the database using -reindex to change -txindex</source>

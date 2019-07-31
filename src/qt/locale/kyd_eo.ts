@@ -62,11 +62,11 @@
         <translation>Ricevanta adresojn</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ĉi tiuj estas viaj KYD adreso por sendi pagojn. Ĉiam kontroku la kvanto kaj la ricevanta antaŭ ol sendi monerojn.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ĉi tiuj estas viaj KYDC adreso por sendi pagojn. Ĉiam kontroku la kvanto kaj la ricevanta antaŭ ol sendi monerojn.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Ĉi tiuj estas vian adreson por ricevi pagojn. Ĝi rekomendas uzi novajn ricenvantan adreson por ĉiu nova transakcio.</translation>
     </message>
     <message>
@@ -176,15 +176,15 @@
         <translation>Konfirmi monerĉifrado</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD fermos nun por fini ĉifran procezon. Memoru ke ĉifri vian monujon ne povas plene protekti viajn KYDs de esti ŝtelita per malware infektanta vian komputilon.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD fermos nun por fini ĉifran procezon. Memoru ke ĉifri vian monujon ne povas plene protekti viajn KYDCs de esti ŝtelita per malware infektanta vian komputilon.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ĉu vi certas ke vi volas ĉifri vian monujon?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
         <translation>Averto: se vi ĉifras vian monujo kaj perdi vian pasfrazon, vi &lt;b&gt;PERDOS VIAN TUTAN MONON&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -254,11 +254,11 @@
         <translation>Adreso:</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Eniri unu KYD adreso ke vi volus ĉifri per BIP 38. Eniri unu pasfrazon meze skatolo. Klaku ĉifri por komputi la ĉifrita privata ŝlosilo.</translation>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Eniri unu KYDC adreso ke vi volus ĉifri per BIP 38. Eniri unu pasfrazon meze skatolo. Klaku ĉifri por komputi la ĉifrita privata ŝlosilo.</translation>
     </message>
     <message>
-        <source>The KYD address to encrypt</source>
+        <source>The KYDC address to encrypt</source>
         <translation>Adreson por ĉifri</translation>
     </message>
     <message>
@@ -290,8 +290,8 @@
         <translation>Kopiu la aktualan subskribo al la sistemo-poŝo</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this KYD address</source>
-        <translation>Ĉifri la privata ŝlosilo por ĉi tiu KYD adreso</translation>
+        <source>Encrypt the private key for this KYDC address</source>
+        <translation>Ĉifri la privata ŝlosilo por ĉi tiu KYDC adreso</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>&amp;Foliumi transakcio historio</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>Privataj agoj por zKYD</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>Privataj agoj por zKYDC</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -649,12 +649,12 @@
         <translation>KYD kerno</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Sendu mono al KYD addreso</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Sendu mono al KYDC addreso</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Peto pagojn (generas QR kodojn kaj kyd: URIs)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Peto pagojn (generas QR kodojn kaj KYDC: URIs)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -681,12 +681,12 @@
         <translation>Modifi agordajn opciojn por KYD</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Subskribu mesaĝo per via KYD adreso por pruvi vi posedas ĝin</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Subskribu mesaĝo per via KYDC adreso por pruvi vi posedas ĝin</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Kontrolu mesaĝojn por certigi ke ili estas subskribita kun specifita KYD adreso</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Kontrolu mesaĝojn por certigi ke ili estas subskribita kun specifita KYDC adreso</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -717,8 +717,8 @@
         <translation>Malfermi mastro-nodo agord-dosieron</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Malfermi unu KYD: URI aŭ pago peto</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Malfermi unu KYDC: URI aŭ pago peto</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1177,8 +1177,8 @@ Muktisendi: %1</translation>
         <translation>Redaktu sendantan adreson</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>La enirita "%1" adreso ne estas validan KYD adreson.</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>La enirita "%1" adreso ne estas validan KYDC adreson.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1561,8 +1561,8 @@ Bonvolu kontroku la adreson kaj riprovu</translation>
         <translation>Adreso / Kvanto:</translation>
     </message>
     <message>
-        <source>Add destinations to send KYD to</source>
-        <translation>Aldonu destinoj por sendi KYD al</translation>
+        <source>Add destinations to send KYDC to</source>
+        <translation>Aldonu destinoj por sendi KYDC al</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1628,12 +1628,12 @@ Bonvolu kontroku la adreson kaj riprovu</translation>
         <translation>Bonvolu elekti privata nivelo.</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>Tion opcion estas la plej rapida kaji kostos ~0.025 KYD por anonimigi 10000 KYD</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>Tion opcion estas la plej rapida kaji kostos ~0.025 KYDC por anonimigi 10000 KYDC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>Tion opcion estas moderebla rapide kaj kostos ĉirkaŭ 0.05 KYD por anonimigi 10000 KYD</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>Tion opcion estas moderebla rapide kaj kostos ĉirkaŭ 0.05 KYDC por anonimigi 10000 KYDC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1787,20 +1787,20 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Via aktuala elspezebla saldo</translation>
     </message>
     <message>
-        <source>KYD Balance</source>
-        <translation>KYD kvanto</translation>
+        <source>KYDC Balance</source>
+        <translation>KYDC kvanto</translation>
     </message>
     <message>
         <source>Immature:</source>
         <translation>Nematura:</translation>
     </message>
     <message>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
-        <translation>Via aktuala KYD totalo, nekonformita kaj nematurita transakcioj inkluzivita</translation>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
+        <translation>Via aktuala KYDC totalo, nekonformita kaj nematurita transakcioj inkluzivita</translation>
     </message>
     <message>
-        <source>zKYD Balance</source>
-        <translation>zKYD kvanto</translation>
+        <source>zKYDC Balance</source>
+        <translation>zKYDC kvanto</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -1870,12 +1870,12 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -1890,12 +1890,12 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Kvanto</translation>
     </message>
     <message>
-        <source>zKYD Control</source>
-        <translation>zKYD kontrolu</translation>
+        <source>zKYDC Control</source>
+        <translation>zKYDC kontrolu</translation>
     </message>
     <message>
-        <source>zKYD Selected:</source>
-        <translation>Elektita zKYD</translation>
+        <source>zKYDC Selected:</source>
+        <translation>Elektita zKYDC</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -1906,20 +1906,20 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Elspezi zerocoin</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending</source>
-        <translation>Havebla (matura kaj elspezebla) zKYD por elspezi</translation>
+        <source>Available (mature and spendable) zKYDC for spending</source>
+        <translation>Havebla (matura kaj elspezebla) zKYDC por elspezi</translation>
     </message>
     <message>
-        <source>0 zKYD</source>
-        <translation>0 zKYD</translation>
+        <source>0 zKYDC</source>
+        <translation>0 zKYDC</translation>
     </message>
     <message>
         <source>Pay &amp;To:</source>
         <translation>Pagu &amp;Al:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>KYD adreso por alsendi la pago. Kreas lokala pago al vi mem kiam malplenija.</translation>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>KYDC adreso por alsendi la pago. Kreas lokala pago al vi mem kiam malplenija.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2004,8 +2004,8 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Mesaĝo: eniri kvanto &gt; 0.</translation>
     </message>
     <message>
-        <source>Invalid Kyd Address</source>
-        <translation>Nevalida Kyd adreso</translation>
+        <source>Invalid KYDC Address</source>
+        <translation>Nevalida KYDC adreso</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -2297,8 +2297,8 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Se estas aktiva sed ŝanĝo-adreso estas malpleniĝa au nevalida, ŝanĝo sendos al nova generita adreson.</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Open Coin Control...</source>
@@ -2345,8 +2345,8 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Kopi ŝanĝo</translation>
     </message>
     <message>
-        <source>Warning: Invalid KYD address</source>
-        <translation>Averto: nevalida KYD adreson</translation>
+        <source>Warning: Invalid KYDC address</source>
+        <translation>Averto: nevalida KYDC adreson</translation>
     </message>
     <message>
         <source>Are you sure you want to send?</source>
@@ -2372,7 +2372,7 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Pagu &amp;Al:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to</source>
+        <source>The KYDC address to send the payment to</source>
         <translation>KYDC adreso por sendi la pago al</translation>
     </message>
     <message>
@@ -2655,8 +2655,8 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Is Spendable</source>

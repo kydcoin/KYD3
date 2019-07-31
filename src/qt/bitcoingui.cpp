@@ -321,7 +321,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a KYD address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a KYDC address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -354,7 +354,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     tabGroup->addAction(historyAction);
 
 //    privacyAction = new QAction(QIcon(":/icons/privacy"), tr("&Privacy"), this);
-//    privacyAction->setStatusTip(tr("Privacy Actions for zKYD"));
+//    privacyAction->setStatusTip(tr("Privacy Actions for zKYDC"));
 //    privacyAction->setToolTip(privacyAction->statusTip());
 //    privacyAction->setCheckable(true);
 //#ifdef Q_OS_MAC
@@ -443,9 +443,9 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your KYD addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your KYDC addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified KYD addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified KYDC addresses"));
     bip38ToolAction = new QAction(QIcon(":/icons/key"), tr("&BIP38 tool"), this);
     bip38ToolAction->setToolTip(tr("Encrypt and decrypt private keys using a passphrase"));
     multiSendAction = new QAction(QIcon(":/icons/edit"), tr("&MultiSend"), this);
@@ -482,7 +482,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
     multisigSignAction->setStatusTip(tr("Sign with a multisignature address"));
 
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a KYD: URI or payment request"));
+    openAction->setStatusTip(tr("Open a KYDC: URI or payment request"));
     openBlockExplorerAction = new QAction(QIcon(":/icons/explorer"), tr("&Blockchain explorer"), this);
     openBlockExplorerAction->setStatusTip(tr("Block explorer window"));
 
