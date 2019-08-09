@@ -48,8 +48,9 @@ public Q_SLOTS:
     void updateNewsList();
 
 public slots:
-    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
-    void newsFinished(QNetworkReply *reply);
+    void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance,
+                    const CAmount& zerocoinBalance, const CAmount& unconfirmedZerocoinBalance, const CAmount& immatureZerocoinBalance,
+                    const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);    void newsFinished(QNetworkReply *reply);
     void newsReadyRead();
     void newsMetaDataChanged();
     void newsError(QNetworkReply::NetworkError);
