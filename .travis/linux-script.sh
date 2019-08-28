@@ -14,7 +14,7 @@ travis_fold end "configure"
 
 travis_fold start "make"
 mkdir release
-make -j4
+make -j8
 make install
 echo $TRAVIS_BUILD_DIR
 cd $TRAVIS_BUILD_DIR/depends/$HOST/bin && tar -cvzf $TRAVIS_BUILD_DIR/$RELEASE_FILE kyd*
