@@ -67,7 +67,7 @@ jobs:
         HOST=x86_64-86-linux-gnu
         RELEASE_FILE=ubuntu18.04-$HOST.tar.gz
         PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools protobuf-compiler libdbus-1-dev libharfbuzz-dev libprotobuf-dev"
-        DEP_OPTS="ALLOW_HOST_PACKAGES=1"
+        DEP_OPTS="ALLOW_HOST_PACKAGES=1 NO_QT=1"
         GOAL="install"
         BITCOIN_CONFIG="--enable-gui --disable-tests --disable-gui-tests --disable-bench --enable-experimental-asm CFLAGS=-fPIC CXXFLAGS=-fPIC --enable-shared --with-incompatible-bdb"
     - stage: windows32
@@ -77,6 +77,7 @@ jobs:
         HOST=i686-w64-mingw32
         RELEASE_FILE=win32-$HOST.tar.gz
         DPKG_ADD_ARCH="i386"
+        DEP_OPTS="NO_QT=1"
         PACKAGES="python3 nsis g++-mingw-w64-i686 wine-binfmt wine32"
         GOAL="install"
         BITCOIN_CONFIG="--enable-gui --enable-reduce-exports"
@@ -88,6 +89,7 @@ jobs:
         SCRIPT=linux
         HOST=x86_64-w64-mingw32
         RELEASE_FILE=win64-$HOST.tar.gz
+        DEP_OPTS="NO_QT=1"
         PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine-binfmt wine1.6-amd64"
         GOAL="install"
         BITCOIN_CONFIG="--enable-gui --enable-reduce-exports"
