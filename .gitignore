@@ -45,6 +45,8 @@ share/qt/Info.plist
 contrib/devtools/split-debug.sh
 
 src/univalue/gen
+src/univalue/build-aux
+Makefile.in
 
 src/qt/*.moc
 src/qt/moc_*.cpp

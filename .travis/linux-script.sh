@@ -14,10 +14,14 @@ travis_fold end "configure"
 
 travis_fold start "make"
 mkdir release
-make -j4
-make install
+git status
+make -j4 install
 echo $TRAVIS_BUILD_DIR
-cd $TRAVIS_BUILD_DIR/depends/$HOST/bin && tar -cvzf $TRAVIS_BUILD_DIR/$RELEASE_FILE kyd*
+if [[ $HOST = *-mingw32 ]]; then
+    cd $TRAVIS_BUILD_DIR/depends/$HOST/bin && zip $TRAVIS_BUILD_DIR/$RELEASE_FILE kyd*
+else
+    cd $TRAVIS_BUILD_DIR/depends/$HOST/bin && tar -cvzf $TRAVIS_BUILD_DIR/$RELEASE_FILE kyd*
+fi
 cd $TRAVIS_BUILD_DIR
 ls
 travis_fold end "make"
