@@ -132,7 +132,7 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
         zkydObj.push_back(Pair(to_string(denom), ValueFromAmount(blockindex->mapZerocoinSupply.at(denom) * (denom*COIN))));
     }
     zkydObj.push_back(Pair("total", ValueFromAmount(blockindex->GetZerocoinSupply())));
-    result.push_back(Pair("zKYDsupply", zkydObj));
+    result.push_back(Pair("zKYDCsupply", zkydObj));
 
     return result;
 }
@@ -252,7 +252,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
             "{                           (json object)\n"
             "  \"transactionid\" : {       (json object)\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in kyd\n"
+            "    \"fee\" : n,              (numeric) transaction fee in KYDC\n"
             "    \"time\" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -333,17 +333,17 @@ UniValue getblock(const UniValue& params, bool fHelp)
             "  \"previousblockhash\" : \"hash\",  (string) The hash of the previous block\n"
             "  \"nextblockhash\" : \"hash\"       (string) The hash of the next block\n"
             "  \"moneysupply\" : \"supply\"       (numeric) The money supply when this block was added to the blockchain\n"
-            "  \"zKYDsupply\" :\n"
+            "  \"zKYDCsupply\" :\n"
             "  {\n"
-            "     \"1\" : n,            (numeric) supply of 1 zKYD denomination\n"
-            "     \"5\" : n,            (numeric) supply of 5 zKYD denomination\n"
-            "     \"10\" : n,           (numeric) supply of 10 zKYD denomination\n"
-            "     \"50\" : n,           (numeric) supply of 50 zKYD denomination\n"
-            "     \"100\" : n,          (numeric) supply of 100 zKYD denomination\n"
-            "     \"500\" : n,          (numeric) supply of 500 zKYD denomination\n"
-            "     \"1000\" : n,         (numeric) supply of 1000 zKYD denomination\n"
-            "     \"5000\" : n,         (numeric) supply of 5000 zKYD denomination\n"
-            "     \"total\" : n,        (numeric) The total supply of all zKYD denominations\n"
+            "     \"1\" : n,            (numeric) supply of 1 zKYDC denomination\n"
+            "     \"5\" : n,            (numeric) supply of 5 zKYDC denomination\n"
+            "     \"10\" : n,           (numeric) supply of 10 zKYDC denomination\n"
+            "     \"50\" : n,           (numeric) supply of 50 zKYDC denomination\n"
+            "     \"100\" : n,          (numeric) supply of 100 zKYDC denomination\n"
+            "     \"500\" : n,          (numeric) supply of 500 zKYDC denomination\n"
+            "     \"1000\" : n,         (numeric) supply of 1000 zKYDC denomination\n"
+            "     \"5000\" : n,         (numeric) supply of 5000 zKYDC denomination\n"
+            "     \"total\" : n,        (numeric) The total supply of all zKYDC denominations\n"
             "  }\n"
             "}\n"
 
@@ -496,8 +496,8 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of kyd addresses\n"
-            "     \"kydaddress\"   	 	(string) kyd address\n"
+            "     \"addresses\" : [          (array of string) array of KYDC addresses\n"
+            "     \"KYDCaddress\"   	 	(string) KYDC address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"

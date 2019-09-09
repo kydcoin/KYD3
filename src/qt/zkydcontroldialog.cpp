@@ -129,7 +129,7 @@ void ZKydControlDialog::updateList()
             if(nConfirmations < Params().Zerocoin_MintRequiredConfirmations())
                 strReason = strprintf("Needs %d more confirmations", Params().Zerocoin_MintRequiredConfirmations() - nConfirmations);
             else if (!mint.isSeedCorrect)
-                strReason = "The zKYD seed used to mint this zKYD is not the same as currently hold in the wallet";
+                strReason = "The zKYDC seed used to mint this zKYDC is not the same as currently hold in the wallet";
             else
                 strReason = strprintf("Needs %d more mints added to network", Params().Zerocoin_RequiredAccumulation());
 

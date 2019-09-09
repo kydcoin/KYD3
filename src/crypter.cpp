@@ -260,16 +260,16 @@ bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn)
 
             uint256 nSeed;
             if (!GetDeterministicSeed(hashSeed, nSeed)) {
-                return error("Failed to read zKYD seed from DB. Wallet is probably corrupt.");
+                return error("Failed to read zKYDC seed from DB. Wallet is probably corrupt.");
             }
             pwalletMain->zwalletMain->SetMasterSeed(nSeed, false);
         } else {
-            // First time this wallet has been unlocked with dzKYD
+            // First time this wallet has been unlocked with dzKYDC
             // Borrow random generator from the key class so that we don't have to worry about randomness
             CKey key;
             key.MakeNewKey(true);
             uint256 seed = key.GetPrivKey_256();
-            LogPrintf("%s: first run of zkyd wallet detected, new seed generated. Seedhash=%s\n", __func__, Hash(seed.begin(), seed.end()).GetHex());
+            LogPrintf("%s: first run of zKYDC wallet detected, new seed generated. Seedhash=%s\n", __func__, Hash(seed.begin(), seed.end()).GetHex());
             pwalletMain->zwalletMain->SetMasterSeed(seed, true);
             pwalletMain->zwalletMain->GenerateMintPool();
         }
@@ -402,9 +402,9 @@ bool CCryptoKeyStore::AddDeterministicSeed(const uint256& seed)
         if (db.WriteZKYDSeed(hashSeed, ToByteVector(seed))) {
             return true;
         }
-        strErr = "save zkydseed to wallet";
+        strErr = "save zKYDCseed to wallet";
     }
-                //the use case for this is no password set seed, mint dzKYD,
+                //the use case for this is no password set seed, mint dzKYDC,
 
     return error("s%: Failed to %s\n", __func__, strErr);
 }

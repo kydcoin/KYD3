@@ -62,12 +62,12 @@
         <translation>Gavimo adresai</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tai jūsų KYD adresai mokėjimų išsiuntimams. Visada patikrinkite sumą ir gavėjo adresą prieš siųsdami monetas.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tai jūsų KYDC adresai mokėjimų išsiuntimams. Visada patikrinkite sumą ir gavėjo adresą prieš siųsdami monetas.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tai jūsų KYD adresai mokėjimų gavimams. Rekomenduojama naudoti naują adresą kiekvienam pavedimui.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tai jūsų KYDC adresai mokėjimų gavimams. Rekomenduojama naudoti naują adresą kiekvienam pavedimui.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Patvirtinkite piniginės užšifravimą.</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>Dabar KYD išsijungs, kad būtų užbaigtas šifravimo procesas. Atminkite, kad jūsų piniginės užšifravimas negali visiškai apsaugoti jūsų KYD nuo kenkėjiškų programų, užkrėsto jūsų kompiuterio.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>Dabar KYD išsijungs, kad būtų užbaigtas šifravimo procesas. Atminkite, kad jūsų piniginės užšifravimas negali visiškai apsaugoti jūsų KYDC nuo kenkėjiškų programų, užkrėsto jūsų kompiuterio.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ar tikrai norite užšifruoti savo piniginę?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>Įspėjimas: jei užšifruosite savo piniginę ir prarasite slaptafrazę, jūs &lt;b&gt;PRARASITE VISUS SAVO KYD&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>Įspėjimas: jei užšifruosite savo piniginę ir prarasite slaptafrazę, jūs &lt;b&gt;PRARASITE VISUS SAVO KYDC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -254,12 +254,12 @@
         <translation>Adresas:</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Įveskite Kyd adresą, kurį norėtumėte užšifruoti naudojant BIP 38. Vidiniame laukelyje įrašykite slaptą frazę. Paspauskite užšifruoti, jei norite gauti užšifruotą privatųjį raktą.</translation>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Įveskite KYDC adresą, kurį norėtumėte užšifruoti naudojant BIP 38. Vidiniame laukelyje įrašykite slaptą frazę. Paspauskite užšifruoti, jei norite gauti užšifruotą privatųjį raktą.</translation>
     </message>
     <message>
-        <source>The KYD address to encrypt</source>
-        <translation>KYD adresas, kurį norite užšifruoti</translation>
+        <source>The KYDC address to encrypt</source>
+        <translation>KYDC adresas, kurį norite užšifruoti</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -290,8 +290,8 @@
         <translation>Kopijuoti dabartinį parašą</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this KYD address</source>
-        <translation>Užšifruoti šio KYD adreso privatų raktą</translation>
+        <source>Encrypt the private key for this KYDC address</source>
+        <translation>Užšifruoti šio KYDC adreso privatų raktą</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>Naršyti pavedimų istoriją</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>zKYD Saugumo Veiksmai </translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>zKYDC Saugumo Veiksmai </translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -649,12 +649,12 @@
         <translation>KYD Core</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Siųsti monetas į KYD adresą</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Siųsti monetas į KYDC adresą</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Prašyti mokėjimų (sugeneruoja QR kodus ir kyd URI)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Prašyti mokėjimų (sugeneruoja QR kodus ir KYDC URI)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -681,12 +681,12 @@
         <translation>Keisti KYD konfigūravimo parinktis</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Pasirašykite pranešimus naudodami savo KYD adresus, kad įrodytumėte, kad juos turite</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Pasirašykite pranešimus naudodami savo KYDC adresus, kad įrodytumėte, kad juos turite</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Patvirtinkite pranešimus, kad jie būtų pasirašyti su nurodytais KYD adresais</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Patvirtinkite pranešimus, kad jie būtų pasirašyti su nurodytais KYDC adresais</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -717,8 +717,8 @@
         <translation>Atidaryti Masternod'o konfigūracijos failą</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Atidaryti KYD: URI arba mokėjimo prašymą</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Atidaryti KYDC: URI arba mokėjimo prašymą</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -738,7 +738,7 @@
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to KYD network</source>
-        <translation><numerusform>%n aktyvių prisijungimų KYD tinkle ()</numerusform><numerusform>%n aktyvių prisijungimų KYD tinkle ()</numerusform><numerusform>%n aktyvių prisijungimų KYD tinkle ()</numerusform><numerusform>%n aktyvių prisijungimų KYD tinkle ()</numerusform></translation>
+        <translation><numerusform>%n aktyvių prisijungimų KYD tinkle</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1177,8 +1177,8 @@ MultiSend: %1</translation>
         <translation>Keisti siuntimo adresą</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>Įvestas adresas "%1" nėra galiojantis KYD adresas.</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>Įvestas adresas "%1" nėra galiojantis KYDC adresas.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1440,12 +1440,12 @@ MultiSend: %1</translation>
         <translation>Įveskite adresą kuriam norite siųsti</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYD addresses after it matures.
-To Add: enter percentage to give and KYD address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYDC addresses after it matures.
+To Add: enter percentage to give and KYDC address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend leidžia automatiškai išsiųsti iki 100% jūsų stake'inimo ar masternod'ų atlygio į kitus KYD adresus.
-Norėdami pridėti: įveskite pateiktą procentą ir KYD adresą, kurį norite pridėti prie MultiSend sąrašo.
+        <translation>MultiSend leidžia automatiškai išsiųsti iki 100% jūsų stake'inimo ar masternod'ų atlygio į kitus KYDC adresus.
+Norėdami pridėti: įveskite pateiktą procentą ir KYDC adresą, kurį norite pridėti prie MultiSend sąrašo.
 Norėdami ištrinti: įveskite adresą, kurį norite ištrinti, ir paspauskite ištrinti
 MultiSend nebus aktyvuotas, nebent paspausite "Įjungti"</translation>
     </message>
@@ -1651,8 +1651,8 @@ Patikrinkite adresą ir bandykite dar kartą.</translation>
         <translation>Adresas / Suma:</translation>
     </message>
     <message>
-        <source>Add destinations to send KYD to</source>
-        <translation>Pridėkite vietas, kurioms norite siųsti KYD</translation>
+        <source>Add destinations to send KYDC to</source>
+        <translation>Pridėkite vietas, kurioms norite siųsti KYDC</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1750,32 +1750,32 @@ Patikrinkite adresą ir bandykite dar kartą.</translation>
         <translation>Pasirinkite privatumo lygmenį.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Naudokite 2 atskirus masternod'us, kad sumaišytumėte lėšas iki 10 000 KYD</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Naudokite 2 atskirus masternod'us, kad sumaišytumėte lėšas iki 10 000 KYDC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Naudokite 8 atskirus masternod'us, kad sumaišytumėte lėšas iki 10 000 KYD</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Naudokite 8 atskirus masternod'us, kad sumaišytumėte lėšas iki 10 000 KYDC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Naudokite 16 atskirų masternod'ų</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>Ši parinktis yra greičiausia ir kainuos apie ~0.025 KYD, kad anonimizuotų 10000 KYD</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>Ši parinktis yra greičiausia ir kainuos apie ~0.025 KYDC, kad anonimizuotų 10000 KYDC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>Ši parinktis yra vidutiniškai greita ir kainuoja apie 0,05 KYD, kad anonimizuotų 10000 KYD</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>Ši parinktis yra vidutiniškai greita ir kainuoja apie 0,05 KYDC, kad anonimizuotų 10000 KYDC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Tai yra lėčiausias ir saugiausias variantas. Maksimalus anonimiškumas kainuos.</translation>
     </message>
     <message>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
-        <translation>0.1 KYD kas 1000 KYD kuriuos anonimizuosite.</translation>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
+        <translation>0.1 KYDC kas 1000 KYDC kuriuos anonimizuosite.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1890,24 +1890,24 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Įrašyti prievadą naudojant &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of KYD units to zKYD</source>
-        <translation>Įgalinti automatinį konvertavimą iš KYD į zKYD</translation>
+        <source>Enable automatic minting of KYDC units to zKYDC</source>
+        <translation>Įgalinti automatinį konvertavimą iš KYDC į zKYDC</translation>
     </message>
     <message>
-        <source>Enable zKYD Automint</source>
-        <translation>Įgalinti zKYD Automatinį nukaldinima</translation>
+        <source>Enable zKYDC Automint</source>
+        <translation>Įgalinti zKYDC Automatinį nukaldinima</translation>
     </message>
     <message>
-        <source>Percentage of incoming KYD which get automatically converted to zKYD via Zerocoin Protocol (min: 10%)</source>
-        <translation>Procentas gauto KYD, kuris automatiškai bus konvertuotas į zKYD naudojant Zerocoin Protokolą (min: 10%)</translation>
+        <source>Percentage of incoming KYDC which get automatically converted to zKYDC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Procentas gauto KYDC, kuris automatiškai bus konvertuotas į zKYDC naudojant Zerocoin Protokolą (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zKYD</source>
-        <translation>Automatiškai sukurtų zKYD procentas</translation>
+        <source>Percentage of autominted zKYDC</source>
+        <translation>Automatiškai sukurtų zKYDC procentas</translation>
     </message>
     <message>
-        <source>Preferred Automint zKYD Denomination</source>
-        <translation>Pageidautinas zKYD Automatinio Nukaldinimo Nominalas</translation>
+        <source>Preferred Automint zKYDC Denomination</source>
+        <translation>Pageidautinas zKYDC Automatinio Nukaldinimo Nominalas</translation>
     </message>
     <message>
         <source>Connect to the KYD network through a SOCKS5 proxy.</source>
@@ -2029,8 +2029,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Bendras balansas, įskaitant visas nepasiekiamas monetas.</translation>
     </message>
     <message>
-        <source>KYD Balance</source>
-        <translation>KYD Balansas</translation>
+        <source>KYDC Balance</source>
+        <translation>KYDC Balansas</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -2053,18 +2053,18 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Dabartinis bendras užrakintas balansas tik žiūrėjimo adresuose</translation>
     </message>
     <message>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
-        <translation>Jūsų dabartinis KYD balansas, įskaitant nepatvirtintus ir nesubrendusius sandorius</translation>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
+        <translation>Jūsų dabartinis KYDC balansas, įskaitant nepatvirtintus ir nesubrendusius sandorius</translation>
     </message>
     <message>
-        <source>zKYD Balance</source>
-        <translation>zKYD Balansas</translation>
+        <source>zKYDC Balance</source>
+        <translation>zKYDC Balansas</translation>
     </message>
     <message>
         <source>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
-These zKYD are spendable.</source>
+These zKYDC are spendable.</source>
         <translation>Subrendę: daugiau nei 20 patvirtinimų ir daugiau nei 1 konvertacija to pačio nominalo, kai jis jau buvo konvertuotas.
-Šiuos zKYD galima išleisti.</translation>
+Šiuos zKYDC galima išleisti.</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -2117,8 +2117,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>Prienamas išleidimui:</translation>
     </message>
     <message>
-        <source>Locked KYD or Masternode collaterals. These are excluded from zKYD minting.</source>
-        <translation>Užrakinti KYD arba Masternode užstatai. Jie yra neįtraukti į zKYD kalimą.</translation>
+        <source>Locked KYDC or Masternode collaterals. These are excluded from zKYDC minting.</source>
+        <translation>Užrakinti KYDC arba Masternode užstatai. Jie yra neįtraukti į zKYDC kalimą.</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2156,8 +2156,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>Netinkamas mokėjimo adresas %1</translation>
     </message>
     <message>
-        <source>Cannot start kyd: click-to-pay handler</source>
-        <translation>Nepavyksta paleisti kyd: apdorojimo "spustelėjimo ir apmokėjimo" funkcijos klaida</translation>
+        <source>Cannot start KYDC: click-to-pay handler</source>
+        <translation>Nepavyksta paleisti KYDC: apdorojimo "spustelėjimo ir apmokėjimo" funkcijos klaida</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2222,8 +2222,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Available for minting are coins which are confirmed and not locked or Masternode collaterals.</source>
@@ -2234,8 +2234,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>Prieinama Konvertavimui:</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -2266,12 +2266,12 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>PRIVATUMAS</translation>
     </message>
     <message>
-        <source>zKYD Control</source>
-        <translation>zKyd Kontrolė</translation>
+        <source>zKYDC Control</source>
+        <translation>zKYDC Kontrolė</translation>
     </message>
     <message>
-        <source>zKYD Selected:</source>
-        <translation>Pasirinkta zKYD:</translation>
+        <source>zKYDC Selected:</source>
+        <translation>Pasirinkta zKYDC:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2290,8 +2290,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>Prieinamas Balansas: </translation>
     </message>
     <message>
-        <source>0 zKYD</source>
-        <translation>0 zKYD</translation>
+        <source>0 zKYDC</source>
+        <translation>0 zKYDC</translation>
     </message>
     <message>
         <source>Security Level:</source>
@@ -2338,8 +2338,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos to pačio nominalo
         <translation>Zerocoin Statistika:</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
-        <translation>Bendras balansas, įskaitant nepatvirtintą ir nesubrendusį zKYD</translation>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
+        <translation>Bendras balansas, įskaitant nepatvirtintą ir nesubrendusį zKYDC</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -2516,12 +2516,12 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>Kopijuoti sumą</translation>
     </message>
     <message>
-        <source>zKYD Spend #: </source>
-        <translation>zKYD Išleidimas #:</translation>
+        <source>zKYDC Spend #: </source>
+        <translation>zKYDC Išleidimas #:</translation>
     </message>
     <message>
-        <source>zKYD Mint</source>
-        <translation>zKYD Konvertavimas</translation>
+        <source>zKYDC Mint</source>
+        <translation>zKYDC Konvertavimas</translation>
     </message>
     <message>
         <source> &lt;b&gt;enabled&lt;/b&gt;.</source>
@@ -2604,8 +2604,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>Klaida: jūsų piniginė užrakinta. Pirmiausia įveskite piniginės slaptažodį.</translation>
     </message>
     <message>
-        <source>Invalid Kyd Address</source>
-        <translation>Netinkamas Kyd Adresas</translation>
+        <source>Invalid KYDC Address</source>
+        <translation>Netinkamas KYDC Adresas</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2628,8 +2628,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>su Saugumo Lygmeniu</translation>
     </message>
     <message>
-        <source>Failed to spend zKYD</source>
-        <translation>Nepavyko išleisti zKYD</translation>
+        <source>Failed to spend zKYDC</source>
+        <translation>Nepavyko išleisti zKYDC</translation>
     </message>
     <message>
         <source>serial: </source>
@@ -2651,8 +2651,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>Suma</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>Įveskite KYD adresą (pvz. %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>Įveskite KYDC adresą (pvz. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3001,8 +3001,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>Pasirinktinio pakeitimo adresas</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3158,8 +3158,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>KYD adresas, kuriuo pasirašyti žinute</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>KYDC adresas, kuriuo pasirašyti žinute</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3182,16 +3182,16 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>Kopijuoti dabartinį parašą</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Pažymėkite žinutę, kad įrodytumėte, jog jūs šio KYD adreso savininkas</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Pažymėkite žinutę, kad įrodytumėte, jog jūs šio KYDC adreso savininkas</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>KYD adresas, kurio buvo pasirašyta žinutė</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>KYDC adresas, kurio buvo pasirašyta žinutė</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Patikrinkite pranešimą, kad jis būtų pasirašytas su nurodytu KYD adresu</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Patikrinkite pranešimą, kad jis būtų pasirašytas su nurodytu KYDC adresu</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -3455,8 +3455,8 @@ Nesubrendusios: patvirtintos, bet mažiau nei 1 konvertacijos tos pačio nominal
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     </context>
 <context>

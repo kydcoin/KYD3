@@ -62,12 +62,12 @@
         <translation>Endereços de recebimento</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Esses são seus endereços KYD para envio de pagamentos. Sempre verifique a quantia e os endereços de recebimento antes de enviar moedas.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Esses são seus endereços KYDC para envio de pagamentos. Sempre verifique a quantia e os endereços de recebimento antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Esses são seus endereços KYD para recebimento de pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Esses são seus endereços KYDC para recebimento de pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Confirmar criptografia de carteira</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas KYDs de serem roubadas por malwares infectando seu computador.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas KYDCs de serem roubadas por malwares infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Você tem certeza que deseja criptografar sua carteira?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS KYD&lt;b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS KYDC&lt;b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -254,7 +254,7 @@
         <translation>Endereço:</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation>Insira um endereço que você deseja criptografar usando a BIP 38. Insira a palavra-chave na caixa do meio. Pressione criptografar para computar a chave privada criptografada.</translation>
     </message>
     <message>
@@ -409,8 +409,8 @@
         <translation>Olhar histórico de transação</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>Ações privadas para zKYD</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>Ações privadas para zKYDC</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -617,12 +617,12 @@
         <translation>KYD Core</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Enviar moedas para um endereço KYD</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Enviar moedas para um endereço KYDC</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Requisitar pagamentos (gera códigos QR e kyd: URIs)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Requisitar pagamentos (gera códigos QR e KYDC: URIs)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -649,12 +649,12 @@
         <translation>Modificar opções de configuração para KYD</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Assine mensagens com seus endereços KYD para provar que você os detém</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Assine mensagens com seus endereços KYDC para provar que você os detém</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Verifique as mensagens para ter certeza que estão assinadas com os endereços KYD especificados</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Verifique as mensagens para ter certeza que estão assinadas com os endereços KYDC especificados</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -685,8 +685,8 @@
         <translation>Abrir arquivo de configuração de Masternode</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Abrir um KYD: URI ou requisição de pagamento</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Abrir um KYDC: URI ou requisição de pagamento</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1118,8 +1118,8 @@ MultiSend: %1</translation>
         <translation>Editar endereço remetente</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>O endereço que você selecionou, "%1" , não é um endereço válido de KYD</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>O endereço que você selecionou, "%1" , não é um endereço válido de KYDC</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1574,32 +1574,32 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>Favor selecionar o nível de privacidade.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 KYD</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 KYDC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 KYD</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 KYDC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 masternodes separados</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 KYD para anonimizar 10000 KYD</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 KYDC para anonimizar 10000 KYDC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 KYD para anonimizar 10000 KYD</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 KYDC para anonimizar 10000 KYDC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta é a opção mais lenta e mais segura. Usando a anonimização máxima vai custar</translation>
     </message>
     <message>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
-        <translation>0.1 KYD por 10000 KYD que deixar anônima.</translation>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
+        <translation>0.1 KYDC por 10000 KYDC que deixar anônima.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1958,12 +1958,12 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -1998,8 +1998,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Pagar &amp;Para:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>O endereço KYD para enviar o pagamento. Cria um pagamento local para si mesmo quando vazio.</translation>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>O endereço KYDC para enviar o pagamento. Cria um pagamento local para si mesmo quando vazio.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2038,8 +2038,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Estatísticas zerocoin:</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
-        <translation>Balanço Total incluindo não confirmadas e imaturas zKYD</translation>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
+        <translation>Balanço Total incluindo não confirmadas e imaturas zKYDC</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -2173,8 +2173,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Quantidade</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>Insira um endereço KYD (e.g. %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>Insira um endereço KYDC (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2687,8 +2687,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Tamanho UTXO:</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2731,12 +2731,12 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Tempo de confirmação:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Se a taxa padrão estiver definida para 1000 uKYDs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uKYDs em taxa,&lt;br /&gt; pagará pelo menos 1000 uKYDs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Se a taxa padrão estiver definida para 1000 uKYDCs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uKYDCs em taxa,&lt;br /&gt; pagará pelo menos 1000 uKYDCs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</source>
-        <translation>Pagar a taxa mínima é aceitável desde que existe menos volume de transações que espaço nos blocos. &lt;br/&gt; Mas fique atento que isso pode acabar em uma transação que nunca será confirmada caso haja mais demanda por transações de KYD do que a rede pode processar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</source>
+        <translation>Pagar a taxa mínima é aceitável desde que existe menos volume de transações que espaço nos blocos. &lt;br/&gt; Mas fique atento que isso pode acabar em uma transação que nunca será confirmada caso haja mais demanda por transações de KYDC do que a rede pode processar.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -2783,8 +2783,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Adicionar &amp;Recipiente</translation>
     </message>
     <message>
-        <source>Anonymized KYD</source>
-        <translation>KYD anonimizadas</translation>
+        <source>Anonymized KYDC</source>
+        <translation>KYDC anonimizadas</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -2819,8 +2819,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Copiar troco</translation>
     </message>
     <message>
-        <source>Warning: Invalid KYD address</source>
-        <translation>Aviso: endereço KYD inválido</translation>
+        <source>Warning: Invalid KYDC address</source>
+        <translation>Aviso: endereço KYDC inválido</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -2906,8 +2906,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Pagar &amp;Para:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to</source>
-        <translation>O endereço KYD para enviar o pagamento</translation>
+        <source>The KYDC address to send the payment to</source>
+        <translation>O endereço KYDC para enviar o pagamento</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2988,8 +2988,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>&amp;Assinar mensagem</translation>
     </message>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>O endereço KYD para assinar a mensagem</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>O endereço KYDC para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3020,16 +3020,16 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Copia a assinatura atual do sistema de transferência</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Assine a mensagem para provar que você possui este endereço KYD</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Assine a mensagem para provar que você possui este endereço KYDC</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>O endereço KYD que assinou a mensagem</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>O endereço KYDC que assinou a mensagem</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Verifique a mensagem para ter certeza que foi assinada com o endereço KYD especificado.</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Verifique a mensagem para ter certeza que foi assinada com o endereço KYDC especificado.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3645,8 +3645,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -3672,12 +3672,12 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Executar o comando quando uma transação da carteira mudar (%s no cmd será substituído pela TxID)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Taxas (em KYD/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Taxas (em KYDC/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Taxas (em KYD/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Taxas (em KYDC/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
     </message>
     <message>
         <source>In this mode -genproclimit controls how many blocks are generated immediately.</source>
@@ -3696,8 +3696,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Define o tamanho máximo de transações de alta prioridade/taxa baixa em bytes (padrão: %d)</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 10000 KYD.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 10000 KYDC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3896,8 +3896,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Falhou em ler o bloco</translation>
     </message>
     <message>
-        <source>Fee (in KYD/kB) to add to transactions you send (default: %s)</source>
-        <translation>Taxa (em KYD/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
+        <source>Fee (in KYDC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Taxa (em KYDC/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>

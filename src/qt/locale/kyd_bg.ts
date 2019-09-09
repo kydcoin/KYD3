@@ -62,12 +62,12 @@
         <translation>Получаващ адрес</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Това са вашите KYD адреси за изпращане на плащания. Винаги проверявайте количеството и адреса на получателя, преди да изпратите монети.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Това са вашите KYDC адреси за изпращане на плащания. Винаги проверявайте количеството и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са вашите KYD адреси за получаване на плащания. Препоръчително е да използвате нови адреси за получаване за всяка транзакция.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Това са вашите KYDC адреси за получаване на плащания. Препоръчително е да използвате нови адреси за получаване за всяка транзакция.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Потвърдете шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD сега ще се затвори, за да довърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да защити вашия KYD от това, да бъде откраднат чрез злонамерен софутуер, инфектирал вашия компютър.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD сега ще се затвори, за да довърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да защити вашия KYDC от това, да бъде откраднат чрез злонамерен софутуер, инфектирал вашия компютър.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Сигурни ли сте, че искате да шифрирате вашия портфейл?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>&lt;b&gt;Внимание: Ако шифрирате вашия портфейл и загубите вашата парола, вие ще ЗАГУБИТЕ ВСИЧКИТЕ ВИ KYD&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>&lt;b&gt;Внимание: Ако шифрирате вашия портфейл и загубите вашата парола, вие ще ЗАГУБИТЕ ВСИЧКИТЕ ВИ KYDC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -254,12 +254,12 @@
         <translation>Адрес:</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Въведете Kyd адрес, който искате да криптиране с BIP 38. Въведете парола в средното поле. Натиснете 'криптирай', за да се изчисли криптирания таен ключ. </translation>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Въведете KYDC адрес, който искате да криптиране с BIP 38. Въведете парола в средното поле. Натиснете 'криптирай', за да се изчисли криптирания таен ключ. </translation>
     </message>
     <message>
-        <source>The KYD address to encrypt</source>
-        <translation>KYD Адреса за криптиране</translation>
+        <source>The KYDC address to encrypt</source>
+        <translation>KYDC Адреса за криптиране</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -290,8 +290,8 @@
         <translation>Копирай сегашния подпис в системния буфер</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this KYD address</source>
-        <translation>Криптирай тайния ключ за този KYD адрес</translation>
+        <source>Encrypt the private key for this KYDC address</source>
+        <translation>Криптирай тайния ключ за този KYDC адрес</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>История на транзакциите</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>Поверителни Действия за ZKYD</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>Поверителни Действия за ZKYDC</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -649,12 +649,12 @@
         <translation>KYD Ядро</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Изпратете монети до KYD адрес</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Изпратете монети до KYDC адрес</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Поискай плащане (генерира QR кодове и  KYD:URI)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Поискай плащане (генерира QR кодове и  KYDC:URI)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -681,12 +681,12 @@
         <translation>Промени KYD конфигурацията</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Подпишете съобщения със своте KYD адреси, за да докажете че са Ваши</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Подпишете съобщения със своте KYDC адреси, за да докажете че са Ваши</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Проеврете съобщения, за да се убедите, че са подписани с указаните KYD адреси</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Проеврете съобщения, за да се убедите, че са подписани с указаните KYDC адреси</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -717,8 +717,8 @@
         <translation>Отвори Мастърноуд конфигурационния файл</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Отвори KYD:URI платежно нареждане</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Отвори KYDC:URI платежно нареждане</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1181,8 +1181,8 @@ Address: %4
         <translation>Редактирай адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>Зададения адрес "%1"не е валиден KYD адрес.</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>Зададения адрес "%1"не е валиден KYDC адрес.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1444,12 +1444,12 @@ Address: %4
         <translation>Въведете адреса на Получателя</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYD addresses after it matures.
-To Add: enter percentage to give and KYD address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYDC addresses after it matures.
+To Add: enter percentage to give and KYDC address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>МултиИзпращане Ви позволява автоматично да изпращате до 100% от вашите стейк или мастърноуд възнаграждения към списък от други KYD адреси.
-Да Добавите: въведете процент и задайте KYD адрес към вектора за МултиИзпращане
+        <translation>МултиИзпращане Ви позволява автоматично да изпращате до 100% от вашите стейк или мастърноуд възнаграждения към списък от други KYDC адреси.
+Да Добавите: въведете процент и задайте KYDC адрес към вектора за МултиИзпращане
 Да Прамахнете: Въведете адрес за изстриване и натиснете истрий (del).
 МултиИзпращането няма да бъде активирано докато не кликнете "Активирай"</translation>
     </message>
@@ -1677,8 +1677,8 @@ Please be patient after clicking import.</source>
         <translation>Адрес / Сума:</translation>
     </message>
     <message>
-        <source>Add destinations to send KYD to</source>
-        <translation>Добави получател на KYD</translation>
+        <source>Add destinations to send KYDC to</source>
+        <translation>Добави получател на KYDC</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1776,32 +1776,32 @@ Please be patient after clicking import.</source>
         <translation>Изберете ниво на поверителност.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Използвай 2 различни мастърноуда за смесване на средства над 10000 KYD</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Използвай 2 различни мастърноуда за смесване на средства над 10000 KYDC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Използвай 8 различни мастърноуда за да смесите средства до 10000 KYD</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Използвай 8 различни мастърноуда за да смесите средства до 10000 KYDC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Използвай 16 различни мастърноуда</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>Това е най-бързия метод и ще струва около 0.025 KYD за да скриете 10000 KYD</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>Това е най-бързия метод и ще струва около 0.025 KYDC за да скриете 10000 KYDC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>Тази опция е сравнително бърза и ще струва около 0.05 KYD за да скриете 10000 KYD</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>Тази опция е сравнително бърза и ще струва около 0.05 KYDC за да скриете 10000 KYDC</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
-        <translation>Това е най-бавния и най-сигурен вариант за скриване на KYD. Използването й ще струва</translation>
+        <translation>Това е най-бавния и най-сигурен вариант за скриване на KYDC. Използването й ще струва</translation>
     </message>
     <message>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
-        <translation>0.1 KYD за 10000 скрити KYD</translation>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
+        <translation>0.1 KYDC за 10000 скрити KYDC</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1944,28 +1944,28 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Картографирай портовете използвайки &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of KYD units to zKYD</source>
-        <translation>Включи автоматичното емитиране на KYD единици в zKYD</translation>
+        <source>Enable automatic minting of KYDC units to zKYDC</source>
+        <translation>Включи автоматичното емитиране на KYDC единици в zKYDC</translation>
     </message>
     <message>
-        <source>Enable zKYD Automint</source>
-        <translation>Включи Автоматично емитиране на zKYD</translation>
+        <source>Enable zKYDC Automint</source>
+        <translation>Включи Автоматично емитиране на zKYDC</translation>
     </message>
     <message>
-        <source>Percentage of incoming KYD which get automatically converted to zKYD via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент от входящите KYD, който автоматично да се конвертира в zKYD посредтвом Zerocoin Протокола (мин: 10%)</translation>
+        <source>Percentage of incoming KYDC which get automatically converted to zKYDC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент от входящите KYDC, който автоматично да се конвертира в zKYDC посредтвом Zerocoin Протокола (мин: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zKYD</source>
-        <translation>Процент автоматично сечени zKYD</translation>
+        <source>Percentage of autominted zKYDC</source>
+        <translation>Процент автоматично сечени zKYDC</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough KYD for this denomination is available</source>
-        <translation>Не бързай с автоматичното конвертиране в zKYD докато не се съберат достатъчно KYD за тази деноминация</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough KYDC for this denomination is available</source>
+        <translation>Не бързай с автоматичното конвертиране в zKYDC докато не се съберат достатъчно KYDC за тази деноминация</translation>
     </message>
     <message>
-        <source>Preferred Automint zKYD Denomination</source>
-        <translation>Предпочитани деноминации, в които да се сече автоматичен zKYD</translation>
+        <source>Preferred Automint zKYDC Denomination</source>
+        <translation>Предпочитани деноминации, в които да се сече автоматичен zKYDC</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
@@ -2127,8 +2127,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Обща Наличност, включително и неналичните монети.</translation>
     </message>
     <message>
-        <source>KYD Balance</source>
-        <translation>KYD Наличности</translation>
+        <source>KYDC Balance</source>
+        <translation>KYDC Наличности</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -2151,18 +2151,18 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Сегашния баланс по портфейли в режим на наблюдение само</translation>
     </message>
     <message>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
-        <translation>Вашите KYD наличности, включително непотвърдените и неузрели преводи</translation>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
+        <translation>Вашите KYDC наличности, включително непотвърдените и неузрели преводи</translation>
     </message>
     <message>
-        <source>zKYD Balance</source>
-        <translation>zKYD Наличности</translation>
+        <source>zKYDC Balance</source>
+        <translation>zKYDC Наличности</translation>
     </message>
     <message>
         <source>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
-These zKYD are spendable.</source>
+These zKYDC are spendable.</source>
         <translation>Узрели: повече от 20 потвърждения и повече от 1 емисии от същата деноминация след като е била емитирана.
-Тези zKYD могат да се похарчат.</translation>
+Тези zKYDC могат да се похарчат.</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -2215,8 +2215,8 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
         <translation>Налични за харчене:</translation>
     </message>
     <message>
-        <source>Locked KYD or Masternode collaterals. These are excluded from zKYD minting.</source>
-        <translation>Заключен KYD или допълнителни гаранции в Главни Възли. Тези не са включени в zKYD емитирането.</translation>
+        <source>Locked KYDC or Masternode collaterals. These are excluded from zKYDC minting.</source>
+        <translation>Заключен KYDC или допълнителни гаранции в Главни Възли. Тези не са включени в zKYDC емитирането.</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2227,8 +2227,8 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
         <translation>Непотвърден</translation>
     </message>
     <message>
-        <source>Your current zKYD balance, unconfirmed and immature zKYD included.</source>
-        <translation>Вашите zKYD наличности, включеително непотвърдените и неузрелите zKYD.</translation>
+        <source>Your current zKYDC balance, unconfirmed and immature zKYDC included.</source>
+        <translation>Вашите zKYDC наличности, включеително непотвърдените и неузрелите zKYDC.</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2280,8 +2280,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>Провал при стартирането на kyd: click-to-pay обработвател</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid KYD address or malformed URI parameters.</source>
-        <translation>URI не може да се парсне. Вероятна причина е невалиден KYD адрес или зле-форматирани URI Параметри.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid KYDC address or malformed URI parameters.</source>
+        <translation>URI не може да се парсне. Вероятна причина е невалиден KYDC адрес или зле-форматирани URI Параметри.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2378,8 +2378,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Available for minting are coins which are confirmed and not locked or Masternode collaterals.</source>
@@ -2390,8 +2390,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>Налични за сечене:</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2430,16 +2430,16 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>КОНФИДЕНЦИАЛНОСТ</translation>
     </message>
     <message>
-        <source>Enter an amount of Kyd to convert to zKYD</source>
-        <translation>Въведете колко KYD  да се конвертират в zKYD</translation>
+        <source>Enter an amount of KYDC to convert to zKYDC</source>
+        <translation>Въведете колко KYDC  да се конвертират в zKYDC</translation>
     </message>
     <message>
-        <source>zKYD Control</source>
-        <translation>zKYD Контрол</translation>
+        <source>zKYDC Control</source>
+        <translation>zKYDC Контрол</translation>
     </message>
     <message>
-        <source>zKYD Selected:</source>
-        <translation>Избрани zKYD:</translation>
+        <source>zKYDC Selected:</source>
+        <translation>Избрани zKYDC:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2454,24 +2454,24 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in kyd.conf</
         <translation>Похарчи Zerocoin</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending</source>
-        <translation>Налични (узрели и готови за харчене) zKYD за употреба</translation>
+        <source>Available (mature and spendable) zKYDC for spending</source>
+        <translation>Налични (узрели и готови за харчене) zKYDC за употреба</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>Налични:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending
+        <source>Available (mature and spendable) zKYDC for spending
 
-zKYD are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
-        <translation>Налични (узрели и готови за харчене) zKYD за употреба
+zKYDC are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+        <translation>Налични (узрели и готови за харчене) zKYDC за употреба
 
-zKYD са узрели, тогава когато имат повече от 20 потвърждения И повече от 2 емисии от същата деноминация след като са биле емитирани</translation>
+zKYDC са узрели, тогава когато имат повече от 20 потвърждения И повече от 2 емисии от същата деноминация след като са биле емитирани</translation>
     </message>
     <message>
-        <source>0 zKYD</source>
-        <translation>0 zKYD</translation>
+        <source>0 zKYDC</source>
+        <translation>0 zKYDC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2490,7 +2490,7 @@ zKYD са узрели, тогава когато имат повече от 20 
         <translation>Плати На:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
         <translation>Адреса на който да изпратим плащането. Ако е празно - плащането е до себе си.</translation>
     </message>
     <message>
@@ -2523,7 +2523,7 @@ zKYD са узрели, тогава когато имат повече от 20 
     </message>
     <message>
         <source>Convert Change to Zerocoin (might cost additional fees)</source>
-        <translation>Изсечи zKYD от рестото (ще струва допълнително заради таксите)</translation>
+        <translation>Изсечи zKYDC от рестото (ще струва допълнително заради таксите)</translation>
     </message>
     <message>
         <source>If checked, the wallet tries to minimize the returning change instead of minimizing the number of spent denominations.</source>
@@ -2542,8 +2542,8 @@ zKYD са узрели, тогава когато имат повече от 20 
         <translation>Zerocoin статистика:</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
-        <translation>Обща Наличност включеително непотвърдените и неузрели zKYD</translation>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
+        <translation>Обща Наличност включеително непотвърдените и неузрели zKYDC</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -2564,24 +2564,24 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
 Неузрели: потвърдени, но с по-малко от 1 емисии от същата деноминация след като са биле емитирани</translation>
     </message>
     <message>
-        <source>Show the current status of automatic zKYD minting.
+        <source>Show the current status of automatic zKYDC minting.
 
 To change the status (restart required):
 - enable: add 'enablezeromint=1' to kyd.conf
 - disable: add 'enablezeromint=0' to kyd.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zKYD
+- menu Settings-&gt;Options-&gt;Percentage of autominted zKYDC
 
 </source>
-        <translation>Покажи състоянието на автоматичното zKYD емитиране.
+        <translation>Покажи състоянието на автоматичното zKYDC емитиране.
 
 За да пормените състоянието (изисква рестарт):
 - вклчване: добавете 'enablezeromint=1' в kyd.conf
 - изключване: добавете 'enablezeromint=0' в kyd.conf
 
 За промяна в процентите (не изисква рестарт):
-- меню Настройки -&gt; Опции -&gt; Процент на автоемитиран zKYD
+- меню Настройки -&gt; Опции -&gt; Процент на автоемитиран zKYDC
 </translation>
     </message>
     <message>
@@ -2777,12 +2777,12 @@ Maximum allowed: </source>
 Максимум позволени:</translation>
     </message>
     <message>
-        <source>zKYD Spend #: </source>
-        <translation>zKYD Похарчени #:</translation>
+        <source>zKYDC Spend #: </source>
+        <translation>zKYDC Похарчени #:</translation>
     </message>
     <message>
-        <source>zKYD Mint</source>
-        <translation>Сечене на zKYD</translation>
+        <source>zKYDC Mint</source>
+        <translation>Сечене на zKYDC</translation>
     </message>
     <message>
         <source> &lt;b&gt;enabled&lt;/b&gt;.</source>
@@ -2797,12 +2797,12 @@ Maximum allowed: </source>
         <translation>Конфигуриран целеви процент: &lt;b&gt;</translation>
     </message>
     <message>
-        <source>zKYD is currently disabled due to maintenance.</source>
-        <translation>В момента zKYD не работи поради ремонт.</translation>
+        <source>zKYDC is currently disabled due to maintenance.</source>
+        <translation>В момента zKYDC не работи поради ремонт.</translation>
     </message>
     <message>
-        <source>zKYD is currently undergoing maintenance.</source>
-        <translation>В момента zKYD е в ремонт.</translation>
+        <source>zKYDC is currently undergoing maintenance.</source>
+        <translation>В момента zKYDC е в ремонт.</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;1&lt;/b&gt;:</source>
@@ -2889,8 +2889,8 @@ Maximum allowed: </source>
         <translation>Успешно изсечени</translation>
     </message>
     <message>
-        <source> zKYD in </source>
-        <translation>zKYD в</translation>
+        <source> zKYDC in </source>
+        <translation>zKYDC в</translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2917,8 +2917,8 @@ Maximum allowed: </source>
         <translation>Без 'Плати На' адрес, плащането е локално</translation>
     </message>
     <message>
-        <source>Invalid Kyd Address</source>
-        <translation>Невалиден KYD адрес</translation>
+        <source>Invalid KYDC Address</source>
+        <translation>Невалиден KYDC адрес</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2949,12 +2949,12 @@ Maximum allowed: </source>
         <translation>Потвърждаване на изпращането</translation>
     </message>
     <message>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
-        <translation>Версия 1 zKYD изисква ниво на сигурност от 100 за успешно изразходване.</translation>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
+        <translation>Версия 1 zKYDC изисква ниво на сигурност от 100 за успешно изразходване.</translation>
     </message>
     <message>
-        <source>Failed to spend zKYD</source>
-        <translation>Неуспешно изразходване на zKYD</translation>
+        <source>Failed to spend zKYDC</source>
+        <translation>Неуспешно изразходване на zKYDC</translation>
     </message>
     <message>
         <source>Failed to fetch mint associated with serial hash</source>
@@ -2976,7 +2976,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message numerus="yes">
         <source>PrivacyDialog</source>
-        <comment>Enter an amount of KYD to convert to zKYD</comment>
+        <comment>Enter an amount of KYDC to convert to zKYDC</comment>
         <translation><numerusform>PrivacyDialog</numerusform><numerusform>PrivacyDialog</numerusform></translation>
     </message>
     <message>
@@ -3019,8 +3019,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>Задайте KYD адрес (например %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>Задайте KYDC адрес (например %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3293,8 +3293,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Персонален резервен път:</translation>
     </message>
     <message>
-        <source>Custom zKYD Backup Path:</source>
-        <translation>Персонализиран zKYD резервен път:</translation>
+        <source>Custom zKYDC Backup Path:</source>
+        <translation>Персонализиран zKYDC резервен път:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -3737,8 +3737,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Размер на UTXO:</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3793,12 +3793,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Автоматично избрани монети</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако собствената такса е настроена на 1000 uKYD и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uKYD входяща такса, &lt;br /&gt;докато "минимална сума" плаща 1000 uKYD. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако собствената такса е настроена на 1000 uKYDC и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uKYDC входяща такса, &lt;br /&gt;докато "минимална сума" плаща 1000 uKYDC. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако собствената такса е настроена на 1000 uKYD и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uKYD входяща такса,&lt;br /&gt; докато "минимална сума" плаща 1000 uKYD. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако собствената такса е настроена на 1000 uKYDC и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uKYDC входяща такса,&lt;br /&gt; докато "минимална сума" плаща 1000 uKYDC. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</source>
@@ -3849,8 +3849,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Добави Получател</translation>
     </message>
     <message>
-        <source>Anonymized KYD</source>
-        <translation>Анонимизиран KYD</translation>
+        <source>Anonymized KYDC</source>
+        <translation>Анонимизиран KYDC</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -3897,8 +3897,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Инструмента за разделяне на блока не работи, когато се изпраща до няколко адреса едновременно. Опитайте пак.</translation>
     </message>
     <message>
-        <source>Warning: Invalid KYD address</source>
-        <translation>Предупреждение: Невалиден KYD адрес</translation>
+        <source>Warning: Invalid KYDC address</source>
+        <translation>Предупреждение: Невалиден KYDC адрес</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -4000,8 +4000,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Плати На:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to</source>
-        <translation>KYD адреса - получател на плащането</translation>
+        <source>The KYDC address to send the payment to</source>
+        <translation>KYDC адреса - получател на плащането</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4040,8 +4040,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Съобщение:</translation>
     </message>
     <message>
-        <source>A message that was attached to the KYD: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
-        <translation>Съобщение, което е било прикачено към KYD:URI и което ще бъде запазено заедно с превода за ваша информация. Внимание: Това съобщение е само за Вас, то няма да бъде изпратено по KYD мрежата.</translation>
+        <source>A message that was attached to the KYDC: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
+        <translation>Съобщение, което е било прикачено към KYDC:URI и което ще бъде запазено заедно с превода за ваша информация. Внимание: Това съобщение е само за Вас, то няма да бъде изпратено по KYD мрежата.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -4090,8 +4090,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Може да подписвате съобщения с Вашите адреси, за да докажете че сте техен притежател. Внимавайте да не подписвате нищо съмнително, тъй като има хакерски атаки, които целят да придобият вашата самоличност. Само подписвайте пълен и ясен текст, с който сте напълно съгласни.</translation>
     </message>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>KYD адреса, с който да подпишете съобщението</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>KYDC адреса, с който да подпишете съобщението</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4122,16 +4122,16 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Копирай сегашния подпис в системния буфер</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Подпишете съобщението, за да докажете, че притежавате този KYD адрес</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Подпишете съобщението, за да докажете, че притежавате този KYDC адрес</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>KYD адреса, който е подписано съобщението</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>KYDC адреса, който е подписано съобщението</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Поверете съобщението, за да се уверите, че е подписано със зададения KYD адрес</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Поверете съобщението, за да се уверите, че е подписано със зададения KYDC адрес</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4513,12 +4513,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Получен посредством обфускация</translation>
     </message>
     <message>
-        <source>KYD Stake</source>
-        <translation>KYD Stake</translation>
+        <source>KYDC Stake</source>
+        <translation>KYDC Stake</translation>
     </message>
     <message>
-        <source>zKYD Stake</source>
-        <translation>zKYD Stake</translation>
+        <source>zKYDC Stake</source>
+        <translation>zKYDC Stake</translation>
     </message>
     <message>
         <source>Obfuscation Denominate</source>
@@ -4537,32 +4537,32 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Обфускация и направа на Деноминации</translation>
     </message>
     <message>
-        <source>Converted KYD to zKYD</source>
-        <translation>Конвертиран KYD във zKYD</translation>
+        <source>Converted KYDC to zKYDC</source>
+        <translation>Конвертиран KYDC във zKYDC</translation>
     </message>
     <message>
-        <source>Spent zKYD</source>
-        <translation>Похарчени zKYD</translation>
+        <source>Spent zKYDC</source>
+        <translation>Похарчени zKYDC</translation>
     </message>
     <message>
-        <source>Received KYD from zKYD</source>
-        <translation>Получен KYD от zKYD</translation>
+        <source>Received KYDC from zKYDC</source>
+        <translation>Получен KYDC от zKYDC</translation>
     </message>
     <message>
-        <source>Minted Change as zKYD from zKYD Spend</source>
-        <translation>Исечено ресто като zKYD от похарчените zKYD</translation>
+        <source>Minted Change as zKYDC from zKYDC Spend</source>
+        <translation>Исечено ресто като zKYDC от похарчените zKYDC</translation>
     </message>
     <message>
-        <source>Converted zKYD to KYD</source>
-        <translation>Конвертиран zKYD във KYD</translation>
+        <source>Converted zKYDC to KYDC</source>
+        <translation>Конвертиран zKYDC във KYDC</translation>
     </message>
     <message>
-        <source>Anonymous (zKYD Transaction)</source>
-        <translation>Анонимен (транзакция zKYD)</translation>
+        <source>Anonymous (zKYDC Transaction)</source>
+        <translation>Анонимен (транзакция zKYDC)</translation>
     </message>
     <message>
-        <source>Anonymous (zKYD Stake)</source>
-        <translation>Анонимен (zKYD Stake)</translation>
+        <source>Anonymous (zKYDC Stake)</source>
+        <translation>Анонимен (zKYDC Stake)</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -4772,12 +4772,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Експортирането Успешно</translation>
     </message>
     <message>
-        <source>Received KYD from zKYD</source>
-        <translation>Получен KYD от zKYD</translation>
+        <source>Received KYDC from zKYDC</source>
+        <translation>Получен KYDC от zKYDC</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zKYD</source>
-        <translation>Харчене на Zerocoin, Ресто в zKYD</translation>
+        <source>Zerocoin Spend, Change in zKYDC</source>
+        <translation>Харчене на Zerocoin, Ресто в zKYDC</translation>
     </message>
     <message>
         <source>The transaction history was successfully saved to %1.</source>
@@ -4813,8 +4813,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Изпрати Монети</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYD.</source>
-        <translation>SwiftTX не подържа изпращането на толкова големи суми. Превода е ограничен до %1 KYD.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYDC.</source>
+        <translation>SwiftTX не подържа изпращането на толкова големи суми. Превода е ограничен до %1 KYDC.</translation>
     </message>
 </context>
 <context>
@@ -4847,8 +4847,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
 <context>
     <name>ZKydControlDialog</name>
     <message>
-        <source>Select zKYD to Spend</source>
-        <translation>Изберете zKYD за Изпращане</translation>
+        <source>Select zKYDC to Spend</source>
+        <translation>Изберете zKYDC за Изпращане</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4859,8 +4859,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4926,12 +4926,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Разпространява се пот MIT софтуерен лиценз, виж съпровождащия файл от &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for KYD inputs (0-1, default: %u)</source>
-        <translation>Активиране или деактивиране на функцията за зареждане за KYD входове (0-1, по подразбиране: %u)</translation>
+        <source>Enable or disable staking functionality for KYDC inputs (0-1, default: %u)</source>
+        <translation>Активиране или деактивиране на функцията за зареждане за KYDC входове (0-1, по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zKYD inputs (0-1, default: %u)</source>
-        <translation>Активиране или деактивиране на функцията за зареждане за zKYD входове (0-1, по подразбиране: %u)</translation>
+        <source>Enable or disable staking functionality for zKYDC inputs (0-1, default: %u)</source>
+        <translation>Активиране или деактивиране на функцията за зареждане за zKYDC входове (0-1, по подразбиране: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -4966,12 +4966,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Командата влиза в сила, когато най-добрия блок се промени (%s в cmd се замества от хаш на блока)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Такси (в KYD/Кб) по-малки от това се считат за нулеви при препращане (default: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Такси (в KYDC/Кб) по-малки от това се считат за нулеви при препращане (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Такси (в KYD/Кб) по-малки от това се считат за нулеви при създаване на предовда (default: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Такси (в KYDC/Кб) по-малки от това се считат за нулеви при създаване на предовда (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5078,12 +5078,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Не намираме достатъчно Обфускационно деноминирани средства за този превод.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>Не можем да намерим достатъчно Обфускационно не-деноминирани средства за този превод, които да не са равни на 10000 KYD.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>Не можем да намерим достатъчно Обфускационно не-деноминирани средства за този превод, които да не са равни на 10000 KYDC.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>Не намираме достатъчно средства за този превод, които да не са равни на 10000 KYD.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>Не намираме достатъчно средства за този превод, които да не са равни на 10000 KYDC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5394,8 +5394,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Неуспешно четене на блок</translation>
     </message>
     <message>
-        <source>Fee (in KYD/kB) to add to transactions you send (default: %s)</source>
-        <translation>Такса (в KYD/kB), която да се добави към изходящи преводи (по подразбиране: %s)</translation>
+        <source>Fee (in KYDC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Такса (в KYDC/kB), която да се добави към изходящи преводи (по подразбиране: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5526,8 +5526,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Процент автоматично емитирани Zerocoin (1-100, по подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Reindex the KYD and zKYD money supply statistics</source>
-        <translation>Индексирай наново KYD и zKYD данните по наличности</translation>
+        <source>Reindex the KYDC and zKYDC money supply statistics</source>
+        <translation>Индексирай наново KYDC и zKYDC данните по наличности</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -5602,8 +5602,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Предпочитани деноминации за автоматично изсечените Zerocoin (1/5/10/50/100/500/1000/5000), 0 за каквито и да е. (По подразбиране: %u)</translation>
     </message>
     <message>
-        <source>Specify custom backup path to add a copy of any automatic zKYD backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Посочете персонализиран път за архивиране, за да добавите копие на всяко автоматично архивиране zKYD. Ако е зададено като реж., Всеки архив генерира файл с времева маркировка. Ако е зададен като файл, ще пренапише към този файл всеки архив. Ако е зададено и резервно копие, ще се случат 4 архиви</translation>
+        <source>Specify custom backup path to add a copy of any automatic zKYDC backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
+        <translation>Посочете персонализиран път за архивиране, за да добавите копие на всяко автоматично архивиране zKYDC. Ако е зададено като реж., Всеки архив генерира файл с времева маркировка. Ако е зададен като файл, ще пренапише към този файл всеки архив. Ако е зададено и резервно копие, ще се случат 4 архиви</translation>
     </message>
     <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
@@ -6102,8 +6102,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Синхронизиране на вилицо-лъжиците...</translation>
     </message>
     <message>
-        <source>Syncing zKYD wallet...</source>
-        <translation>Синхронизиране на zKYD портфейла ...</translation>
+        <source>Syncing zKYDC wallet...</source>
+        <translation>Синхронизиране на zKYDC портфейла ...</translation>
     </message>
     <message>
         <source>The coin spend has been used</source>
@@ -6250,8 +6250,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Потребителско име за JSON-RPC свръзките</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zKYD</source>
-        <translation>Стойността е под най-малката налична деноминация (= 1) в zKYD</translation>
+        <source>Value is below the smallest available denomination (= 1) of zKYDC</source>
+        <translation>Стойността е под най-малката налична деноминация (= 1) в zKYDC</translation>
     </message>
     <message>
         <source>Value more than Obfuscation pool maximum allows.</source>
@@ -6266,8 +6266,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Проверява портфейла...</translation>
     </message>
     <message>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
-        <translation>Версия 1 zKYD изисква ниво на сигурност от 100 за успешно изразходване.</translation>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
+        <translation>Версия 1 zKYDC изисква ниво на сигурност от 100 за успешно изразходване.</translation>
     </message>
     <message>
         <source>Wallet %s resides outside data directory %s</source>

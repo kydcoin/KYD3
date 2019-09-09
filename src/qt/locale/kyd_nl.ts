@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw KYD adressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden van geld.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw KYDC adressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden van geld.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw KYD adressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw KYDC adressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen tegen malware infecties op uw computer die uw KYD's kunnen stelen.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen tegen malware infecties op uw computer die uw KYDC's kunnen stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW KYD VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW KYDC VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -254,12 +254,12 @@
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een KYD adres in dat u wilt coderen met BIP 38. Voer een wachtwoordzin in in het middelste vak. Druk op versleutelen om de versleutelde privé sleutel te berekenen.</translation>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een KYDC adres in dat u wilt coderen met BIP 38. Voer een wachtwoordzin in in het middelste vak. Druk op versleutelen om de versleutelde privé sleutel te berekenen.</translation>
     </message>
     <message>
-        <source>The KYD address to encrypt</source>
-        <translation>Het KYD adres om te versleutelen</translation>
+        <source>The KYDC address to encrypt</source>
+        <translation>Het KYDC adres om te versleutelen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -290,8 +290,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this KYD address</source>
-        <translation>Versleutel de privé sleutel voor dit KYD adres</translation>
+        <source>Encrypt the private key for this KYDC address</source>
+        <translation>Versleutel de privé sleutel voor dit KYDC adres</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>Blader door transactiegescheidenis</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>Privacy Acties voor zKYD</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>Privacy Acties voor zKYDC</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -649,12 +649,12 @@
         <translation>KYD Core</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Verstuur munten naar een KYD adres</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Verstuur munten naar een KYDC adres</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR codes en KYD: URI's)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR codes en KYDC: URI's)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -681,12 +681,12 @@
         <translation>Wijzig KYD configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw KYD adressen om te bewijzen dat deze adressen in uw bezit zijn</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw KYDC adressen om te bewijzen dat deze adressen in uw bezit zijn</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Controleer berichten om te verzekeren dat deze ondertekend zijn met de gespecificeerde KYD adressen</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Controleer berichten om te verzekeren dat deze ondertekend zijn met de gespecificeerde KYDC adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -717,8 +717,8 @@
         <translation>Open Masternode configuratiebestand</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Open een KYD: URI of betaalverzoek</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Open een KYDC: URI of betaalverzoek</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1185,8 +1185,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzend adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid KYD address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig KYD adres.</translation>
+        <source>The entered address "%1" is not a valid KYDC address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig KYDC adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1448,12 +1448,12 @@ MultiSend: %1</translation>
         <translation>Vul het adres in om naar te verzenden</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYD addresses after it matures.
-To Add: enter percentage to give and KYD address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYDC addresses after it matures.
+To Add: enter percentage to give and KYDC address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend stelt je in staat om automatisch tot 100% van uw stake of masternode beloning automatisch te verzenden naar een lijst van andere KYD adressen nadat het volwassen is. 
-Toevoegen: voer het te geven percentage in en KYD adres om toe te voegen aan de MultiSend vector.
+        <translation>MultiSend stelt je in staat om automatisch tot 100% van uw stake of masternode beloning automatisch te verzenden naar een lijst van andere KYDC adressen nadat het volwassen is. 
+Toevoegen: voer het te geven percentage in en KYDC adres om toe te voegen aan de MultiSend vector.
 Verwijderen: Voer adres in om te verwijderen en druk op delete.
 MultiSend zal niet worden geactiveerd tenzij je op Activeer hebt geklikt</translation>
     </message>
@@ -1681,8 +1681,8 @@ Waas alsjeblieft geduldig nadat u op importeren hebt geklikt.</translation>
         <translation>Adres / Bedrag:</translation>
     </message>
     <message>
-        <source>Add destinations to send KYD to</source>
-        <translation>Voeg bestemmingen toe om KYD naar te verzenden</translation>
+        <source>Add destinations to send KYDC to</source>
+        <translation>Voeg bestemmingen toe om KYDC naar te verzenden</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1780,32 +1780,32 @@ Waas alsjeblieft geduldig nadat u op importeren hebt geklikt.</translation>
         <translation>Selecteer de privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Gebruik 2 aparte masternodes om fondsen te mixen tot 10000 KYD</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Gebruik 2 aparte masternodes om fondsen te mixen tot 10000 KYDC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
-        <translation>Gebruik 8 aparte masternodes om fondsen te mixen tot 10000 KYD</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
+        <translation>Gebruik 8 aparte masternodes om fondsen te mixen tot 10000 KYDC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Gebruik 16 aparte masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
-        <translation>Deze optie is het snelst en kost ongeveer ~0,025 KYD om 10000 KYD te anonimiseren</translation>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
+        <translation>Deze optie is het snelst en kost ongeveer ~0,025 KYDC om 10000 KYDC te anonimiseren</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
-        <translation>Deze optie is gematigd snel en kost ongeveer 0,05 KYD om 10000 KYD te anonimiseren</translation>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
+        <translation>Deze optie is gematigd snel en kost ongeveer 0,05 KYDC om 10000 KYDC te anonimiseren</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Dit is de langzaamste en veiligste optie. Het gebruik van maximale anonimiteit kost</translation>
     </message>
     <message>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
-        <translation>je anonimiseert 0,1 KYD per 10000 KYD.</translation>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
+        <translation>je anonimiseert 0,1 KYDC per 10000 KYDC.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1948,28 +1948,28 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Map poort gebruikt &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of KYD units to zKYD</source>
-        <translation>Schakel automatisch slaan van KYD-eenheden in op zKYD</translation>
+        <source>Enable automatic minting of KYDC units to zKYDC</source>
+        <translation>Schakel automatisch slaan van KYDC-eenheden in op zKYDC</translation>
     </message>
     <message>
-        <source>Enable zKYD Automint</source>
-        <translation>Schakel zKYD Automint in</translation>
+        <source>Enable zKYDC Automint</source>
+        <translation>Schakel zKYDC Automint in</translation>
     </message>
     <message>
-        <source>Percentage of incoming KYD which get automatically converted to zKYD via Zerocoin Protocol (min: 10%)</source>
-        <translation>Percentage inkomende KYD die automatisch wordt omgezet naar zKYD via Zerocoin Protocol (min: 10%)</translation>
+        <source>Percentage of incoming KYDC which get automatically converted to zKYDC via Zerocoin Protocol (min: 10%)</source>
+        <translation>Percentage inkomende KYDC die automatisch wordt omgezet naar zKYDC via Zerocoin Protocol (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zKYD</source>
-        <translation>Percentage autominted zKYD</translation>
+        <source>Percentage of autominted zKYDC</source>
+        <translation>Percentage autominted zKYDC</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough KYD for this denomination is available</source>
-        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg KYD voor deze denominatie beschikbaar is</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough KYDC for this denomination is available</source>
+        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg KYDC voor deze denominatie beschikbaar is</translation>
     </message>
     <message>
-        <source>Preferred Automint zKYD Denomination</source>
-        <translation>Gewenste Automint zKYD denominatie</translation>
+        <source>Preferred Automint zKYDC Denomination</source>
+        <translation>Gewenste Automint zKYDC denominatie</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
@@ -2131,8 +2131,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Totaal saldo, inclusief alle niet-beschikbare munten.</translation>
     </message>
     <message>
-        <source>KYD Balance</source>
-        <translation>KYD Saldi</translation>
+        <source>KYDC Balance</source>
+        <translation>KYDC Saldi</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -2155,16 +2155,16 @@ https://www.transifex.com/kyd-project/kyd-project-translations</translation>
         <translation>Huidige vergrendelde balans in alleen-lezen-adressen</translation>
     </message>
     <message>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
-        <translation>Uw huidige KYD-saldo, onbevestigde en onvolgroeide transacties inbegrepen</translation>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
+        <translation>Uw huidige KYDC-saldo, onbevestigde en onvolgroeide transacties inbegrepen</translation>
     </message>
     <message>
-        <source>zKYD Balance</source>
-        <translation>zKYD-saldo</translation>
+        <source>zKYDC Balance</source>
+        <translation>zKYDC-saldo</translation>
     </message>
     <message>
         <source>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
-These zKYD are spendable.</source>
+These zKYDC are spendable.</source>
         <translation>Volwassen: meer dan 20 bevestigingen en meer dan 1 mint van dezelfde denominatie nadat het gemint was.
 Deze zPIB zijn besteedbaar.</translation>
     </message>
@@ -2219,8 +2219,8 @@ Onvolwassen: bevestigd, maar minder dan 1 mint van dezelfde denominatie nadat he
         <translation>Uitgeefbaar:</translation>
     </message>
     <message>
-        <source>Locked KYD or Masternode collaterals. These are excluded from zKYD minting.</source>
-        <translation>Vergrendelde KYD of Masternode onderpanden. Deze zijn uitgesloten van de zKYD muntage.</translation>
+        <source>Locked KYDC or Masternode collaterals. These are excluded from zKYDC minting.</source>
+        <translation>Vergrendelde KYDC of Masternode onderpanden. Deze zijn uitgesloten van de zKYDC muntage.</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2231,8 +2231,8 @@ Onvolwassen: bevestigd, maar minder dan 1 mint van dezelfde denominatie nadat he
         <translation>Onbevestigd:</translation>
     </message>
     <message>
-        <source>Your current zKYD balance, unconfirmed and immature zKYD included.</source>
-        <translation>Uw huidige zKYD-saldo, onbevestigde en onvolgroeide zKYD inbegrepen.</translation>
+        <source>Your current zKYDC balance, unconfirmed and immature zKYDC included.</source>
+        <translation>Uw huidige zKYDC-saldo, onbevestigde en onvolgroeide zKYDC inbegrepen.</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2243,10 +2243,10 @@ Onvolwassen: bevestigd, maar minder dan 1 mint van dezelfde denominatie nadat he
         <translation>niet gesynchroniseerd</translation>
     </message>
     <message>
-        <source>Current percentage of zKYD.
+        <source>Current percentage of zKYDC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
-        <translation>Huidige percentage van zKYD
+        <translation>Huidige percentage van zKYDC
 Als AutoMint ingeschakeld is zal deze percentage afhangen van de geconfigureerde AutoMint percentage (standaard = 10%).
 </translation>
     </message>
@@ -2292,8 +2292,8 @@ Om AutoMint in te schakelend verander je 'enablezeromint=0' naar 'enablezeromint
         <translation>Kan kyd niet starten: click-to-pay handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid KYD address or malformed URI parameters.</source>
-        <translation>URL kan niet ontleed worden! Dit kan worden veroorzaakt door een ongeldig KYD adres of misvormde URL parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid KYDC address or malformed URI parameters.</source>
+        <translation>URL kan niet ontleed worden! Dit kan worden veroorzaakt door een ongeldig KYDC adres of misvormde URL parameters.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2390,8 +2390,8 @@ Om AutoMint in te schakelend verander je 'enablezeromint=0' naar 'enablezeromint
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Available for minting are coins which are confirmed and not locked or Masternode collaterals.</source>
@@ -2402,8 +2402,8 @@ Om AutoMint in te schakelend verander je 'enablezeromint=0' naar 'enablezeromint
         <translation>Beschikbaar voor minting:</translation>
     </message>
     <message>
-        <source>0.000 000 00 KYD</source>
-        <translation>0.000 000 00 KYD</translation>
+        <source>0.000 000 00 KYDC</source>
+        <translation>0.000 000 00 KYDC</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2442,16 +2442,16 @@ Om AutoMint in te schakelend verander je 'enablezeromint=0' naar 'enablezeromint
         <translation>PRIVACY</translation>
     </message>
     <message>
-        <source>Enter an amount of Kyd to convert to zKYD</source>
-        <translation>Vul het aantal KYD in om te converteren naar zKYD</translation>
+        <source>Enter an amount of KYDC to convert to zKYDC</source>
+        <translation>Vul het aantal KYDC in om te converteren naar zKYDC</translation>
     </message>
     <message>
-        <source>zKYD Control</source>
-        <translation>zKYD Control</translation>
+        <source>zKYDC Control</source>
+        <translation>zKYDC Control</translation>
     </message>
     <message>
-        <source>zKYD Selected:</source>
-        <translation>zKYD geselecteerd:</translation>
+        <source>zKYDC Selected:</source>
+        <translation>zKYDC geselecteerd:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2466,24 +2466,24 @@ Om AutoMint in te schakelend verander je 'enablezeromint=0' naar 'enablezeromint
         <translation>Besteed Zerocoin</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending</source>
-        <translation>Beschikbare (volwassen en uitgeefbaar) zKYD voor besteding</translation>
+        <source>Available (mature and spendable) zKYDC for spending</source>
+        <translation>Beschikbare (volwassen en uitgeefbaar) zKYDC voor besteding</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>Beschikbaar saldo:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zKYD for spending
+        <source>Available (mature and spendable) zKYDC for spending
 
-zKYD are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
-        <translation>Beschikbare (volwwassen en uitgeefbaar) zKYD voor besteding
+zKYDC are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+        <translation>Beschikbare (volwwassen en uitgeefbaar) zKYDC voor besteding
 
-zKyd zijn volwassen wanneer zij meer dan 20 bevestigingen hebben EN meer dan 2 muntages van dezelfde denominaties nadat zij gemunt zijn.</translation>
+zKYDC zijn volwassen wanneer zij meer dan 20 bevestigingen hebben EN meer dan 2 muntages van dezelfde denominaties nadat zij gemunt zijn.</translation>
     </message>
     <message>
-        <source>0 zKYD</source>
-        <translation>0 zKYD</translation>
+        <source>0 zKYDC</source>
+        <translation>0 zKYDC</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2502,8 +2502,8 @@ zKyd zijn volwassen wanneer zij meer dan 20 bevestigingen hebben EN meer dan 2 m
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>Het KYD adres om de betaling naar te verzenden. Maakt lokale betaling aan jezelf als je leeg bent.</translation>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>Het KYDC adres om de betaling naar te verzenden. Maakt lokale betaling aan jezelf als je leeg bent.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2554,8 +2554,8 @@ zKyd zijn volwassen wanneer zij meer dan 20 bevestigingen hebben EN meer dan 2 m
         <translation>Zerocoin Statistieken:</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
-        <translation>Totale Saldi, inclusief onbevestigde en onvolwassen zKYD</translation>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
+        <translation>Totale Saldi, inclusief onbevestigde en onvolwassen zKYDC</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -2576,24 +2576,24 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
 Onvolwassen: bevestigd, maar minder dan 1 mint van dezelfde denominatie nadat het gemint was.</translation>
     </message>
     <message>
-        <source>Show the current status of automatic zKYD minting.
+        <source>Show the current status of automatic zKYDC minting.
 
 To change the status (restart required):
 - enable: add 'enablezeromint=1' to kyd.conf
 - disable: add 'enablezeromint=0' to kyd.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zKYD
+- menu Settings-&gt;Options-&gt;Percentage of autominted zKYDC
 
 </source>
-        <translation>Toon de huidige status van automatische zKYD-markering.
+        <translation>Toon de huidige status van automatische zKYDC-markering.
 
 Om de status te wijzigen (opnieuw opstarten vereist): 
 - enable: voeg 'enablezeromint = 1' toe aan kyd.conf
 - uitschakelen: voeg 'enablezeromint = 0' toe aan kyd.conf
 
 Om het percentage te wijzigen (geen herstart vereist): 
-- menu Instellingen-&gt; Opties-&gt; Percentage van geautomatiseerde zKYD
+- menu Instellingen-&gt; Opties-&gt; Percentage van geautomatiseerde zKYDC
 </translation>
     </message>
     <message>
@@ -2789,12 +2789,12 @@ Maximum allowed: </source>
 Maximaal toegestaan:</translation>
     </message>
     <message>
-        <source>zKYD Spend #: </source>
-        <translation>zKYD besteed #:</translation>
+        <source>zKYDC Spend #: </source>
+        <translation>zKYDC besteed #:</translation>
     </message>
     <message>
-        <source>zKYD Mint</source>
-        <translation>zKYD mint</translation>
+        <source>zKYDC Mint</source>
+        <translation>zKYDC mint</translation>
     </message>
     <message>
         <source> &lt;b&gt;enabled&lt;/b&gt;.</source>
@@ -2809,12 +2809,12 @@ Maximaal toegestaan:</translation>
         <translation>Geconfigureerd doelpercentage:&lt;b&gt;</translation>
     </message>
     <message>
-        <source>zKYD is currently disabled due to maintenance.</source>
-        <translation>zKYD is momenteel uitgeschakeld vanwege onderhoud.</translation>
+        <source>zKYDC is currently disabled due to maintenance.</source>
+        <translation>zKYDC is momenteel uitgeschakeld vanwege onderhoud.</translation>
     </message>
     <message>
-        <source>zKYD is currently undergoing maintenance.</source>
-        <translation>zKYD wordt momenteel onderhouden.</translation>
+        <source>zKYDC is currently undergoing maintenance.</source>
+        <translation>zKYDC wordt momenteel onderhouden.</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;1&lt;/b&gt;:</source>
@@ -2901,8 +2901,8 @@ Maximaal toegestaan:</translation>
         <translation>Succesvol gemint</translation>
     </message>
     <message>
-        <source> zKYD in </source>
-        <translation> zKYD in </translation>
+        <source> zKYDC in </source>
+        <translation> zKYDC in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2929,8 +2929,8 @@ Maximaal toegestaan:</translation>
         <translation>Geen 'Betaal aan' adres verstrekt, lokale betaling wordt gemaakt</translation>
     </message>
     <message>
-        <source>Invalid Kyd Address</source>
-        <translation>Ongeldig Kyd addres</translation>
+        <source>Invalid KYDC Address</source>
+        <translation>Ongeldig KYDC addres</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2961,12 +2961,12 @@ Maximaal toegestaan:</translation>
         <translation>Bevestig verzending coins</translation>
     </message>
     <message>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
-        <translation>Versie 1 zKYD vereist een beveiligingsniveau van 100 om succesvol te besteden.</translation>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
+        <translation>Versie 1 zKYDC vereist een beveiligingsniveau van 100 om succesvol te besteden.</translation>
     </message>
     <message>
-        <source>Failed to spend zKYD</source>
-        <translation>Mislukt om zKYD te besteden.</translation>
+        <source>Failed to spend zKYDC</source>
+        <translation>Mislukt om zKYDC te besteden.</translation>
     </message>
     <message>
         <source>Failed to fetch mint associated with serial hash</source>
@@ -2988,7 +2988,7 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
     </message>
     <message numerus="yes">
         <source>PrivacyDialog</source>
-        <comment>Enter an amount of KYD to convert to zKYD</comment>
+        <comment>Enter an amount of KYDC to convert to zKYDC</comment>
         <translation><numerusform>PrivacyDialoog</numerusform><numerusform>PrivacyDialog</numerusform></translation>
     </message>
     <message>
@@ -3031,8 +3031,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>Voer een KYD adres in (b.v. %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>Voer een KYDC adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3305,8 +3305,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Aangepast back-up pad:</translation>
     </message>
     <message>
-        <source>Custom zKYD Backup Path:</source>
-        <translation>Aangepast zKYD back-up pad:</translation>
+        <source>Custom zKYDC Backup Path:</source>
+        <translation>Aangepast zKYDC back-up pad:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -3749,8 +3749,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>UTXO grootte:</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3805,16 +3805,16 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Munten automatisch geselecteerd</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uKYDs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uKYD's in vergoeding,&lt;br /&gt;terwijl "minstens" 1000 uKYD's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uKYDCs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uKYDC's in vergoeding,&lt;br /&gt;terwijl "minstens" 1000 uKYDC's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uKYDs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uKYD's in vergoeding,&lt;br /&gt;terwijl "totaal minstens" 1000 uKYD's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uKYDCs in fee,&lt;br /&gt;while "total at least" pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uKYDCs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uKYDC's in vergoeding,&lt;br /&gt;terwijl "totaal minstens" 1000 uKYDC's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</source>
-        <translation>Alleen de minimale vergoeding betalen is prima, zolang er minder transactie volume is dan ruimte in de blokken. &lt;br /&gt;Maar wees ervan bewust dat dit kan leiden tot een nooit bevestigende transactie wanneer er meer vraag is naar KYD transacties dan het netwerk kan verwerken.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</source>
+        <translation>Alleen de minimale vergoeding betalen is prima, zolang er minder transactie volume is dan ruimte in de blokken. &lt;br /&gt;Maar wees ervan bewust dat dit kan leiden tot een nooit bevestigende transactie wanneer er meer vraag is naar KYDC transacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3861,8 +3861,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Voeg &amp;ontvanger toe</translation>
     </message>
     <message>
-        <source>Anonymized KYD</source>
-        <translation>Geanonimiseerde KYD</translation>
+        <source>Anonymized KYDC</source>
+        <translation>Geanonimiseerde KYDC</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -3909,8 +3909,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Het split block tool werkt niet met meerdere adressen. Probeer het nog eens.</translation>
     </message>
     <message>
-        <source>Warning: Invalid KYD address</source>
-        <translation>Waarschuwing: Ongeldig KYD adres</translation>
+        <source>Warning: Invalid KYDC address</source>
+        <translation>Waarschuwing: Ongeldig KYDC adres</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -4012,8 +4012,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The KYD address to send the payment to</source>
-        <translation>Het KYD adres om de betaling naar te verzenden</translation>
+        <source>The KYDC address to send the payment to</source>
+        <translation>Het KYDC adres om de betaling naar te verzenden</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4052,8 +4052,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Bericht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the KYD: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
-        <translation>Een bericht dat is gehecht aan de KYD: URI die bij de transactie wordt opgeslagen voor uw referentie. Opmerking: dit bericht wordt niet verzonden via het KYD netwerk.</translation>
+        <source>A message that was attached to the KYDC: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
+        <translation>Een bericht dat is gehecht aan de KYDC: URI die bij de transactie wordt opgeslagen voor uw referentie. Opmerking: dit bericht wordt niet verzonden via het KYD netwerk.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -4102,8 +4102,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Je kunt berichten met je adressen ondertekenen om te bewijzen dat je ze bezit. Wees voorzichtig om niets vaags te ondertekenen, omdat phishing aanvallen je misschien kunnen proberen om je identiteit over te geven. Teken alleen volledig gedetailleerde verklaringen aan waar je mee akkoord gaat.</translation>
     </message>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>Het KYD adres om het bericht met te ondertekenen</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>Het KYDC adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4134,16 +4134,16 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het KYD adres bezit</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het KYDC adres bezit</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>Het KYD adres waarmee het bericht was ondertekend</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>Het KYDC adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde KYD adres</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde KYDC adres</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4525,12 +4525,12 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Verkregen via verduistering</translation>
     </message>
     <message>
-        <source>KYD Stake</source>
-        <translation>KYD Stake</translation>
+        <source>KYDC Stake</source>
+        <translation>KYDC Stake</translation>
     </message>
     <message>
-        <source>zKYD Stake</source>
-        <translation>zKYD Stake</translation>
+        <source>zKYDC Stake</source>
+        <translation>zKYDC Stake</translation>
     </message>
     <message>
         <source>Obfuscation Denominate</source>
@@ -4549,32 +4549,32 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Verduistering creëert denominaties</translation>
     </message>
     <message>
-        <source>Converted KYD to zKYD</source>
-        <translation>Geconverteerde KYD naar zKYD</translation>
+        <source>Converted KYDC to zKYDC</source>
+        <translation>Geconverteerde KYDC naar zKYDC</translation>
     </message>
     <message>
-        <source>Spent zKYD</source>
-        <translation>Bestede zKYD</translation>
+        <source>Spent zKYDC</source>
+        <translation>Bestede zKYDC</translation>
     </message>
     <message>
-        <source>Received KYD from zKYD</source>
-        <translation>Ontvangen KYD van zKYD</translation>
+        <source>Received KYDC from zKYDC</source>
+        <translation>Ontvangen KYDC van zKYDC</translation>
     </message>
     <message>
-        <source>Minted Change as zKYD from zKYD Spend</source>
-        <translation>Gemint wisselgeld als zKYD van bestede zKYD</translation>
+        <source>Minted Change as zKYDC from zKYDC Spend</source>
+        <translation>Gemint wisselgeld als zKYDC van bestede zKYDC</translation>
     </message>
     <message>
-        <source>Converted zKYD to KYD</source>
-        <translation>Geconverteerde zKYD naar KYD</translation>
+        <source>Converted zKYDC to KYDC</source>
+        <translation>Geconverteerde zKYDC naar KYDC</translation>
     </message>
     <message>
-        <source>Anonymous (zKYD Transaction)</source>
-        <translation>Anonieme (zKYD transactie)</translation>
+        <source>Anonymous (zKYDC Transaction)</source>
+        <translation>Anonieme (zKYDC transactie)</translation>
     </message>
     <message>
-        <source>Anonymous (zKYD Stake)</source>
-        <translation>Anonieme (zKYD stake)</translation>
+        <source>Anonymous (zKYDC Stake)</source>
+        <translation>Anonieme (zKYDC stake)</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -4784,12 +4784,12 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Exporteren succesvol</translation>
     </message>
     <message>
-        <source>Received KYD from zKYD</source>
-        <translation>Ontvangen KYD van zKYD</translation>
+        <source>Received KYDC from zKYDC</source>
+        <translation>Ontvangen KYDC van zKYDC</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zKYD</source>
-        <translation>Zerocoin besteed, wisselgeld in zKYD</translation>
+        <source>Zerocoin Spend, Change in zKYDC</source>
+        <translation>Zerocoin besteed, wisselgeld in zKYDC</translation>
     </message>
     <message>
         <source>The transaction history was successfully saved to %1.</source>
@@ -4825,8 +4825,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Verzend Munten</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYD.</source>
-        <translation>SwiftTX ondersteunt geen verzendwaarden die zo hoog zijn. Transacties zijn momenteel beperkt tot %1 KYD.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 KYDC.</source>
+        <translation>SwiftTX ondersteunt geen verzendwaarden die zo hoog zijn. Transacties zijn momenteel beperkt tot %1 KYDC.</translation>
     </message>
 </context>
 <context>
@@ -4859,8 +4859,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
 <context>
     <name>ZKydControlDialog</name>
     <message>
-        <source>Select zKYD to Spend</source>
-        <translation>Selecteer zKYD om te besteden</translation>
+        <source>Select zKYDC to Spend</source>
+        <translation>Selecteer zKYDC om te besteden</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4871,8 +4871,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>0</translation>
     </message>
     <message>
-        <source>zKYD</source>
-        <translation>zKYD</translation>
+        <source>zKYDC</source>
+        <translation>zKYDC</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4938,16 +4938,16 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Gedistribueerd onder de MIT software licentie, zie het bijgevoegde bestand COPYING of &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
-        <source>Enable automatic wallet backups triggered after each zKYD minting (0-1, default: %u)</source>
-        <translation>Schakel automatische portemonnee back-ups in geactiveerd na elke geminte zKYD (0-1, standaard: %u)</translation>
+        <source>Enable automatic wallet backups triggered after each zKYDC minting (0-1, default: %u)</source>
+        <translation>Schakel automatische portemonnee back-ups in geactiveerd na elke geminte zKYDC (0-1, standaard: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for KYD inputs (0-1, default: %u)</source>
-        <translation>In- of uitschakelen staking functionaliteit voor KYD inputs (0-1, standaard: %u)</translation>
+        <source>Enable or disable staking functionality for KYDC inputs (0-1, default: %u)</source>
+        <translation>In- of uitschakelen staking functionaliteit voor KYDC inputs (0-1, standaard: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zKYD inputs (0-1, default: %u)</source>
-        <translation>In- of uitschakelen staking functionaliteit voor zKYD inputs (0-1, standaard: %u)</translation>
+        <source>Enable or disable staking functionality for zKYDC inputs (0-1, default: %u)</source>
+        <translation>In- of uitschakelen staking functionaliteit voor zKYDC inputs (0-1, standaard: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -4982,12 +4982,12 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Uitvoeren commando wanneer het beste blok verandert (%s in cmd is vervangen door block hash)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Kosten (in KYD/Kb) kleiner dan dit worden beschouwd als zero fee voor heruitzending (standaard: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Kosten (in KYDC/Kb) kleiner dan dit worden beschouwd als zero fee voor heruitzending (standaard: %s)</translation>
     </message>
     <message>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Kosten (in KYD/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Kosten (in KYDC/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5094,12 +5094,12 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Kan niet genoeg verduistering gedenomineerde fondsen voor deze transactie vinden.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>Kan niet genoeg verduistering niet gedenomineerde fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 KYD.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>Kan niet genoeg verduistering niet gedenomineerde fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 KYDC.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYD.</source>
-        <translation>Kan niet genoeg fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 KYD.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYDC.</source>
+        <translation>Kan niet genoeg fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 KYDC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5410,8 +5410,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Mislukt om block te lezen</translation>
     </message>
     <message>
-        <source>Fee (in KYD/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in KYD/kB) om toe te voegen aan transacties die je verzendt (standaard: %s)</translation>
+        <source>Fee (in KYDC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in KYDC/kB) om toe te voegen aan transacties die je verzendt (standaard: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5542,8 +5542,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Percentage automatisch geminte Zerocoin (10-100, standaard: %u)</translation>
     </message>
     <message>
-        <source>Reindex the KYD and zKYD money supply statistics</source>
-        <translation>Indexeer de KYD- en zKYD-geldvoorraadstatistieken opnieuw</translation>
+        <source>Reindex the KYDC and zKYDC money supply statistics</source>
+        <translation>Indexeer de KYDC- en zKYDC-geldvoorraadstatistieken opnieuw</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -5618,8 +5618,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Voorkeur denominatie voor automatisch minted Zerocoin (1/5/10/50/100/500/1000/5000), 0 voor geen voorkeur. standaard: %u)</translation>
     </message>
     <message>
-        <source>Specify custom backup path to add a copy of any automatic zKYD backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Specificeer aangepast back-up pad om een kopie van elke automatische zKYD back-up toe te voegen. Indien ingesteld als dir zal elke back-up een bestand genereren met een tijdstempel. Indien ingesteld als file zal elke back-up herschreven worden naar dat bestand. Indien backuppath ook is ingesteld zullen 4 back-ups gedaan worden.</translation>
+        <source>Specify custom backup path to add a copy of any automatic zKYDC backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
+        <translation>Specificeer aangepast back-up pad om een kopie van elke automatische zKYDC back-up toe te voegen. Indien ingesteld als dir zal elke back-up een bestand genereren met een tijdstempel. Indien ingesteld als file zal elke back-up herschreven worden naar dat bestand. Indien backuppath ook is ingesteld zullen 4 back-ups gedaan worden.</translation>
     </message>
     <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
@@ -6118,8 +6118,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Synchroniseren sporks...</translation>
     </message>
     <message>
-        <source>Syncing zKYD wallet...</source>
-        <translation>Synchroniseren zKYD portemonnee...</translation>
+        <source>Syncing zKYDC wallet...</source>
+        <translation>Synchroniseren zKYDC portemonnee...</translation>
     </message>
     <message>
         <source>The coin spend has been used</source>
@@ -6266,8 +6266,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Gebruikersnaam voor JSON-RPC verbindingen</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zKYD</source>
-        <translation>Waarde is minder dan de kleinst beschikbare denominatie (=1) van zKYD</translation>
+        <source>Value is below the smallest available denomination (= 1) of zKYDC</source>
+        <translation>Waarde is minder dan de kleinst beschikbare denominatie (=1) van zKYDC</translation>
     </message>
     <message>
         <source>Value more than Obfuscation pool maximum allows.</source>
@@ -6282,8 +6282,8 @@ Ofwel het munten van hogere denominaties (dus minder invoer nodig) of het te bes
         <translation>Portemonnee verifiëren...</translation>
     </message>
     <message>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
-        <translation>Versie 1 zKYD vereist een beveiligingsniveau van 100 om succesvol uit te geven.</translation>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
+        <translation>Versie 1 zKYDC vereist een beveiligingsniveau van 100 om succesvol uit te geven.</translation>
     </message>
     <message>
         <source>Wallet %s resides outside data directory %s</source>

@@ -493,7 +493,7 @@
                         <enum>Qt::ActionsContextMenu</enum>
                        </property>
                        <property name="text">
-                        <string notr="true">0.00 KYD</string>
+                        <string notr="true">0.00 KYDC</string>
                        </property>
                        <property name="textInteractionFlags">
                         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -573,7 +573,7 @@
                         <enum>Qt::ActionsContextMenu</enum>
                        </property>
                        <property name="text">
-                        <string notr="true">0.00 KYD</string>
+                        <string notr="true">0.00 KYDC</string>
                        </property>
                        <property name="textInteractionFlags">
                         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -653,7 +653,7 @@
                         <enum>Qt::ActionsContextMenu</enum>
                        </property>
                        <property name="text">
-                        <string notr="true">0.00 KYD</string>
+                        <string notr="true">0.00 KYDC</string>
                        </property>
                        <property name="textInteractionFlags">
                         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -682,7 +682,7 @@
                         <enum>Qt::ActionsContextMenu</enum>
                        </property>
                        <property name="text">
-                        <string notr="true">0.00 KYD</string>
+                        <string notr="true">0.00 KYDC</string>
                        </property>
                        <property name="textInteractionFlags">
                         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -849,7 +849,7 @@
                 <item>
                  <widget class="QLabel" name="labelBlockSize">
                   <property name="text">
-                   <string>0 KYD</string>
+                   <string>0 KYDC</string>
                   </property>
                  </widget>
                 </item>
@@ -1193,7 +1193,7 @@
                       <item>
                        <widget class="QRadioButton" name="radioCustomPerKilobyte">
                         <property name="toolTip">
-                         <string>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
+                         <string>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDCs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
                         </property>
                         <property name="text">
                          <string>per kilobyte</string>
@@ -1209,7 +1209,7 @@
                       <item>
                        <widget class="QRadioButton" name="radioCustomAtLeast">
                         <property name="toolTip">
-                         <string>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
+                         <string>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDCs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</string>
                         </property>
                         <property name="text">
                          <string>total at least</string>
@@ -1242,7 +1242,7 @@
                       <item>
                        <widget class="QCheckBox" name="checkBoxMinimumFee">
                         <property name="toolTip">
-                         <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</string>
+                         <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1255,7 +1255,7 @@
                          <bool>true</bool>
                         </property>
                         <property name="toolTip">
-                         <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</string>
+                         <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</string>
                         </property>
                         <property name="text">
                          <string>(read the tooltip)</string>
@@ -1686,7 +1686,7 @@
                 <bool>false</bool>
                </property>
                <property name="text">
-                <string>Anonymized KYD</string>
+                <string>Anonymized KYDC</string>
                </property>
               </widget>
              </item>
@@ -1725,7 +1725,7 @@
                 <cursorShape>IBeamCursor</cursorShape>
                </property>
                <property name="text">
-                <string notr="true">123.456 KYD</string>
+                <string notr="true">123.456 KYDC</string>
                </property>
                <property name="textInteractionFlags">
                 <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>

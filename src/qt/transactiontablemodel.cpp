@@ -345,9 +345,9 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
     case TransactionRecord::SendToSelf:
         return tr("Payment to yourself");
     case TransactionRecord::StakeMint:
-        return tr("KYD Stake");
+        return tr("KYDC Stake");
     case TransactionRecord::StakeZKYD:
-        return tr("zKYD Stake");
+        return tr("zKYDC Stake");
     case TransactionRecord::Generated:
         return tr("Mined");
     case TransactionRecord::ObfuscationDenominate:
@@ -361,15 +361,15 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
     case TransactionRecord::Obfuscated:
         return tr("Obfuscated");
     case TransactionRecord::ZerocoinMint:
-        return tr("Converted KYD to zKYD");
+        return tr("Converted KYDC to zKYDC");
     case TransactionRecord::ZerocoinSpend:
-        return tr("Spent zKYD");
+        return tr("Spent zKYDC");
     case TransactionRecord::RecvFromZerocoinSpend:
-        return tr("Received KYD from zKYD");
+        return tr("Received KYDC from zKYDC");
     case TransactionRecord::ZerocoinSpend_Change_zKyd:
-        return tr("Minted Change as zKYD from zKYD Spend");
+        return tr("Minted Change as zKYDC from zKYDC Spend");
     case TransactionRecord::ZerocoinSpend_FromMe:
-        return tr("Converted zKYD to KYD");
+        return tr("Converted zKYDC to KYDC");
 
     default:
         return QString();
@@ -425,9 +425,9 @@ QString TransactionTableModel::formatTxToAddress(const TransactionRecord* wtx, b
         return QString::fromStdString(wtx->address) + watchAddress;
     case TransactionRecord::ZerocoinMint:
     case TransactionRecord::ZerocoinSpend_Change_zKyd:
-        return tr("Anonymous (zKYD Transaction)");
+        return tr("Anonymous (zKYDC Transaction)");
     case TransactionRecord::StakeZKYD:
-        return tr("Anonymous (zKYD Stake)");
+        return tr("Anonymous (zKYDC Stake)");
     case TransactionRecord::SendToSelf:
     default:
         return tr("(n/a)") + watchAddress;

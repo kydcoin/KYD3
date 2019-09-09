@@ -62,12 +62,12 @@
         <translation>Adrese za primanje</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>To su vaše KYD adrese za slanje plaćanja. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>To su vaše KYDC adrese za slanje plaćanja. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
     </message>
     <message>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To su vaše KYD adrese za primanje uplata. Preporuča se upotreba nove adrese primanja za svaku transakciju.</translation>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To su vaše KYDC adrese za primanje uplata. Preporuča se upotreba nove adrese primanja za svaku transakciju.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Potvrdite šifriranje novčanika</translation>
     </message>
     <message>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
-        <translation>KYD se sada zatvara kako bi dovršio proces šifriranja. Ne zaboravite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše KYD od krađe zlonamjernog softvera koji zarazi vaše računalo.</translation>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
+        <translation>KYD se sada zatvara kako bi dovršio proces šifriranja. Ne zaboravite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše KYDC od krađe zlonamjernog softvera koji zarazi vaše računalo.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Jeste li sigurni da želite šifrirati svoj novčanik?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>Upozorenje: Ako šifrirate svoj novčanik i izgubite vašu zaporku, vi ćete1 IZGUBITI ĆE TE SAV VAŠ KYD1!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>Upozorenje: Ako šifrirate svoj novčanik i izgubite vašu zaporku, vi ćete1 IZGUBITI ĆE TE SAV VAŠ KYDC1!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -397,8 +397,8 @@
         <translation>Pregledajte povijest transakcija</translation>
     </message>
     <message>
-        <source>Privacy Actions for zKYD</source>
-        <translation>Aktivnosti na privatnost za zKYD</translation>
+        <source>Privacy Actions for zKYDC</source>
+        <translation>Aktivnosti na privatnost za zKYDC</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -605,12 +605,12 @@
         <translation>KYD Core</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Pošaljite kovanice na KYD adresu</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Pošaljite kovanice na KYDC adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Zahtjev za plaćanja (generira QR kodove i kyd: URI)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Zahtjev za plaćanja (generira QR kodove i KYDC: URI)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -637,12 +637,12 @@
         <translation>Izmijenite opcije konfiguracije za KYD</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Potpišite poruke s vašim KYD adresama kako biste dokazali da ih posjedujete</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Potpišite poruke s vašim KYDC adresama kako biste dokazali da ih posjedujete</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Potvrdite poruke kako biste bili sigurni da su potpisani s određenim KYD adresama</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Potvrdite poruke kako biste bili sigurni da su potpisani s određenim KYDC adresama</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -1045,8 +1045,8 @@
         <translation>ne</translation>
     </message>
     <message>
-        <source>0 KYD</source>
-        <translation>0 KYD</translation>
+        <source>0 KYDC</source>
+        <translation>0 KYDC</translation>
     </message>
     <message>
         <source>Confirmation time:</source>
@@ -1118,8 +1118,8 @@
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The KYD address to sign the message with</source>
-        <translation>KYD adresa za potpisivanje poruke s</translation>
+        <source>The KYDC address to sign the message with</source>
+        <translation>KYDC adresa za potpisivanje poruke s</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1142,16 +1142,16 @@
         <translation>Kopirajte trenutačni potpis u međuspremnik sustava</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Potpišite poruku da biste dokazali da ste vlasnik ove KYD adrese</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Potpišite poruku da biste dokazali da ste vlasnik ove KYDC adrese</translation>
     </message>
     <message>
-        <source>The KYD address the message was signed with</source>
-        <translation>KYD adresa s kojom je potpisana poruka</translation>
+        <source>The KYDC address the message was signed with</source>
+        <translation>KYDC adresa s kojom je potpisana poruka</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
-        <translation>Potvrdite poruku kako biste bili sigurni da je potpisan s navedenom KYD adresom</translation>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
+        <translation>Potvrdite poruku kako biste bili sigurni da je potpisan s navedenom KYDC adresom</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>

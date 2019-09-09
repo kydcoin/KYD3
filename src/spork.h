@@ -27,7 +27,7 @@ using namespace boost;
     Sporks 11,12, and 16 to be removed with 1st zerocoin release
 */
 #define SPORK_START 10001
-#define SPORK_END 10015
+#define SPORK_END 10016
 
 #define SPORK_2_SWIFTTX 10001
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING 10002
@@ -42,6 +42,7 @@ using namespace boost;
 #define SPORK_14_NEW_PROTOCOL_ENFORCEMENT 10013
 #define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2 10014
 #define SPORK_16_ZEROCOIN_MAINTENANCE_MODE 10015
+#define SPORK_17_MN_WINNER_MINIMUM_AGE 10016
 
 #define SPORK_2_SWIFTTX_DEFAULT 978307200                         //2001-1-1
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING_DEFAULT 1424217600        //2015-2-18
@@ -55,6 +56,7 @@ using namespace boost;
 #define SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT 4070908800      //OFF
 #define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT 4070908800    //OFF
 #define SPORK_16_ZEROCOIN_MAINTENANCE_MODE_DEFAULT 1              //ON
+#define SPORK_17_MN_WINNER_MINIMUM_AGE_DEFAULT 8000               // Age in seconds. This should be > MASTERNODE_REMOVAL_SECONDS to avoid misconfigured new nodes in the list. Set this to zero to emulate classic behaviour
 
 class CSporkMessage;
 class CSporkManager;
