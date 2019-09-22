@@ -15,7 +15,6 @@ src/test/test_kyd
 src/qt/test/test_kyd-qt
 
 # autoreconf
-Makefile.in
 aclocal.m4
 autom4te.cache/
 build-aux/config.guess
@@ -46,6 +45,8 @@ share/qt/Info.plist
 contrib/devtools/split-debug.sh
 
 src/univalue/gen
+src/univalue/build-aux
+Makefile.in
 
 src/qt/*.moc
 src/qt/moc_*.cpp

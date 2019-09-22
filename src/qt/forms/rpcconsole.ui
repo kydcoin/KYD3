@@ -1328,7 +1328,7 @@
        <item row="4" column="0">
         <widget class="QLabel" name="wallet_customzkydbackuppath_label">
          <property name="text">
-          <string>Custom zKYD Backup Path:</string>
+          <string>Custom zKYDC Backup Path:</string>
          </property>
          <property name="visible">
           <bool>false</bool>

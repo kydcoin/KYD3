@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your KYD addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your KYDC addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your KYD addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your KYDC addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDs from being stolen by malware infecting your computer.</source>
+        <source>KYD will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your KYDCs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -231,7 +231,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -326,12 +326,12 @@
     </message>
     <message>
         <location line="-424"/>
-        <source>Enter a KYD Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a KYDC Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>The KYD address to encrypt</source>
+        <source>The KYDC address to encrypt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -375,7 +375,7 @@
     </message>
     <message>
         <location line="+18"/>
-        <source>Encrypt the private key for this KYD address</source>
+        <source>Encrypt the private key for this KYDC address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -557,7 +557,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Privacy Actions for zKYD</source>
+        <source>Privacy Actions for zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -836,12 +836,12 @@
     </message>
     <message>
         <location line="-722"/>
-        <source>Send coins to a KYD address</source>
+        <source>Send coins to a KYDC address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -876,12 +876,12 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -921,7 +921,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Open a KYD: URI or payment request</source>
+        <source>Open a KYDC: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1521,7 +1521,7 @@ Address: %4
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid KYD address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid KYDC address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1847,8 +1847,8 @@ Address: %4
     </message>
     <message>
         <location line="-106"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYD addresses after it matures.
-To Add: enter percentage to give and KYD address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other KYDC addresses after it matures.
+To Add: enter percentage to give and KYDC address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
         <translation type="unfinished"></translation>
@@ -2169,7 +2169,7 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Add destinations to send KYD to</source>
+        <source>Add destinations to send KYDC to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2292,12 +2292,12 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 KYD</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 KYD</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2307,12 +2307,12 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 KYD to anonymize 10000 KYD</source>
+        <source>This option is the quickest and will cost about ~0.025 KYDC to anonymize 10000 KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 KYD to anonymize 10000 KYD</source>
+        <source>This option is moderately fast and will cost about 0.05 KYDC to anonymize 10000 KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2322,7 +2322,7 @@ Please be patient after clicking import.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 KYD per 10000 KYD you anonymize.</source>
+        <source>0.1 KYDC per 10000 KYDC you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2501,33 +2501,33 @@ https://www.transifex.com/kyd-project/kyd-project-translations</source>
     </message>
     <message>
         <location line="-169"/>
-        <source>Enable automatic minting of KYD units to zKYD</source>
+        <source>Enable automatic minting of KYDC units to zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Enable zKYD Automint</source>
+        <source>Enable zKYDC Automint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Percentage of incoming KYD which get automatically converted to zKYD via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming KYDC which get automatically converted to zKYDC via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Percentage of autominted zKYD</source>
+        <source>Percentage of autominted zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
         <location line="+16"/>
-        <source>Wait with automatic conversion to Zerocoin until enough KYD for this denomination is available</source>
+        <source>Wait with automatic conversion to Zerocoin until enough KYDC for this denomination is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-13"/>
-        <source>Preferred Automint zKYD Denomination</source>
+        <source>Preferred Automint zKYDC Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2746,7 +2746,7 @@ https://www.transifex.com/kyd-project/kyd-project-translations</source>
     </message>
     <message>
         <location line="+71"/>
-        <source>KYD Balance</source>
+        <source>KYDC Balance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2778,19 +2778,19 @@ https://www.transifex.com/kyd-project/kyd-project-translations</source>
     <message>
         <location line="+16"/>
         <location line="+19"/>
-        <source>Your current KYD balance, unconfirmed and immature transactions included</source>
+        <source>Your current KYDC balance, unconfirmed and immature transactions included</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+96"/>
-        <source>zKYD Balance</source>
+        <source>zKYDC Balance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+53"/>
         <location line="+17"/>
         <source>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
-These zKYD are spendable.</source>
+These zKYDC are spendable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2863,7 +2863,7 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
     <message>
         <location line="+191"/>
         <location line="+19"/>
-        <source>Locked KYD or Masternode collaterals. These are excluded from zKYD minting.</source>
+        <source>Locked KYDC or Masternode collaterals. These are excluded from zKYDC minting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2879,7 +2879,7 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
     <message>
         <location line="+58"/>
         <location line="+19"/>
-        <source>Your current zKYD balance, unconfirmed and immature zKYD included.</source>
+        <source>Your current zKYDC balance, unconfirmed and immature zKYDC included.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2895,7 +2895,7 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
     </message>
     <message>
         <location line="+111"/>
-        <source>Current percentage of zKYD.
+        <source>Current percentage of zKYDC.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
         <translation type="unfinished"></translation>
@@ -2958,7 +2958,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+110"/>
-        <source>URI cannot be parsed! This can be caused by an invalid KYD address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid KYDC address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3086,7 +3086,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <message>
         <location line="-371"/>
         <location line="+651"/>
-        <source>zKYD</source>
+        <source>zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3101,7 +3101,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+19"/>
-        <source>0.000 000 00 KYD</source>
+        <source>0.000 000 00 KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3152,17 +3152,17 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     <message>
         <location line="+308"/>
         <location line="+52"/>
-        <source>Enter an amount of Kyd to convert to zKYD</source>
+        <source>Enter an amount of KYDC to convert to zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+301"/>
-        <source>zKYD Control</source>
+        <source>zKYDC Control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>zKYD Selected:</source>
+        <source>zKYDC Selected:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3190,7 +3190,7 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+7"/>
-        <source>Available (mature and spendable) zKYD for spending</source>
+        <source>Available (mature and spendable) zKYDC for spending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3200,9 +3200,9 @@ To enable AutoMint change &apos;enablezeromint=0&apos; to &apos;enablezeromint=1
     </message>
     <message>
         <location line="+16"/>
-        <source>Available (mature and spendable) zKYD for spending
+        <source>Available (mature and spendable) zKYDC for spending
 
-zKYD are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+zKYDC are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3219,7 +3219,7 @@ zKYD are mature when they have more than 20 confirmations AND more than 2 mints 
         <location line="+31"/>
         <location line="+31"/>
         <location line="+31"/>
-        <source>0 zKYD</source>
+        <source>0 zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3244,7 +3244,7 @@ zKYD are mature when they have more than 20 confirmations AND more than 2 mints 
     </message>
     <message>
         <location line="+27"/>
-        <source>The KYD address to send the payment to. Creates local payment to yourself when empty.</source>
+        <source>The KYDC address to send the payment to. Creates local payment to yourself when empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3312,7 +3312,7 @@ zKYD are mature when they have more than 20 confirmations AND more than 2 mints 
         <location line="+25"/>
         <location line="+936"/>
         <location line="+38"/>
-        <source>Total Balance including unconfirmed and immature zKYD</source>
+        <source>Total Balance including unconfirmed and immature zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3346,14 +3346,14 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
     </message>
     <message>
         <location line="+40"/>
-        <source>Show the current status of automatic zKYD minting.
+        <source>Show the current status of automatic zKYDC minting.
 
 To change the status (restart required):
 - enable: add &apos;enablezeromint=1&apos; to kyd.conf
 - disable: add &apos;enablezeromint=0&apos; to kyd.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zKYD
+- menu Settings-&gt;Options-&gt;Percentage of autominted zKYDC
 
 </source>
         <translation type="unfinished"></translation>
@@ -3423,7 +3423,7 @@ To change the percentage (no restart required):
     </message>
     <message>
         <location line="-1324"/>
-        <source>Show zKYD denominations list</source>
+        <source>Show zKYDC denominations list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3622,12 +3622,12 @@ Maximum allowed: </source>
     </message>
     <message>
         <location line="+34"/>
-        <source>zKYD Spend #: </source>
+        <source>zKYDC Spend #: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>zKYD Mint</source>
+        <source>zKYDC Mint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3648,13 +3648,13 @@ Maximum allowed: </source>
     <message>
         <location line="+12"/>
         <location line="+4"/>
-        <source>zKYD is currently disabled due to maintenance.</source>
+        <source>zKYDC is currently disabled due to maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-666"/>
         <location line="+112"/>
-        <source>zKYD is currently undergoing maintenance.</source>
+        <source>zKYDC is currently undergoing maintenance.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3765,7 +3765,7 @@ Maximum allowed: </source>
     </message>
     <message>
         <location line="+0"/>
-        <source> zKYD in </source>
+        <source> zKYDC in </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3801,7 +3801,7 @@ Maximum allowed: </source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Invalid Kyd Address</source>
+        <source>Invalid KYDC Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3842,13 +3842,13 @@ Maximum allowed: </source>
     <message>
         <location line="+24"/>
         <location line="+32"/>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-31"/>
         <location line="+32"/>
-        <source>Failed to spend zKYD</source>
+        <source>Failed to spend zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3876,7 +3876,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <message numerus="yes">
         <location line="+362"/>
         <source>PrivacyDialog</source>
-        <comment>Enter an amount of KYD to convert to zKYD</comment>
+        <comment>Enter an amount of KYDC to convert to zKYDC</comment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -3932,7 +3932,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+105"/>
-        <source>Enter a KYD address (e.g. %1)</source>
+        <source>Enter a KYDC address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4307,7 +4307,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+29"/>
-        <source>Custom zKYD Backup Path:</source>
+        <source>Custom zKYDC Backup Path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4900,12 +4900,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+7"/>
-        <source>0 KYD</source>
+        <source>0 KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+167"/>
-        <source>SwiftX technology allows for near instant transactions - A flat fee of 0.01 KYD applies</source>
+        <source>SwiftX technology allows for near instant transactions - A flat fee of 0.01 KYDC applies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4975,18 +4975,18 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1062"/>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDCs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>If the custom fee is set to 1000 uKYDs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uKYDs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uKYDCs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uKYDCs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uKYDCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYD transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for KYDC transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5046,7 +5046,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+35"/>
-        <source>Anonymized KYD</source>
+        <source>Anonymized KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5106,7 +5106,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+653"/>
-        <source>Warning: Invalid KYD address</source>
+        <source>Warning: Invalid KYDC address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5245,7 +5245,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+18"/>
-        <source>The KYD address to send the payment to</source>
+        <source>The KYDC address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5299,7 +5299,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the KYD: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
+        <source>A message that was attached to the KYDC: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the KYD network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5362,7 +5362,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+15"/>
-        <source>The KYD address to sign the message with</source>
+        <source>The KYDC address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5404,17 +5404,17 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+18"/>
-        <source>Sign the message to prove you own this KYD address</source>
+        <source>Sign the message to prove you own this KYDC address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+103"/>
-        <source>The KYD address the message was signed with</source>
+        <source>The KYDC address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+34"/>
-        <source>Verify the message to ensure it was signed with the specified KYD address</source>
+        <source>Verify the message to ensure it was signed with the specified KYDC address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5926,12 +5926,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+7"/>
-        <source>KYD Stake</source>
+        <source>KYDC Stake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>zKYD Stake</source>
+        <source>zKYDC Stake</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5956,37 +5956,37 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+4"/>
-        <source>Converted KYD to zKYD</source>
+        <source>Converted KYDC to zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Spent zKYD</source>
+        <source>Spent zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Received KYD from zKYD</source>
+        <source>Received KYDC from zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Minted Change as zKYD from zKYD Spend</source>
+        <source>Minted Change as zKYDC from zKYDC Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Converted zKYD to KYD</source>
+        <source>Converted zKYDC to KYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+56"/>
-        <source>Anonymous (zKYD Transaction)</source>
+        <source>Anonymous (zKYDC Transaction)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Anonymous (zKYD Stake)</source>
+        <source>Anonymous (zKYDC Stake)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6255,12 +6255,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-310"/>
-        <source>Received KYD from zKYD</source>
+        <source>Received KYDC from zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Zerocoin Spend, Change in zKYD</source>
+        <source>Zerocoin Spend, Change in zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6307,7 +6307,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <message>
         <location line="-18"/>
         <location line="+9"/>
-        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 KYD.</source>
+        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 KYDC.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6348,7 +6348,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     <name>ZKydControlDialog</name>
     <message>
         <location filename="../forms/zkydcontroldialog.ui" line="+20"/>
-        <source>Select zKYD to Spend</source>
+        <source>Select zKYDC to Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6364,7 +6364,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="-7"/>
-        <source>zKYD</source>
+        <source>zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6447,17 +6447,17 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+5"/>
-        <source>Enable automatic wallet backups triggered after each zKYD minting (0-1, default: %u)</source>
+        <source>Enable automatic wallet backups triggered after each zKYDC minting (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enable or disable staking functionality for KYD inputs (0-1, default: %u)</source>
+        <source>Enable or disable staking functionality for KYDC inputs (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Enable or disable staking functionality for zKYD inputs (0-1, default: %u)</source>
+        <source>Enable or disable staking functionality for zKYDC inputs (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6502,12 +6502,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+8"/>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in KYD/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6647,12 +6647,12 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYD.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 KYDC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYD.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 KYDC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7057,7 +7057,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+4"/>
-        <source>Fee (in KYD/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in KYDC/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7222,7 +7222,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+9"/>
-        <source>Reindex the KYD and zKYD money supply statistics</source>
+        <source>Reindex the KYDC and zKYDC money supply statistics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7314,7 +7314,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify custom backup path to add a copy of any automatic zKYD backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
+        <source>Specify custom backup path to add a copy of any automatic zKYDC backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7939,7 +7939,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Syncing zKYD wallet...</source>
+        <source>Syncing zKYDC wallet...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8129,7 +8129,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Value is below the smallest available denomination (= 1) of zKYD</source>
+        <source>Value is below the smallest available denomination (= 1) of zKYDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8149,7 +8149,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>Version 1 zKYD require a security level of 100 to successfully spend.</source>
+        <source>Version 1 zKYDC require a security level of 100 to successfully spend.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

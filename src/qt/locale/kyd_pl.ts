@@ -144,8 +144,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYD&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE KYD!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR KYDC&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE KYDC!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -513,12 +513,12 @@
         <translation>&amp;Rdzeń KYD</translation>
     </message>
     <message>
-        <source>Send coins to a KYD address</source>
-        <translation>Wyślij monety do adresu KYD</translation>
+        <source>Send coins to a KYDC address</source>
+        <translation>Wyślij monety do adresu KYDC</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and kyd: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i kyd:URI)</translation>
+        <source>Request payments (generates QR codes and KYDC: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i KYDC:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -541,12 +541,12 @@
         <translation>Modyfikuj opcje konfiguracji KYD</translation>
     </message>
     <message>
-        <source>Sign messages with your KYD addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami KYD, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your KYDC addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami KYDC, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified KYD addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu KYD</translation>
+        <source>Verify messages to ensure they were signed with specified KYDC addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu KYDC</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -573,8 +573,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a KYD: URI or payment request</source>
-        <translation>Otwórz KYD: URI i żądanie zapłaty</translation>
+        <source>Open a KYDC: URI or payment request</source>
+        <translation>Otwórz KYDC: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -1463,8 +1463,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations </translation>
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a KYD address (e.g. %1)</source>
-        <translation>Wprowadź adres KYD (np. %1)</translation>
+        <source>Enter a KYDC address (e.g. %1)</source>
+        <translation>Wprowadź adres KYDC (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1894,8 +1894,8 @@ https://www.transifex.com/kyd-project/kyd-project-translations </translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this KYD address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres KYD jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this KYDC address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres KYDC jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>

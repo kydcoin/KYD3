@@ -42,11 +42,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case KYD:
-        return QString("KYD");
+        return QString("KYDC");
     case mKYD:
-        return QString("mKYD");
+        return QString("mKYDC");
     case uKYD:
-        return QString::fromUtf8("KYD");
+        return QString::fromUtf8("KYDC");
     default:
         return QString("???");
     }
@@ -57,22 +57,22 @@ QString BitcoinUnits::name(int unit)
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
         case KYD:
-            return QString("KYD");
+            return QString("KYDC");
         case mKYD:
-            return QString("mKYD");
+            return QString("mKYDC");
         case uKYD:
-            return QString::fromUtf8("μKYD");
+            return QString::fromUtf8("μKYDC");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
         case KYD:
-            return QString("tKYD");
+            return QString("tKYDC");
         case mKYD:
-            return QString("mtKYD");
+            return QString("mtKYDC");
         case uKYD:
-            return QString::fromUtf8("μtKYD");
+            return QString::fromUtf8("μtKYDC");
         default:
             return QString("???");
         }
@@ -84,22 +84,22 @@ QString BitcoinUnits::description(int unit)
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
         case KYD:
-            return QString("KYD");
+            return QString("KYDC");
         case mKYD:
-            return QString("Milli-KYD (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-KYDC (1 / 1" THIN_SP_UTF8 "000)");
         case uKYD:
-            return QString("Micro-KYD (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-KYDC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
         case KYD:
-            return QString("TestKYDs");
+            return QString("TestKYDCs");
         case mKYD:
-            return QString("Milli-TestKYD (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-TestKYDC (1 / 1" THIN_SP_UTF8 "000)");
         case uKYD:
-            return QString("Micro-TestKYD (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-TestKYDC (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }

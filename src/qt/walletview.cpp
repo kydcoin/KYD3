@@ -24,6 +24,7 @@
 #include "transactiontablemodel.h"
 #include "transactionview.h"
 #include "walletmodel.h"
+#include "proposallist.h"
 
 #include "ui_interface.h"
 
@@ -132,6 +133,14 @@ WalletView::WalletView(QWidget* parent) : QStackedWidget(parent),
         masternodeListPage = new MasternodeList();
         addWidget(masternodeListPage);
     }
+
+    QVBoxLayout* vbox_2 = new QVBoxLayout();
+    proposalList = new ProposalList(this);
+    vbox_2->addWidget(proposalList);
+    vbox_2->setStretch(1, 1);
+    proposalListPage = new QWidget(this);
+    proposalListPage->setLayout(vbox_2);
+    addWidget(proposalListPage);
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), transactionView, SLOT(focusTransaction(QModelIndex)));
@@ -274,6 +283,11 @@ void WalletView::gotoPrivacyPage()
     setCurrentWidget(privacyPage);
     // Refresh UI-elements in case coins were locked/unlocked in CoinControl
     walletModel->emitBalanceChanged();
+}
+
+void WalletView::gotoProposalPage()
+{
+    setCurrentWidget(proposalListPage);
 }
 
 void WalletView::gotoSendCoinsPage(QString addr)

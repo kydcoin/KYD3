@@ -58,12 +58,12 @@ QT_TRANSLATE_NOOP("kyd-core", ""
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Enable SwiftX, show confirmations for locked transactions (bool, default: %s)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"Enable automatic wallet backups triggered after each zKYD minting (0-1, "
+"Enable automatic wallet backups triggered after each zKYDC minting (0-1, "
 "default: %u)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"Enable or disable staking functionality for KYD inputs (0-1, default: %u)"),
+"Enable or disable staking functionality for KYDC inputs (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"Enable or disable staking functionality for zKYD inputs (0-1, default: %u)"),
+"Enable or disable staking functionality for zKYDC inputs (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Enable spork administration functionality with the appropriate private key."),
 QT_TRANSLATE_NOOP("kyd-core", ""
@@ -100,10 +100,10 @@ QT_TRANSLATE_NOOP("kyd-core", ""
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Failed to find coin set amongst held coins with less than maxNumber of Spends"),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"Fees (in KYD/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in KYDC/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"Fees (in KYD/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in KYDC/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -171,7 +171,7 @@ QT_TRANSLATE_NOOP("kyd-core", ""
 "Show N confirmations for a successfully locked transaction (0-9999, default: "
 "%u)"),
 QT_TRANSLATE_NOOP("kyd-core", ""
-"Specify custom backup path to add a copy of any automatic zKYD backup. If "
+"Specify custom backup path to add a copy of any automatic zKYDC backup. If "
 "set as dir, every backup generates a timestamped file. If set as file, will "
 "rewrite to that file every backup. If backuppath is set as well, 4 backups "
 "will happen"),
@@ -199,10 +199,10 @@ QT_TRANSLATE_NOOP("kyd-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 10000 KYD."),
+"transaction that are not equal 10000 KYDC."),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Unable to locate enough funds for this transaction that are not equal 10000 "
-"KYD."),
+"KYDC."),
 QT_TRANSLATE_NOOP("kyd-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -324,7 +324,7 @@ QT_TRANSLATE_NOOP("kyd-core", "Failed to read block"),
 QT_TRANSLATE_NOOP("kyd-core", "Failed to select a zerocoin"),
 QT_TRANSLATE_NOOP("kyd-core", "Failed to wipe zerocoinDB"),
 QT_TRANSLATE_NOOP("kyd-core", "Failed to write coin serial number into wallet"),
-QT_TRANSLATE_NOOP("kyd-core", "Fee (in KYD/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("kyd-core", "Fee (in KYDC/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("kyd-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("kyd-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("kyd-core", "Found enough users, signing ( waiting %s )"),
@@ -413,7 +413,7 @@ QT_TRANSLATE_NOOP("kyd-core", "Randomly drop 1 of every <n> network messages"),
 QT_TRANSLATE_NOOP("kyd-core", "Randomly fuzz 1 of every <n> network messages"),
 QT_TRANSLATE_NOOP("kyd-core", "Rebuild block chain index from current blk000??.dat files"),
 QT_TRANSLATE_NOOP("kyd-core", "Receive and display P2P network alerts (default: %u)"),
-QT_TRANSLATE_NOOP("kyd-core", "Reindex the KYD and zKYD money supply statistics"),
+QT_TRANSLATE_NOOP("kyd-core", "Reindex the KYDC and zKYDC money supply statistics"),
 QT_TRANSLATE_NOOP("kyd-core", "Reindex the accumulator database"),
 QT_TRANSLATE_NOOP("kyd-core", "Reindexing zerocoin database..."),
 QT_TRANSLATE_NOOP("kyd-core", "Reindexing zerocoin failed"),
@@ -465,7 +465,7 @@ QT_TRANSLATE_NOOP("kyd-core", "Synchronizing budgets..."),
 QT_TRANSLATE_NOOP("kyd-core", "Synchronizing masternode winners..."),
 QT_TRANSLATE_NOOP("kyd-core", "Synchronizing masternodes..."),
 QT_TRANSLATE_NOOP("kyd-core", "Synchronizing sporks..."),
-QT_TRANSLATE_NOOP("kyd-core", "Syncing zKYD wallet..."),
+QT_TRANSLATE_NOOP("kyd-core", "Syncing zKYDC wallet..."),
 QT_TRANSLATE_NOOP("kyd-core", "The coin spend has been used"),
 QT_TRANSLATE_NOOP("kyd-core", "The new spend coin transaction did not verify"),
 QT_TRANSLATE_NOOP("kyd-core", "The selected mint coin is an invalid coin"),
@@ -503,11 +503,11 @@ QT_TRANSLATE_NOOP("kyd-core", "Use a custom max chain reorganization depth (defa
 QT_TRANSLATE_NOOP("kyd-core", "Use the test network"),
 QT_TRANSLATE_NOOP("kyd-core", "User Agent comment (%s) contains unsafe characters."),
 QT_TRANSLATE_NOOP("kyd-core", "Username for JSON-RPC connections"),
-QT_TRANSLATE_NOOP("kyd-core", "Value is below the smallest available denomination (= 1) of zKYD"),
+QT_TRANSLATE_NOOP("kyd-core", "Value is below the smallest available denomination (= 1) of zKYDC"),
 QT_TRANSLATE_NOOP("kyd-core", "Value more than Obfuscation pool maximum allows."),
 QT_TRANSLATE_NOOP("kyd-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("kyd-core", "Verifying wallet..."),
-QT_TRANSLATE_NOOP("kyd-core", "Version 1 zKYD require a security level of 100 to successfully spend."),
+QT_TRANSLATE_NOOP("kyd-core", "Version 1 zKYDC require a security level of 100 to successfully spend."),
 QT_TRANSLATE_NOOP("kyd-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("kyd-core", "Wallet is locked."),
 QT_TRANSLATE_NOOP("kyd-core", "Wallet needed to be rewritten: restart KYD Core to complete"),

@@ -453,7 +453,7 @@ std::set<CMintMeta> CzKYDTracker::ListMints(bool fUnusedOnly, bool fMatureOnly, 
             Add(dMint, false, false, zKYDWallet);
         }
         delete zKYDWallet;
-        LogPrint("zero", "%s: added %d dzkyd from DB\n", __func__, listDeterministicDB.size());
+        LogPrint("zero", "%s: added %d dzKYDC from DB\n", __func__, listDeterministicDB.size());
     }
 
     std::vector<CMintMeta> vOverWrite;
