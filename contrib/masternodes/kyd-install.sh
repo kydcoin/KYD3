@@ -187,6 +187,7 @@ function prepare_system() {
 echo -e "Preparing the system to install ${GREEN}$COIN_NAME${NC} masternode."
 DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
 #DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade >/dev/null 2>&1
+apt install software-properties-common
 echo -e "${GREEN}Adding bitcoin PPA repository"
 apt-add-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
 DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
