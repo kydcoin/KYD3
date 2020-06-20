@@ -193,7 +193,7 @@ DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
 echo -e "Installing required packages, it may take some time to finish.${NC}"
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make build-essential libtool software-properties-common autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev \
 libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git curl \
-bsdmainutils libminiupnpc-dev libgmp3-dev ufw fail2ban pkg-config libevent-dev libzmq5 >/dev/null 2>&1
+bsdmainutils libminiupnpc-dev libgmp3-dev ufw fail2ban pkg-config libevent-dev libzmq5 libdb4.8-dev libdb4.8++-dev >/dev/null 2>&1
 if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Not all required packages were installed properly. Try to install them manually by running the following commands:${NC}\n"
